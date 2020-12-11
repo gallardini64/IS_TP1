@@ -1,0 +1,6 @@
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Cliente.AccesoExterno\bin\Debug\ControlCalidad.Cliente.AccesoExterno.dll.config
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Cliente.AccesoExterno\bin\Debug\ControlCalidad.Cliente.AccesoExterno.dll
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Cliente.AccesoExterno\bin\Debug\ControlCalidad.Cliente.AccesoExterno.pdb
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.csproj.CoreCompileInputs.cache
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.dll
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.pdb

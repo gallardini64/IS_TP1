@@ -1,0 +1,15 @@
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csprojAssemblyReference.cache
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CoreCompileInputs.cache
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe.config
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.pdb
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Servicio.dll
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Dominio.dll
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Datos.dll
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Servicio.pdb
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Servicio.dll.config
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Datos.pdb
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CopyComplete
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.exe
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.pdb

@@ -1,0 +1,5 @@
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.dll
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csproj.CoreCompileInputs.cache
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.dll
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.pdb
