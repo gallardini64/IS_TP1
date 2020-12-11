@@ -22,5 +22,9 @@ namespace ControlCalidad.Servidor.Servicio
                     })
                 .ToArray();
         }
+        public void prueba()
+        {
+
+        }
     }
 }
