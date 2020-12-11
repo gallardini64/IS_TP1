@@ -1,8 +1,17 @@
-﻿namespace ControlCalidad.Servidor.Dominio
+﻿using System;
+
+namespace ControlCalidad.Servidor.Dominio
 {
-    public class Defecto
+    public class Hallazgo
     {
-        public TipoDefecto TipoDefecto { get; set; }
-        public string Descripcion { get; set; }
+        public DateTime Hora { get; set; }
+        public int Cantidad { get; set; }
+        public Pie Pie { get; set; }
+
+        public Hallazgo(Pie pie, string descripcion)
+        {
+            Pie = pie;
+                    
+        }
     }
 }

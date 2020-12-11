@@ -5,23 +5,24 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using ControlCalidad.Servidor.Datos;
+using ControlCalidad.Servidor.Servicio.Controladores;
 
 namespace ControlCalidad.Servidor.Servicio
 {
     
     public class ControlCalidadServicio : IControlCalidadServicio
     {
-        private Repositorio _repositorio = Repositorio.GetInstancia();
+        private ControladorLineas _controladorLineas = new ControladorLineas();
+        private ControladorOP _controladorOP = new ControladorOP();
         public LineaDto[] GetLineas()
         {
-            return _repositorio
-                .GetLineas()
-                .Select(l => new LineaDto
-                    {
-                        Numero = l.Numero,
-                    })
-                .ToArray();
+            return _controladorLineas.GetLineas();
         }
+
+
+
+
+
         public void prueba()
         {
 
