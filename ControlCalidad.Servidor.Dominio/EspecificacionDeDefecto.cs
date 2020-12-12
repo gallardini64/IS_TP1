@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Dominio
 {
-    public class Modelo: EntityBase
+    public class EspecificacionDeDefecto: EntityBase
     {
-        public string Sku { get; set; }
-        public string Denominacion { get; set; }
-        public int Objetivo { get; set; }
+        public TipoDefecto TipoDefecto { get; set; }
+        public string Descripcion { get; set; }
     }
 }

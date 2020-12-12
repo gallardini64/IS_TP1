@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Dominio
 {
-    public class Modelo: EntityBase
+    public abstract class EntityBase
     {
-        public string Sku { get; set; }
-        public string Denominacion { get; set; }
-        public int Objetivo { get; set; }
+        public virtual int Id { get; set; }
+
+        public virtual bool IsNew()
+        {
+            return Id == 0;
+        }
     }
 }
