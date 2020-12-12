@@ -47,16 +47,19 @@
     <Compile Include="Controladores\ControladorLineas.cs" />
     <Compile Include="Controladores\ControladorOP.cs" />
     <Compile Include="Entidades\ColorDto.cs" />
+    <Compile Include="Entidades\EstadoOPDto.cs" />
     <Compile Include="Entidades\HorarioDto.cs" />
     <Compile Include="Entidades\LineaDto.cs" />
     <Compile Include="Entidades\ModeloDto.cs" />
     <Compile Include="Entidades\OpDto.cs" />
+    <Compile Include="Entidades\TipoDefectoDto.cs" />
     <Compile Include="IControlCalidadServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ControlCalidadServicio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ControlCalidad.Servidor.Servicio.csproj.DotSettings" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ControlCalidad.Servidor.Datos\ControlCalidad.Servidor.Datos.csproj">

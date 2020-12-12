@@ -6,14 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Servicio.Entidades
-{
+{ 
     [DataContract]
-    public class ColorDto
+    public class TurnoDto
     {
-
+        [DataMember]
+        public DateTime Inicio { get; set; }
+        [DataMember]
+        public DateTime Fin { get; set; }
         [DataMember]
         public string Descripcion { get; set; }
-        [DataMember]
-        public int Codigo { get; set; }
+
     }
 }

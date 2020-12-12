@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ControlCalidad.Servidor.Dominio
 {
-    public class Horario
+    public class Horario : EntityBase
     {
        
         public DateTime Inicio { get; set; }

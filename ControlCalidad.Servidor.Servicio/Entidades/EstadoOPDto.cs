@@ -8,12 +8,10 @@ using System.Threading.Tasks;
 namespace ControlCalidad.Servidor.Servicio.Entidades
 {
     [DataContract]
-    public class ColorDto
+    public class EstadoOPDto
     {
+        [DataMember]
+        public string Estado { get; set; }
 
-        [DataMember]
-        public string Descripcion { get; set; }
-        [DataMember]
-        public int Codigo { get; set; }
     }
 }

@@ -8,12 +8,9 @@ using System.Threading.Tasks;
 namespace ControlCalidad.Servidor.Servicio.Entidades
 {
     [DataContract]
-    public class ColorDto
+    public class TipoDefectoDto
     {
-
         [DataMember]
-        public string Descripcion { get; set; }
-        [DataMember]
-        public int Codigo { get; set; }
+        public string Tipo { get; set; }
     }
 }

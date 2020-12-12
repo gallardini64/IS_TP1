@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Dominio
 {
-    public class Turno
+    public class Turno : EntityBase
     {
         public DateTime Inicio { get; set; }
         public DateTime Fin { get; set; }
