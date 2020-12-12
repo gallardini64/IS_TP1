@@ -7,5 +7,6 @@ namespace ControlCalidad.Servidor.Servicio.Entidades
     {
         [DataMember]
         public string Pie { get; set; }
+
     }
 }
