@@ -1,8 +1,18 @@
-﻿namespace ControlCalidad.Servidor.Dominio
+﻿using System;
+
+namespace ControlCalidad.Servidor.Dominio
 {
-    public class Defecto
+    public class Defecto: EntityBase
     {
-        public TipoDefecto TipoDefecto { get; set; }
-        public string Descripcion { get; set; }
+        public DateTime Hora { get; set; }
+        public int Cantidad { get; set; }
+        public Pie Pie { get; set; }
+        public virtual EspecificacionDeDefecto EspecificacionDeDefecto { get; set; }
+
+        public Defecto(Pie pie, string descripcion)
+        {
+            Pie = pie;
+                    
+        }
     }
 }

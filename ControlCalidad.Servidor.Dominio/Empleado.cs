@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Dominio
 {
-    class Empleado
+    public class Empleado : EntityBase
     {
+        public int Documento { get; set; }
         public string Nombre { get; set; }
+        public string Email { get; set; }
 
     }
 }
