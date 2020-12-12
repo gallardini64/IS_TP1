@@ -19,11 +19,23 @@ namespace ControlCalidad.Servidor.Servicio
             return _controladorLineas.GetLineas();
         }
 
+        public bool RegistrarDefecto()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool FinalizarOp(OpDto op)
+        {
+            return _controladorOP.FinalizarOp(op);
+        }
+
+        public bool InicializarOp()
+        {
+            return _controladorOP.InicializarOp();
+        }
 
 
-
-
-        public void prueba()
+        public void Prueba()
         {
 
         }

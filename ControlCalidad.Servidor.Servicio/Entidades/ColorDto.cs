@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Servicio.Entidades
 {
-    class ColorDTO
+    public class ColorDto
     {
+
     }
 }

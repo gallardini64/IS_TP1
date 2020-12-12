@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ControlCalidad.Servidor.Servicio
 {
     [DataContract]
-    class OpDto
+    public class OpDto
     {
         [DataMember]
         public int Numero { get; set; }

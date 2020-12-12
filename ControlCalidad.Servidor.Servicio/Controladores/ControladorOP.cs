@@ -13,5 +13,15 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
         {
             throw new NotImplementedException();
         }
+
+        public bool InicializarOp()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool FinalizarOp(OpDto op)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -14,9 +14,18 @@ namespace ControlCalidad.Servidor.Servicio
         [OperationContract]
         LineaDto[] GetLineas();
 
-        
+        [OperationContract]
+        bool RegistrarDefecto();
 
-       
+        [OperationContract]
+        bool FinalizarOp(OpDto op);
+
+        [OperationContract]
+        bool InicializarOp();
+
+
+
+
     }
 
     
