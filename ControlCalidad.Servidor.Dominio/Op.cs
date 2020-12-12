@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Dominio
 {
-    public class Op
+    public class Op: EntityBase
     {
         public int Numero { get; set; }
         public DateTime FechaInicio { get; set; }
@@ -15,9 +15,12 @@ namespace ControlCalidad.Servidor.Dominio
         public virtual Color Color { get; set; }
         public virtual List<Horario> Horarios { get; set; }
         public virtual Linea Linea { get; set; }
+        public EstadoOP Estado{ get; set; }
 
-
-
-
+        public Op()
+        {
+            Horarios = new List<Horario>();
+            Estado = EstadoOP.Activa;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Dominio
 {
-    public class Linea
+    public class Linea: EntityBase
     {
         public int Numero { get; set; }
         

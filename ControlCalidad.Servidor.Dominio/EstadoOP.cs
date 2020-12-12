@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Dominio
 {
-    public class Modelo: EntityBase
+    public enum EstadoOP
     {
-        public string Sku { get; set; }
-        public string Denominacion { get; set; }
-        public int Objetivo { get; set; }
+        Pausada, Activa, Finalizada
     }
 }

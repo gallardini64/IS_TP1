@@ -2,13 +2,14 @@
 
 namespace ControlCalidad.Servidor.Dominio
 {
-    public class Hallazgo
+    public class Defecto: EntityBase
     {
         public DateTime Hora { get; set; }
         public int Cantidad { get; set; }
         public Pie Pie { get; set; }
+        public virtual EspecificacionDeDefecto EspecificacionDeDefecto { get; set; }
 
-        public Hallazgo(Pie pie, string descripcion)
+        public Defecto(Pie pie, string descripcion)
         {
             Pie = pie;
                     
