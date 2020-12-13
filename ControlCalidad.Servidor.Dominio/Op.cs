@@ -16,6 +16,7 @@ namespace ControlCalidad.Servidor.Dominio
         public virtual List<Horario> Horarios { get; set; }
         public virtual Linea Linea { get; set; }
         public EstadoOP Estado{ get; set; }
+        public virtual Horario HorarioActual { get; set; }
 
 
         public Op()
