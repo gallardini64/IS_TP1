@@ -21,7 +21,7 @@ namespace ControlCalidad.Servidor.Servicio
         bool FinalizarOp(OpDto op);
 
         [OperationContract]
-        bool InicializarOp();
+        (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp();
 
 
 

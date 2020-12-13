@@ -1,4 +1,4 @@
-﻿using ControlCalidad.Servidor.Servicio.Entidades;
+﻿using ControlCalidad.Servidor.Servicio;
 using System;
 using System.Collections.Generic;
 using System.Linq;

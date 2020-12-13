@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlCalidad.Servidor.Servicio.Entidades
+namespace ControlCalidad.Servidor.Servicio
 {
     [DataContract]
     public class EmpleadoDto

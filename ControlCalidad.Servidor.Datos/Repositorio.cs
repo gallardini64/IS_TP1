@@ -13,7 +13,7 @@ namespace ControlCalidad.Servidor.Datos
          where T : EntityBase
     {
         private readonly ControlCalidadContext _context;
-        protected Repositorio()
+        private Repositorio()
         {
             if (_context == null)
             {
@@ -50,9 +50,6 @@ namespace ControlCalidad.Servidor.Datos
         {
             _context.Dispose();
         }
-
-
-
 
 
     }

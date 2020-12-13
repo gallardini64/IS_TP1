@@ -13,3 +13,6 @@ C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\Cont
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CopyComplete
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.exe
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.pdb
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\EntityFramework.dll
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Datos.dll.config
+C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Host\bin\Debug\EntityFramework.xml

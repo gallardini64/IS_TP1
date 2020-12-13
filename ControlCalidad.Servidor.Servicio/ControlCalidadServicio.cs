@@ -29,9 +29,9 @@ namespace ControlCalidad.Servidor.Servicio
             return _controladorOP.FinalizarOp(op);
         }
 
-        public bool InicializarOp()
+        public (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp()
         {
-            return _controladorOP.InicializarOp();
+            return _controladorOP.IniciarOP();
         }
 
 
