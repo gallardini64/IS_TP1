@@ -12,20 +12,20 @@ namespace ControlCalidad.Servidor.Host
     {
         static void Main(string[] args)
         {
-            ControladorOP c = new ControladorOP();
-            (ColorDto[], ModeloDto[], LineaDto[]) array = c.IniciarOP();
-            foreach (var item in array.Item1)
-            {
-                Console.WriteLine($"color: {item.Descripcion}");
-            }
-            foreach (var item in array.Item2)
-            {
-                Console.WriteLine($"Modelo: {item.Denominacion}");
-            }
-            foreach (var item in array.Item3)
-            {
-                Console.WriteLine($"linea: {item.Numero}");
-            }
+            //ControladorOP c = new ControladorOP();
+            //(ColorDto[], ModeloDto[], LineaDto[]) array = c.IniciarOP();
+            //foreach (var item in array.Item1)
+            //{
+            //    Console.WriteLine($"color: {item.Descripcion}");
+            //}
+            //foreach (var item in array.Item2)
+            //{
+            //    Console.WriteLine($"Modelo: {item.Denominacion}");
+            //}
+            //foreach (var item in array.Item3)
+            //{
+            //    Console.WriteLine($"linea: {item.Numero}");
+            //}
 
 
             System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);
