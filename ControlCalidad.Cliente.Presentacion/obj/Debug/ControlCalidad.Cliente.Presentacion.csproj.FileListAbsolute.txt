@@ -58,3 +58,8 @@ J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.exe
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.pdb
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.CrearOPVista.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.DefectoAgregar.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.FormBase.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaOP.resources

@@ -56,7 +56,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             for (int i = 0; i < cant; i++)
             {
                 DefectoAgregar panelDefectos = new DefectoAgregar(_presentadorOP);
-                panelDefectos.setParametros(this, especificacionDeDefectos[i].Id);
+               // panelDefectos.setParametros(this, especificacionDeDefectos[i].Id);
                 panelDefectos.Location = new Point(defectoAgregarRep.Location.X, defectoAgregarRep.Location.Y + 90 * i);
                 pReprocesado.Controls.Add(panelDefectos);
                 _panelesDefecto.Add(panelDefectos);
