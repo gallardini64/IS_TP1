@@ -1,4 +1,5 @@
 ﻿using ControlCalidad.Cliente.Presentacion.Interfaces;
+using ControlCalidad.Servidor.Servicio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,15 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
         public PresentadorOP(IVistaOP vista)
         {
             _vista = vista;
+        }
+        public void AgregarDefecto(int numero) 
+        {
+        
+        }
+
+        internal List<EspecificacionDeDefectoDto> ObtenerEspecificacionesDefectosTipo(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

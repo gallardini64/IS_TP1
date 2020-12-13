@@ -120,30 +120,30 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAgregarDefectoDer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAABESURBVEhLYxgFVAX/3779D8JQLvXBqAUEwagFBAHFFsAMoBRDjcME2BSTg6HGkQ4oNoAQGLWA
-        IBi1gCCguQUjETAwAAC/NAVwqaDfPwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAERJREFUSEtj
+        GAVUBf/fvv0PwlAu9cGoBQTBqAUEAcUWwAygFEONwwTYFJODocaRDig2gBAYtYAgGLWAIKC5BSMRMDAA
+        AL80BXCpoN8/AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnAgregarDefectoIzq.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAABESURBVEhLYxgFVAX/3779D8JQLvXBqAUEwagFBAHFFsAMoBRDjcME2BSTg6HGkQ4oNoAQGLWA
-        IBi1gCCguQUjETAwAAC/NAVwqaDfPwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAERJREFUSEtj
+        GAVUBf/fvv0PwlAu9cGoBQTBqAUEAcUWwAygFEONwwTYFJODocaRDig2gBAYtYAgGLWAIKC5BSMRMDAA
+        AL80BXCpoN8/AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnQuitarDefectoDer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAA1SURBVEhLYxgFo2AUjAISwf937/b/f/v2P4V4L9Q4TACUPIymmBx8EGrcKBgFo2AUEAcYGADq
-        k4ln7+7k0gAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAADVJREFUSEtj
+        GAWjYBSMAhLB/3fv9v9/+/Y/hXgv1DhMAJQ8jKaYHHwQatwoGAWjYBQQBxgYAOqTiWfv7uTSAAAAAElF
+        TkSuQmCC
 </value>
   </data>
   <data name="btnQuitarDefectoIzq.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAA1SURBVEhLYxgFo2AUjAISwf937/b/f/v2P4V4L9Q4TACUPIymmBx8EGrcKBgFo2AUEAcYGADq
-        k4ln7+7k0gAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAADVJREFUSEtj
+        GAWjYBSMAhLB/3fv9v9/+/Y/hXgv1DhMAJQ8jKaYHHwQatwoGAWjYBQQBxgYAOqTiWfv7uTSAAAAAElF
+        TkSuQmCC
 </value>
   </data>
 </root>

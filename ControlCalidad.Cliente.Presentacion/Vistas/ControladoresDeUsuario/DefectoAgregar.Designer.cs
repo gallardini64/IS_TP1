@@ -107,6 +107,7 @@
             this.btnAgregarDefectoDer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregarDefectoDer.Textcolor = System.Drawing.Color.White;
             this.btnAgregarDefectoDer.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarDefectoDer.Click += new System.EventHandler(this.btnAgregarDefectoDer_Click);
             // 
             // btnAgregarDefectoIzq
             // 

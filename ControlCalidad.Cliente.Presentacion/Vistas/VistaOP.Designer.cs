@@ -44,15 +44,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lbReprocesado = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.defectoAgregarObs = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.DefectoAgregar();
-            this.defectoAgregarRep = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.DefectoAgregar();
             this.cbPie = new MetroFramework.Controls.MetroComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnAgregarDefectoIzq = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnQuitarDefectoIzq = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbContadorDer = new System.Windows.Forms.Label();
+            this.btnQuitarDefectoIzq = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAgregarDefectoIzq = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label11 = new System.Windows.Forms.Label();
             this.hermanado1 = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado();
             this.btSalir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pObservado.SuspendLayout();
@@ -180,6 +178,14 @@
             this.pObservado.Size = new System.Drawing.Size(462, 392);
             this.pObservado.TabIndex = 33;
             // 
+            // defectoAgregarObs
+            // 
+            this.defectoAgregarObs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
+            this.defectoAgregarObs.Location = new System.Drawing.Point(3, 67);
+            this.defectoAgregarObs.Name = "defectoAgregarObs";
+            this.defectoAgregarObs.Size = new System.Drawing.Size(454, 70);
+            this.defectoAgregarObs.TabIndex = 21;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -229,6 +235,14 @@
             this.pReprocesado.Size = new System.Drawing.Size(462, 392);
             this.pReprocesado.TabIndex = 34;
             // 
+            // defectoAgregarRep
+            // 
+            this.defectoAgregarRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
+            this.defectoAgregarRep.Location = new System.Drawing.Point(3, 67);
+            this.defectoAgregarRep.Name = "defectoAgregarRep";
+            this.defectoAgregarRep.Size = new System.Drawing.Size(454, 70);
+            this.defectoAgregarRep.TabIndex = 21;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -265,22 +279,6 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Izquierdo";
             // 
-            // defectoAgregarObs
-            // 
-            this.defectoAgregarObs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.defectoAgregarObs.Location = new System.Drawing.Point(3, 67);
-            this.defectoAgregarObs.Name = "defectoAgregarObs";
-            this.defectoAgregarObs.Size = new System.Drawing.Size(454, 70);
-            this.defectoAgregarObs.TabIndex = 21;
-            // 
-            // defectoAgregarRep
-            // 
-            this.defectoAgregarRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.defectoAgregarRep.Location = new System.Drawing.Point(3, 67);
-            this.defectoAgregarRep.Name = "defectoAgregarRep";
-            this.defectoAgregarRep.Size = new System.Drawing.Size(454, 70);
-            this.defectoAgregarRep.TabIndex = 21;
-            // 
             // cbPie
             // 
             this.cbPie.BackColor = System.Drawing.Color.White;
@@ -300,7 +298,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(86, 81);
+            this.label2.Location = new System.Drawing.Point(86, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 21);
             this.label2.TabIndex = 27;
@@ -319,54 +317,16 @@
             this.panel1.Size = new System.Drawing.Size(462, 61);
             this.panel1.TabIndex = 34;
             // 
-            // label11
+            // lbContadorDer
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(86, 22);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 21);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "PAR PRIMERA";
-            // 
-            // btnAgregarDefectoIzq
-            // 
-            this.btnAgregarDefectoIzq.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
-            this.btnAgregarDefectoIzq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
-            this.btnAgregarDefectoIzq.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarDefectoIzq.BackgroundImage")));
-            this.btnAgregarDefectoIzq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAgregarDefectoIzq.BorderRadius = 5;
-            this.btnAgregarDefectoIzq.ButtonText = "";
-            this.btnAgregarDefectoIzq.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarDefectoIzq.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAgregarDefectoIzq.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnAgregarDefectoIzq.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarDefectoIzq.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAgregarDefectoIzq.Iconimage = null;
-            this.btnAgregarDefectoIzq.Iconimage_right = null;
-            this.btnAgregarDefectoIzq.Iconimage_right_Selected = null;
-            this.btnAgregarDefectoIzq.Iconimage_Selected = null;
-            this.btnAgregarDefectoIzq.IconMarginLeft = 0;
-            this.btnAgregarDefectoIzq.IconMarginRight = 0;
-            this.btnAgregarDefectoIzq.IconRightVisible = true;
-            this.btnAgregarDefectoIzq.IconRightZoom = 0D;
-            this.btnAgregarDefectoIzq.IconVisible = true;
-            this.btnAgregarDefectoIzq.IconZoom = 90D;
-            this.btnAgregarDefectoIzq.IsTab = false;
-            this.btnAgregarDefectoIzq.Location = new System.Drawing.Point(277, 13);
-            this.btnAgregarDefectoIzq.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnAgregarDefectoIzq.Name = "btnAgregarDefectoIzq";
-            this.btnAgregarDefectoIzq.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
-            this.btnAgregarDefectoIzq.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
-            this.btnAgregarDefectoIzq.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAgregarDefectoIzq.selected = false;
-            this.btnAgregarDefectoIzq.Size = new System.Drawing.Size(39, 38);
-            this.btnAgregarDefectoIzq.TabIndex = 29;
-            this.btnAgregarDefectoIzq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAgregarDefectoIzq.Textcolor = System.Drawing.Color.White;
-            this.btnAgregarDefectoIzq.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbContadorDer.AutoSize = true;
+            this.lbContadorDer.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.lbContadorDer.ForeColor = System.Drawing.Color.White;
+            this.lbContadorDer.Location = new System.Drawing.Point(335, 22);
+            this.lbContadorDer.Name = "lbContadorDer";
+            this.lbContadorDer.Size = new System.Drawing.Size(21, 22);
+            this.lbContadorDer.TabIndex = 32;
+            this.lbContadorDer.Text = "0";
             // 
             // btnQuitarDefectoIzq
             // 
@@ -405,16 +365,54 @@
             this.btnQuitarDefectoIzq.Textcolor = System.Drawing.Color.White;
             this.btnQuitarDefectoIzq.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // lbContadorDer
+            // btnAgregarDefectoIzq
             // 
-            this.lbContadorDer.AutoSize = true;
-            this.lbContadorDer.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.lbContadorDer.ForeColor = System.Drawing.Color.White;
-            this.lbContadorDer.Location = new System.Drawing.Point(335, 22);
-            this.lbContadorDer.Name = "lbContadorDer";
-            this.lbContadorDer.Size = new System.Drawing.Size(21, 22);
-            this.lbContadorDer.TabIndex = 32;
-            this.lbContadorDer.Text = "0";
+            this.btnAgregarDefectoIzq.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btnAgregarDefectoIzq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btnAgregarDefectoIzq.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarDefectoIzq.BackgroundImage")));
+            this.btnAgregarDefectoIzq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAgregarDefectoIzq.BorderRadius = 5;
+            this.btnAgregarDefectoIzq.ButtonText = "";
+            this.btnAgregarDefectoIzq.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarDefectoIzq.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAgregarDefectoIzq.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnAgregarDefectoIzq.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarDefectoIzq.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAgregarDefectoIzq.Iconimage = null;
+            this.btnAgregarDefectoIzq.Iconimage_right = null;
+            this.btnAgregarDefectoIzq.Iconimage_right_Selected = null;
+            this.btnAgregarDefectoIzq.Iconimage_Selected = null;
+            this.btnAgregarDefectoIzq.IconMarginLeft = 0;
+            this.btnAgregarDefectoIzq.IconMarginRight = 0;
+            this.btnAgregarDefectoIzq.IconRightVisible = true;
+            this.btnAgregarDefectoIzq.IconRightZoom = 0D;
+            this.btnAgregarDefectoIzq.IconVisible = true;
+            this.btnAgregarDefectoIzq.IconZoom = 90D;
+            this.btnAgregarDefectoIzq.IsTab = false;
+            this.btnAgregarDefectoIzq.Location = new System.Drawing.Point(277, 13);
+            this.btnAgregarDefectoIzq.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAgregarDefectoIzq.Name = "btnAgregarDefectoIzq";
+            this.btnAgregarDefectoIzq.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btnAgregarDefectoIzq.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btnAgregarDefectoIzq.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAgregarDefectoIzq.selected = false;
+            this.btnAgregarDefectoIzq.Size = new System.Drawing.Size(39, 38);
+            this.btnAgregarDefectoIzq.TabIndex = 29;
+            this.btnAgregarDefectoIzq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregarDefectoIzq.Textcolor = System.Drawing.Color.White;
+            this.btnAgregarDefectoIzq.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label11.Location = new System.Drawing.Point(86, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(117, 21);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "PAR PRIMERA";
             // 
             // hermanado1
             // 
@@ -445,7 +443,7 @@
             this.btSalir.IconRightVisible = true;
             this.btSalir.IconRightZoom = 0D;
             this.btSalir.IconVisible = true;
-            this.btSalir.IconZoom = 70D;
+            this.btSalir.IconZoom = 60D;
             this.btSalir.IsTab = false;
             this.btSalir.Location = new System.Drawing.Point(914, 660);
             this.btSalir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
