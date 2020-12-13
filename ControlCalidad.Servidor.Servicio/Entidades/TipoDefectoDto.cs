@@ -5,12 +5,18 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlCalidad.Servidor.Servicio.Entidades
+namespace ControlCalidad.Servidor.Servicio
 {
     [DataContract]
     public class TipoDefectoDto
     {
         [DataMember]
         public string Tipo { get; set; }
+
+        
+        public TipoDefectoDto(string tipo)
+        {
+            Tipo = tipo;
+        }
     }
 }

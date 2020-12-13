@@ -52,11 +52,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlCalidadContext.cs" />
+    <Compile Include="ControlCalidadDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlCalidadDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202012122057311_Inicial.cs" />
     <Compile Include="Migrations\202012122057311_Inicial.designer.cs">
       <DependentUpon>202012122057311_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012132005378_horarioActual.cs" />
+    <Compile Include="Migrations\202012132005378_horarioActual.designer.cs">
+      <DependentUpon>202012132005378_horarioActual.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Repositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -68,11 +82,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ControlCalidadDBDataSet.xsc">
+      <DependentUpon>ControlCalidadDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ControlCalidadDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControlCalidadDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ControlCalidadDBDataSet.xss">
+      <DependentUpon>ControlCalidadDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202012122057311_Inicial.resx">
       <DependentUpon>202012122057311_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012132005378_horarioActual.resx">
+      <DependentUpon>202012132005378_horarioActual.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

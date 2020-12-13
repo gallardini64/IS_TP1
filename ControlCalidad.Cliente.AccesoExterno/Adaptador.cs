@@ -19,9 +19,12 @@ namespace ControlCalidad.Cliente.AccesoExterno
             }
         }
 
-        public static void funcionEjemplo()
-        {
-
-        }
+        //public static EspecificacionDeDefectoDto[] ObtenerEspecificacionesDefectosTipo(string tipo)
+        //{
+        //    using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+        //    {
+        //        return servicio.ObtenerEspecificacionesDeDefectosTipo(tipo);
+        //    }
+        //}
     }
 }

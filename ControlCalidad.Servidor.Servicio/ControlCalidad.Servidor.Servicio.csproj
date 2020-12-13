@@ -54,7 +54,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ControladorColor.cs" />
+    <Compile Include="Controladores\ControladorDefectos.cs" />
+    <Compile Include="Controladores\ControladorEspecificacionDeDefecto.cs" />
     <Compile Include="Controladores\ControladorLineas.cs" />
+    <Compile Include="Controladores\ControladorModelo.cs" />
     <Compile Include="Controladores\ControladorOP.cs" />
     <Compile Include="Entidades\ColorDto.cs" />
     <Compile Include="Entidades\DefectoDto.cs" />

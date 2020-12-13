@@ -5,11 +5,13 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlCalidad.Servidor.Servicio.Entidades
+namespace ControlCalidad.Servidor.Servicio
 {
     [DataContract]
     public class EspecificacionDeDefectoDto
     {
+        [DataMember]
+        public int id { get; set; }
         [DataMember]
         public TipoDefectoDto TipoDefecto { get; set; }
         [DataMember]
