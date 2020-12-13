@@ -33,6 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\BUNIFU UI\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,17 +58,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Interfaces\IVistaInteractiva.cs" />
+    <Compile Include="Interfaces\IVistaLineaProduccion.cs" />
+    <Compile Include="Interfaces\IVistaOP.cs" />
+    <Compile Include="Interfaces\IVistaSupervisorDeLinea.cs" />
+    <Compile Include="Presentadores\PresentadorAcceso.cs" />
+    <Compile Include="Presentadores\PresentadorInicio.cs" />
+    <Compile Include="Presentadores\PresentadorOP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Vistas\ControladoresDeUsuario\CrearOPVista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\CrearOPVista.Designer.cs">
+      <DependentUpon>CrearOPVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\DefectoAgregar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\DefectoAgregar.Designer.cs">
+      <DependentUpon>DefectoAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\Hermanado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\Hermanado.Designer.cs">
+      <DependentUpon>Hermanado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VistaAcceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VistaAcceso.Designer.cs">
+      <DependentUpon>VistaAcceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VistaInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VistaInicio.Designer.cs">
+      <DependentUpon>VistaInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VistaLineaProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VistaLineaProduccion.Designer.cs">
+      <DependentUpon>VistaLineaProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VistaOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VistaOP.Designer.cs">
+      <DependentUpon>VistaOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VistaSupervisorDeLinea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VistaSupervisorDeLinea.Designer.cs">
+      <DependentUpon>VistaSupervisorDeLinea.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +130,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\ControladoresDeUsuario\CrearOPVista.resx">
+      <DependentUpon>CrearOPVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ControladoresDeUsuario\DefectoAgregar.resx">
+      <DependentUpon>DefectoAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ControladoresDeUsuario\Hermanado.resx">
+      <DependentUpon>Hermanado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VistaOP.resx">
+      <DependentUpon>VistaOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +164,18 @@
       <Project>{38e6ad54-08b2-440c-b5fb-15f69469e260}</Project>
       <Name>ControlCalidad.Cliente.AccesoExterno</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ControlCalidad.Servidor.Servicio\ControlCalidad.Servidor.Servicio.csproj">
+      <Project>{FED95E7D-BE93-4492-8937-966116FF9DA7}</Project>
+      <Name>ControlCalidad.Servidor.Servicio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\color_mode_24px.png" />
+    <Content Include="Resources\exit_32px.png" />
+    <Content Include="Resources\minus_24px.png" />
+    <Content Include="Resources\plus_math_24px.png" />
+    <Content Include="Resources\shoes_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
