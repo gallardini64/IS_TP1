@@ -14,6 +14,7 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.pdb
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.Inicial.resources
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.csproj.GenerateResource.cache
+<<<<<<< HEAD
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Datos.dll.config
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Datos.dll
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Datos.pdb
@@ -31,3 +32,21 @@ C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Datos\obj\Debug\Con
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.dll
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.pdb
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.horarioActual.resources
+=======
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Datos.dll.config
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Datos.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Datos.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Dominio.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\EntityFramework.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\EntityFramework.SqlServer.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\EntityFramework.xml
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\EntityFramework.SqlServer.xml
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.csprojAssemblyReference.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.Inicial.resources
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.csproj.GenerateResource.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.csproj.CoreCompileInputs.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.csproj.CopyComplete
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.pdb
+>>>>>>> origin/frontend
