@@ -12,5 +12,11 @@ namespace ControlCalidad.Servidor.Servicio
     {
         [DataMember]
         public string Tipo { get; set; }
+
+        
+        public TipoDefectoDto(string tipo)
+        {
+            Tipo = tipo;
+        }
     }
 }

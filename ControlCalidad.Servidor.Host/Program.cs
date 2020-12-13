@@ -27,6 +27,14 @@ namespace ControlCalidad.Servidor.Host
             //    Console.WriteLine($"linea: {item.Numero}");
             //}
 
+            ControladorEspecificacionDeDefecto c = new ControladorEspecificacionDeDefecto();
+            EspecificacionDeDefectoDto[] array = c.GetEspecificaciones("Observado");
+            foreach (var item in array)
+            {
+                Console.WriteLine($"especificacion: tipo {item.TipoDefecto.Tipo} descripcion {item.Descripcion}" );
+            }
+
+
 
             System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);
         }

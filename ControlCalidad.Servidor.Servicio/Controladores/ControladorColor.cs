@@ -9,7 +9,7 @@ using ControlCalidad.Servidor.Servicio;
 
 namespace ControlCalidad.Servidor.Servicio.Controladores
 {
-    class ControladorColor
+    public class ControladorColor
     {
         private Repositorio<Color> _repositorio = Repositorio<Color>.GetInstancia();
 
