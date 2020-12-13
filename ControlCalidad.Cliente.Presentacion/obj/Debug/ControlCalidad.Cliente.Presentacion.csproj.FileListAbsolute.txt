@@ -26,35 +26,3 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csproj.CopyComplete
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.exe
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.pdb
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Cliente.Presentacion.exe.config
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Cliente.Presentacion.exe
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Cliente.Presentacion.pdb
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\Bunifu_UI_v1.5.3.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Cliente.AccesoExterno.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.Servicio.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\MetroFramework.Design.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\MetroFramework.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\MetroFramework.Fonts.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.Datos.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.Dominio.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\EntityFramework.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Cliente.AccesoExterno.pdb
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Cliente.AccesoExterno.dll.config
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.Servicio.pdb
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.Servicio.dll.config
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.Datos.pdb
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.Datos.dll.config
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\EntityFramework.xml
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csprojAssemblyReference.cache
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Properties.Resources.resources
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.CrearOPVista.resources
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.DefectoAgregar.resources
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.FormBase.resources
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaOP.resources
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csproj.GenerateResource.cache
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csproj.CoreCompileInputs.cache
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csproj.CopyComplete
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.exe
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.pdb
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado.resources

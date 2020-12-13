@@ -3,18 +3,9 @@ C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\bin\Debug\C
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csproj.CoreCompileInputs.cache
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.dll
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.pdb
-<<<<<<< HEAD
 C:\UTN\proyectos\soft\ControlCalidad\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csprojAssemblyReference.cache
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csproj.CoreCompileInputs.cache
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.pdb
-=======
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csprojAssemblyReference.cache
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csproj.CoreCompileInputs.cache
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.dll
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.pdb
->>>>>>> origin/frontend
