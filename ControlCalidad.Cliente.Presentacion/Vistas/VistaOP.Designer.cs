@@ -53,6 +53,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.hermanado1 = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado();
             this.btSalir = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.defectoAgregar1 = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.DefectoAgregar();
             this.pObservado.SuspendLayout();
             this.pReprocesado.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -169,7 +170,7 @@
             // 
             this.pObservado.AutoScroll = true;
             this.pObservado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.pObservado.Controls.Add(this.defectoAgregarObs);
+            this.pObservado.Controls.Add(this.defectoAgregar1);
             this.pObservado.Controls.Add(this.label7);
             this.pObservado.Controls.Add(this.label6);
             this.pObservado.Controls.Add(this.lbObservado);
@@ -177,14 +178,6 @@
             this.pObservado.Name = "pObservado";
             this.pObservado.Size = new System.Drawing.Size(462, 392);
             this.pObservado.TabIndex = 33;
-            // 
-            // defectoAgregarObs
-            // 
-            this.defectoAgregarObs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.defectoAgregarObs.Location = new System.Drawing.Point(3, 67);
-            this.defectoAgregarObs.Name = "defectoAgregarObs";
-            this.defectoAgregarObs.Size = new System.Drawing.Size(454, 70);
-            this.defectoAgregarObs.TabIndex = 21;
             // 
             // label7
             // 
@@ -226,7 +219,6 @@
             // 
             this.pReprocesado.AutoScroll = true;
             this.pReprocesado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.pReprocesado.Controls.Add(this.defectoAgregarRep);
             this.pReprocesado.Controls.Add(this.label9);
             this.pReprocesado.Controls.Add(this.lbReprocesado);
             this.pReprocesado.Controls.Add(this.label8);
@@ -234,14 +226,6 @@
             this.pReprocesado.Name = "pReprocesado";
             this.pReprocesado.Size = new System.Drawing.Size(462, 392);
             this.pReprocesado.TabIndex = 34;
-            // 
-            // defectoAgregarRep
-            // 
-            this.defectoAgregarRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.defectoAgregarRep.Location = new System.Drawing.Point(3, 67);
-            this.defectoAgregarRep.Name = "defectoAgregarRep";
-            this.defectoAgregarRep.Size = new System.Drawing.Size(454, 70);
-            this.defectoAgregarRep.TabIndex = 21;
             // 
             // label9
             // 
@@ -458,6 +442,14 @@
             this.btSalir.Textcolor = System.Drawing.Color.White;
             this.btSalir.TextFont = new System.Drawing.Font("Century Gothic", 12F);
             // 
+            // defectoAgregar1
+            // 
+            this.defectoAgregar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
+            this.defectoAgregar1.Location = new System.Drawing.Point(-9, 87);
+            this.defectoAgregar1.Name = "defectoAgregar1";
+            this.defectoAgregar1.Size = new System.Drawing.Size(483, 70);
+            this.defectoAgregar1.TabIndex = 21;
+            // 
             // VistaOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,5 +514,6 @@
         private System.Windows.Forms.Label lbContadorDer;
         private ControladoresDeUsuario.Hermanado hermanado1;
         private Bunifu.Framework.UI.BunifuFlatButton btSalir;
+        private ControladoresDeUsuario.DefectoAgregar defectoAgregar1;
     }
 }

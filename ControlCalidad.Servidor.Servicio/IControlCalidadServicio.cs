@@ -23,7 +23,8 @@ namespace ControlCalidad.Servidor.Servicio
         [OperationContract]
         (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp();
 
-
+        [OperationContract]
+        EspecificacionDeDefectoDto[] GetEspecificacionDeDefectoTipo(string tipo);
 
 
     }

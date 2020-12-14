@@ -17,6 +17,6 @@ namespace ControlCalidad.Servidor.Servicio
         [DataMember]
         public PieDto Pie { get; set; }
         [DataMember]
-        public virtual EspecificacionDeDefectoDto EspecificacionDeDefecto { get; set; }
+        public EspecificacionDeDefectoDto EspecificacionDeDefecto { get; set; }
     }
 }

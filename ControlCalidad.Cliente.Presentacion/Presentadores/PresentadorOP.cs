@@ -1,5 +1,6 @@
-﻿using ControlCalidad.Cliente.Presentacion.Interfaces;
-using ControlCalidad.Servidor.Servicio.Entidades;
+﻿using ControlCalidad.Cliente.AccesoExterno;
+using ControlCalidad.Cliente.Presentacion.Interfaces;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,9 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
         
         }
 
-        internal List<EspecificacionDeDefectoDto> ObtenerEspecificacionesDefectosTipo(string v)
+        public dynamic[] ObtenerEspecificacionesDefectosTipo(string v)
         {
-            throw new NotImplementedException();
+            return Adaptador.ObtenerEspecificacionesDefectosTipo(v);
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ControlCalidad.Cliente.Presentacion.Interfaces;
 using ControlCalidad.Servidor.Servicio;
-using ControlCalidad.Servidor.Servicio.Entidades;
+
 
 namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
 {

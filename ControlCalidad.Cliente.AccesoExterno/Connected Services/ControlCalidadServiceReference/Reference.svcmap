@@ -22,10 +22,11 @@
     <MetadataSource Address="http://localhost:8733/ControlCalidadServicio/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="e7fb72ed-6ba2-4560-98c2-f694548997b3" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="6e87b276-2316-4fba-be50-d8f80c37228a" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?disco" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="77bd37fd-e19d-432c-8784-ef04a5542a86" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?xsd=xsd1" />
     <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="f8489568-adb2-4c48-b8a5-df3cc900c046" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?xsd=xsd0" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="6e87b276-2316-4fba-be50-d8f80c37228a" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?disco" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="d6eae391-4d0c-4c8d-be1a-f4f8d8909639" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?xsd=xsd3" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="e7fb72ed-6ba2-4560-98c2-f694548997b3" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?xsd=xsd2" />
     <MetadataFile FileName="ControlCalidadServicio.wsdl" MetadataType="Wsdl" ID="8fdbc3b8-b2f2-4f5a-aa78-d54e85023312" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?wsdl" />
   </Metadata>
   <Extensions>

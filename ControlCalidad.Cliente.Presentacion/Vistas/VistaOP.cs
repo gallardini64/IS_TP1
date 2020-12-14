@@ -1,8 +1,6 @@
 ﻿using ControlCalidad.Cliente.Presentacion.Interfaces;
 using ControlCalidad.Cliente.Presentacion.Presentadores;
 using ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario;
-using ControlCalidad.Servidor.Servicio;
-using ControlCalidad.Servidor.Servicio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,22 +21,23 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         {
             InitializeComponent();
             _presentadorOP = new PresentadorOP(this);
+            CargarDefectosDeReprocesado();
         }
 
-        public void ActivarControles(OpDto op)
-        {
-            throw new NotImplementedException();
-        }
+        //public void ActivarControles(OpDto op)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public void AgregarDefecto(int id, string pie)
         {
             throw new NotImplementedException();
         }
 
-        public void CargarOrden(OpDto op)
-        {
-            throw new NotImplementedException();
-        }
+        //public void CargarOrden(OpDto op)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public void DesactivarControles()
         {
@@ -49,18 +48,22 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         {
             throw new NotImplementedException();
         }
+
         private void CargarDefectosDeReprocesado()
         {
-            List<EspecificacionDeDefectoDto> especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Reprocesado");
-            int cant = especificacionDeDefectos.Count;
-            for (int i = 0; i < cant; i++)
+            dynamic[] especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Reprocesado");
+            var i = 0;
+            foreach (var item in especificacionDeDefectos)
             {
                 DefectoAgregar panelDefectos = new DefectoAgregar(_presentadorOP);
-               // panelDefectos.setParametros(this, especificacionDeDefectos[i].Id);
-                panelDefectos.Location = new Point(defectoAgregarRep.Location.X, defectoAgregarRep.Location.Y + 90 * i);
+                panelDefectos.setParametros(this, item.id, item.Descripcion);
+                panelDefectos.Location = new Point(defectoAgregar1.Location.X, defectoAgregar1.Location.Y + 90 * i);
                 pReprocesado.Controls.Add(panelDefectos);
                 _panelesDefecto.Add(panelDefectos);
+                i++;
             }
+
+            
             //bindingSourceED.DataSource = especificacionDeDefectos;
             //foreach (DataGridViewRow item in DataGridDefectos.Rows)
             //{

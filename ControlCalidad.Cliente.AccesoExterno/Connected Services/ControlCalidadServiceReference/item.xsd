@@ -13,4 +13,84 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="LineaDto" nillable="true" type="tns:LineaDto" />
+  <xs:complexType name="OpDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color" nillable="true" type="tns:ColorDto" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="tns:EstadoOPDto" />
+      <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HorarioActual" nillable="true" type="tns:HorarioDto" />
+      <xs:element minOccurs="0" name="Horarios" nillable="true" type="tns:ArrayOfHorarioDto" />
+      <xs:element minOccurs="0" name="Linea" nillable="true" type="tns:LineaDto" />
+      <xs:element minOccurs="0" name="Modelo" nillable="true" type="tns:ModeloDto" />
+      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpDto" nillable="true" type="tns:OpDto" />
+  <xs:complexType name="ColorDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ColorDto" nillable="true" type="tns:ColorDto" />
+  <xs:complexType name="EstadoOPDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadoOPDto" nillable="true" type="tns:EstadoOPDto" />
+  <xs:complexType name="HorarioDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Inicio" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HorarioDto" nillable="true" type="tns:HorarioDto" />
+  <xs:complexType name="ArrayOfHorarioDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HorarioDto" nillable="true" type="tns:HorarioDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHorarioDto" nillable="true" type="tns:ArrayOfHorarioDto" />
+  <xs:complexType name="ModeloDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Denominacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Objetivo" type="xs:int" />
+      <xs:element minOccurs="0" name="Sku" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModeloDto" nillable="true" type="tns:ModeloDto" />
+  <xs:complexType name="ArrayOfColorDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ColorDto" nillable="true" type="tns:ColorDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfColorDto" nillable="true" type="tns:ArrayOfColorDto" />
+  <xs:complexType name="ArrayOfModeloDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModeloDto" nillable="true" type="tns:ModeloDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModeloDto" nillable="true" type="tns:ArrayOfModeloDto" />
+  <xs:complexType name="ArrayOfEspecificacionDeDefectoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EspecificacionDeDefectoDto" nillable="true" type="tns:EspecificacionDeDefectoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEspecificacionDeDefectoDto" nillable="true" type="tns:ArrayOfEspecificacionDeDefectoDto" />
+  <xs:complexType name="EspecificacionDeDefectoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDefecto" nillable="true" type="tns:TipoDefectoDto" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EspecificacionDeDefectoDto" nillable="true" type="tns:EspecificacionDeDefectoDto" />
+  <xs:complexType name="TipoDefectoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoDefectoDto" nillable="true" type="tns:TipoDefectoDto" />
 </xs:schema>

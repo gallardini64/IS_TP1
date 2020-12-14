@@ -19,12 +19,12 @@ namespace ControlCalidad.Cliente.AccesoExterno
             }
         }
 
-        //public static EspecificacionDeDefectoDto[] ObtenerEspecificacionesDefectosTipo(string tipo)
-        //{
-        //    using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
-        //    {
-        //        return servicio.ObtenerEspecificacionesDeDefectosTipo(tipo);
-        //    }
-        //}
+        public static EspecificacionDeDefectoDto[] ObtenerEspecificacionesDefectosTipo(string tipo)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.GetEspecificacionDeDefectoTipo(tipo);
+            }
+        }
     }
 }

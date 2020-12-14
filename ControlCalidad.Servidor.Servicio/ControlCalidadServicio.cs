@@ -14,6 +14,7 @@ namespace ControlCalidad.Servidor.Servicio
     {
         private ControladorLineas _controladorLineas = new ControladorLineas();
         private ControladorOP _controladorOP = new ControladorOP();
+        private ControladorEspecificacionDeDefecto _controladorEspec = new ControladorEspecificacionDeDefecto();
         public LineaDto[] GetLineas()
         {
             return _controladorLineas.GetLineas();
@@ -34,6 +35,10 @@ namespace ControlCalidad.Servidor.Servicio
             return _controladorOP.IniciarOP();
         }
 
+        public EspecificacionDeDefectoDto[] GetEspecificacionDeDefectoTipo(string tipo)
+        {
+            return _controladorEspec.GetEspecificaciones(tipo);
+        }
 
         public void Prueba()
         {

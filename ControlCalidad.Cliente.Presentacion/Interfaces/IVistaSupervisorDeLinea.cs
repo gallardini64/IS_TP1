@@ -1,5 +1,4 @@
 ﻿using ControlCalidad.Servidor.Servicio;
-using ControlCalidad.Servidor.Servicio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;

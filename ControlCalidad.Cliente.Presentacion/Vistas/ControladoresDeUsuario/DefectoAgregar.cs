@@ -14,6 +14,13 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
     public partial class DefectoAgregar : UserControl
     {
         private PresentadorOP _presentadorOP;
+        private VistaOP _vistaOP;
+        private int _id;
+
+        public DefectoAgregar()
+        {
+            InitializeComponent();
+        }
         public DefectoAgregar(PresentadorOP presentador)
         {
             InitializeComponent();
@@ -24,9 +31,11 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
         {
             
         }
-        private void setParametros(DefectoAgregar defectoAgregar, object id)
+        public void setParametros(VistaOP vista, int id, string descripcion)
         {
-            throw new NotImplementedException();
+            _vistaOP = vista;
+            _id = id;
+            lbDefecto.Text = $"{descripcion} {_id}";
         }
     }
 }

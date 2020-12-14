@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+      <xsd:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IControlCalidadServicio_GetLineas_InputMessage">
@@ -13,16 +14,92 @@
   <wsdl:message name="IControlCalidadServicio_GetLineas_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetLineasResponse" />
   </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_RegistrarDefecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarDefecto" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_RegistrarDefecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarDefectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_FinalizarOp_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizarOp" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_FinalizarOp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizarOpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_InicializarOp_InputMessage">
+    <wsdl:part name="parameters" element="tns:InicializarOp" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_InicializarOp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InicializarOpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetEspecificacionDeDefectoTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEspecificacionDeDefectoTipo" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetEspecificacionDeDefectoTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEspecificacionDeDefectoTipoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IControlCalidadServicio">
     <wsdl:operation name="GetLineas">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetLineas" message="tns:IControlCalidadServicio_GetLineas_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetLineasResponse" message="tns:IControlCalidadServicio_GetLineas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDefecto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto" message="tns:IControlCalidadServicio_RegistrarDefecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefectoResponse" message="tns:IControlCalidadServicio_RegistrarDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizarOp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/FinalizarOp" message="tns:IControlCalidadServicio_FinalizarOp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/FinalizarOpResponse" message="tns:IControlCalidadServicio_FinalizarOp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InicializarOp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/InicializarOp" message="tns:IControlCalidadServicio_InicializarOp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/InicializarOpResponse" message="tns:IControlCalidadServicio_InicializarOp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEspecificacionDeDefectoTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetEspecificacionDeDefectoTipo" message="tns:IControlCalidadServicio_GetEspecificacionDeDefectoTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetEspecificacionDeDefectoTipoResponse" message="tns:IControlCalidadServicio_GetEspecificacionDeDefectoTipo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IControlCalidadServicio" type="tns:IControlCalidadServicio">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetLineas">
       <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GetLineas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDefecto">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizarOp">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/FinalizarOp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InicializarOp">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/InicializarOp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEspecificacionDeDefectoTipo">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GetEspecificacionDeDefectoTipo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

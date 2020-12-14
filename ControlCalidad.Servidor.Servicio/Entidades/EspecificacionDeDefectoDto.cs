@@ -11,7 +11,7 @@ namespace ControlCalidad.Servidor.Servicio
     public class EspecificacionDeDefectoDto
     {
         [DataMember]
-        public int id { get; set; }
+        public int Id { get; set; }
         [DataMember]
         public TipoDefectoDto TipoDefecto { get; set; }
         [DataMember]
