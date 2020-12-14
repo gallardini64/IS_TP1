@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlCalidad.Servidor.Servicio.CapaTransversal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,12 @@ namespace ControlCalidad.Servidor.Dominio
             Horarios = new List<Horario>();
             Estado = EstadoOP.Activa;
         }
+
+        public Op(int numero)
+        {
+            Numero = numero;
+        }
+
         public bool RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now)
         {
             if (HorarioActual.Turno.SoyTurnoActual())
@@ -31,15 +38,15 @@ namespace ControlCalidad.Servidor.Dominio
                 HorarioActual.RegistrarDefecto(numero, especDe, pie, now);
                 return true;
             }
-            //else
-            //{
-            //    if ((int)HorarioActual.Turno.HeFilalizadoHace().TotalMinutes <
-            //        FactoriaDeEstrategias.GetInstancia().GetEstrategiaTiempoLimite().getMinLimiteDeTiempoDeOperaciones)
-            //    {
-            //        HorarioActual.RegistrarDefecto(numero, especDe, pie, now);
-            //        return true;
-            //    }
-            //}
+            else
+            {
+                if ((int)HorarioActual.Turno.HeFilalizadoHace().TotalMinutes <
+                    FactoriaDeEstrategias.GetInstancia().GetEstrategiaTiempoLimite().getMinLimiteDeTiempoDeOperaciones())
+                {
+                    HorarioActual.RegistrarDefecto(numero, especDe, pie, now);
+                    return true;
+                }
+            }
             return false;
         }
 
