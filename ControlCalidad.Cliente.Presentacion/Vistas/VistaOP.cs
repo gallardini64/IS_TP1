@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ControlCalidad.Cliente.Presentacion.Vistas
 {
-    public partial class VistaOP : Form, IVistaOP
+    public partial class VistaOP : FormBase, IVistaOP
     {
         private PresentadorOP _presentadorOP;
         private List<DefectoAgregar> _panelesDefecto = new List<DefectoAgregar>();
@@ -68,7 +68,20 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             _panelesDefecto.FirstOrDefault(e => e._id == idEspDefecto).RegistrarDefectoTipo(numero);
         }
 
+        private void VistaOP_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseUp(sender, e);
+        }
 
+        private void VistaOP_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown(sender, e);
+        }
+
+        private void VistaOP_MouseMove(object sender, MouseEventArgs e)
+        {
+            mouseMove(sender, e);
+        }
 
 
 

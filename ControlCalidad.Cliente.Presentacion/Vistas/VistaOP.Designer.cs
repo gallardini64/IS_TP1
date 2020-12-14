@@ -42,6 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lbObservado = new System.Windows.Forms.Label();
             this.pReprocesado = new System.Windows.Forms.Panel();
+            this.defectoAgregarRep = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.DefectoAgregar();
             this.label9 = new System.Windows.Forms.Label();
             this.lbReprocesado = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.hermanado1 = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado();
             this.btSalir = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.defectoAgregarRep = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.DefectoAgregar();
             this.pObservado.SuspendLayout();
             this.pReprocesado.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -237,6 +237,15 @@
             this.pReprocesado.Name = "pReprocesado";
             this.pReprocesado.Size = new System.Drawing.Size(487, 392);
             this.pReprocesado.TabIndex = 34;
+            // 
+            // defectoAgregarRep
+            // 
+            this.defectoAgregarRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
+            this.defectoAgregarRep.Location = new System.Drawing.Point(3, 87);
+            this.defectoAgregarRep.Name = "defectoAgregarRep";
+            this.defectoAgregarRep.Size = new System.Drawing.Size(483, 70);
+            this.defectoAgregarRep.TabIndex = 21;
+            this.defectoAgregarRep.Visible = false;
             // 
             // label9
             // 
@@ -453,15 +462,6 @@
             this.btSalir.Textcolor = System.Drawing.Color.White;
             this.btSalir.TextFont = new System.Drawing.Font("Century Gothic", 12F);
             // 
-            // defectoAgregarRep
-            // 
-            this.defectoAgregarRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.defectoAgregarRep.Location = new System.Drawing.Point(3, 87);
-            this.defectoAgregarRep.Name = "defectoAgregarRep";
-            this.defectoAgregarRep.Size = new System.Drawing.Size(483, 70);
-            this.defectoAgregarRep.TabIndex = 21;
-            this.defectoAgregarRep.Visible = false;
-            // 
             // VistaOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,10 +483,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VistaOP";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaOP";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VistaOP_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.VistaOP_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VistaOP_MouseUp);
             this.pObservado.ResumeLayout(false);
             this.pObservado.PerformLayout();
             this.pReprocesado.ResumeLayout(false);
