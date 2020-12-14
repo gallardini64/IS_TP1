@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using ControlCalidad.Servidor.Dominio;
 
 namespace ControlCalidad.Servidor.Datos
@@ -12,6 +13,7 @@ namespace ControlCalidad.Servidor.Datos
     public class Repositorio<T> : IDisposable
          where T : EntityBase
     {
+        
         private readonly ControlCalidadContext _context;
         private Repositorio()
         {
@@ -19,6 +21,7 @@ namespace ControlCalidad.Servidor.Datos
             {
                 _context = new ControlCalidadContext();
             }
+
         }
 
         private static Repositorio<T> Instancia { get; set; } = null;
@@ -41,6 +44,15 @@ namespace ControlCalidad.Servidor.Datos
             _context.Set<T>().Add(entity);
             _context.SaveChanges();
         }
+
+        public void Update(T entity)
+        {
+            var DbSet = _context.Set<T>();
+            DbSet.Attach(entity);
+            var entry = _context.Entry(entity);
+            entry.State = System.Data.Entity.EntityState.Modified;
+        }
+
         public int Next()
         {
             return GetAll() == null ? 0 : GetAll().Count();

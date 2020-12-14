@@ -132,12 +132,15 @@
     </Compile>
     <EmbeddedResource Include="Vistas\ControladoresDeUsuario\CrearOPVista.resx">
       <DependentUpon>CrearOPVista.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ControladoresDeUsuario\DefectoAgregar.resx">
       <DependentUpon>DefectoAgregar.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ControladoresDeUsuario\Hermanado.resx">
       <DependentUpon>Hermanado.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>

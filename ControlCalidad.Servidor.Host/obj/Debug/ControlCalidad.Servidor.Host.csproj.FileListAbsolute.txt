@@ -36,6 +36,7 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.pdb
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Host\bin\Debug\EntityFramework.SqlServer.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Host\bin\Debug\EntityFramework.SqlServer.xml
+<<<<<<< HEAD
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe.config
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.pdb
@@ -56,6 +57,8 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\obj\Debug
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CopyComplete
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.exe
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.pdb
+=======
+>>>>>>> 668e09455b42c3208ecb219e65c39befd4a570f7
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe.config
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.pdb
@@ -76,3 +79,4 @@ J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CopyComplete
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.exe
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.pdb
+>>>>>>> bd991eb9da7c42665915c3eb65396ceda96e506c

@@ -14,5 +14,9 @@ namespace ControlCalidad.Servidor.Dominio
             Pie = pie;
                     
         }
+
+        public Defecto(EspecificacionDeDefecto especDe, string pie, DateTime now)
+        {
+        }
     }
 }

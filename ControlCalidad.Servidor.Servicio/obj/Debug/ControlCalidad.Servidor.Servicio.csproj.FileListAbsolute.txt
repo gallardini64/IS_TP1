@@ -32,6 +32,7 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Servicio\obj\Debug\ControlCalidad.Servidor.Servicio.csproj.CopyComplete
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Servicio\obj\Debug\ControlCalidad.Servidor.Servicio.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Servicio\obj\Debug\ControlCalidad.Servidor.Servicio.pdb
+<<<<<<< HEAD
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.Servicio.dll.config
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.Servicio.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.Servicio.pdb
@@ -49,6 +50,8 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Servicio\obj\D
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Servicio\obj\Debug\ControlCalidad.Servidor.Servicio.csproj.CopyComplete
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Servicio\obj\Debug\ControlCalidad.Servidor.Servicio.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Servicio\obj\Debug\ControlCalidad.Servidor.Servicio.pdb
+=======
+>>>>>>> 668e09455b42c3208ecb219e65c39befd4a570f7
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.Servicio.dll.config
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.Servicio.dll
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.Servicio.pdb
@@ -66,3 +69,4 @@ J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Servicio\obj\Debug\ControlCalidad.Servidor.Servicio.csproj.CopyComplete
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Servicio\obj\Debug\ControlCalidad.Servidor.Servicio.dll
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Servicio\obj\Debug\ControlCalidad.Servidor.Servicio.pdb
+>>>>>>> bd991eb9da7c42665915c3eb65396ceda96e506c

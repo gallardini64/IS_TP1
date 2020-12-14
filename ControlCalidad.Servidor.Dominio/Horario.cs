@@ -37,9 +37,20 @@ namespace ControlCalidad.Servidor.Dominio
             }
         }
 
+        internal void RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now)
+        {
+            if (numero > 0)
+            {
+                Defecto defecto = new Defecto(especDe, pie, now);
+                Defectos.Add(defecto);
+            }
+            if (numero < 0)
+            {
+                var defecto = Defectos.ToList().LastOrDefault(d => d.EspecificacionDeDefecto.Equals(especDe) &&
+                                                                   d.Pie.ToString().Equals(pie));
+                Defectos.Remove(defecto);
+            }
 
-
-
-
+        }
     }
 }
