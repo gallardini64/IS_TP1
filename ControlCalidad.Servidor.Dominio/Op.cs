@@ -26,17 +26,17 @@ namespace ControlCalidad.Servidor.Dominio
         }
         public bool RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now)
         {
-            //if (HorarioActual.Turno.SoyTurnoActual())
-            //{
-            //    HorarioActual.AgregarDefecto(numero, especDe, pie, now);
-            //    return true;
-            //}
+            if (HorarioActual.Turno.SoyTurnoActual())
+            {
+                HorarioActual.RegistrarDefecto(numero, especDe, pie, now);
+                return true;
+            }
             //else
             //{
             //    if ((int)HorarioActual.Turno.HeFilalizadoHace().TotalMinutes <
             //        FactoriaDeEstrategias.GetInstancia().GetEstrategiaTiempoLimite().getMinLimiteDeTiempoDeOperaciones)
             //    {
-            //        HorarioActual.AgregarDefecto(numero, especDe, pie, now);
+            //        HorarioActual.RegistrarDefecto(numero, especDe, pie, now);
             //        return true;
             //    }
             //}

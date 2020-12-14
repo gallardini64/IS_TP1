@@ -37,5 +37,10 @@ namespace ControlCalidad.Servidor.Servicio
         {
             return _controladorEspec.GetEspecificaciones(tipo);
         }
+
+        public bool ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color, DateTime fecha)
+        {
+            return _controladorOP.ConfirmarOP(numero, linea, modelo, color, fecha);
+        }
     }
 }

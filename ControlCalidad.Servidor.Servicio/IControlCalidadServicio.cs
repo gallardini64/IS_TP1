@@ -24,6 +24,9 @@ namespace ControlCalidad.Servidor.Servicio
         (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp();
 
         [OperationContract]
+        bool ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color, DateTime fecha);
+
+        [OperationContract]
         EspecificacionDeDefectoDto[] GetEspecificacionDeDefectoTipo(string tipo);
 
     }

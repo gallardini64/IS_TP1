@@ -12,6 +12,9 @@ namespace ControlCalidad.Servidor.Servicio
     public class LineaDto
     {
         [DataMember]
+        public int Id { get; set; }
+
+        [DataMember]
         public int Numero { get; set; }
         [DataMember]
         public string Descripcion { get; set; } 
