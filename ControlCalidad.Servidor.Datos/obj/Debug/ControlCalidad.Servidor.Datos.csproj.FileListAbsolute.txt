@@ -69,3 +69,5 @@ J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.dll
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.pdb
 >>>>>>> bd991eb9da7c42665915c3eb65396ceda96e506c
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.cambiosEnFecha.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.CorreccionDBIcollection.resources

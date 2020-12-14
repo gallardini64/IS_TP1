@@ -31,7 +31,8 @@ namespace ControlCalidad.Servidor.Datos
                 .Conventions
                 .Remove<ManyToManyCascadeDeleteConvention>();
 
-            
+            modelBuilder.Properties<DateTime>()
+              .Configure(c => c.HasColumnType("datetime2"));
 
 
             base.OnModelCreating(modelBuilder);

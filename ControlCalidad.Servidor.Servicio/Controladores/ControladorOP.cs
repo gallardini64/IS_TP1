@@ -59,7 +59,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             {
                 _op = new Op(numero);
                 _op.Color = new Color { Codigo = color.Codigo, Descripcion = color.Descripcion };
-                _op.Modelo = new Modelo { Denominacion = modelo.Denominacion, Objetivo = modelo.Objetivo, Sku = modelo.Sku}
+                _op.Modelo = new Modelo { Denominacion = modelo.Denominacion, Objetivo = modelo.Objetivo, Sku = modelo.Sku };
                 _op.FechaInicio = fecha;
                 _repositorioOP.Add(_op);
                 return true;

@@ -14,9 +14,7 @@ namespace ControlCalidad.Servidor.Dominio
         public virtual ICollection<Par> Pares { get; set; }
 
 
-        public Horario()
-        {
-        }
+        
         public Horario(Turno turno)
         {
             Defectos = new List<Defecto>();

@@ -65,6 +65,14 @@
     <Compile Include="Migrations\202012132005378_horarioActual.designer.cs">
       <DependentUpon>202012132005378_horarioActual.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012142031331_cambiosEnFecha.cs" />
+    <Compile Include="Migrations\202012142031331_cambiosEnFecha.designer.cs">
+      <DependentUpon>202012142031331_cambiosEnFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012142105223_CorreccionDBIcollection.cs" />
+    <Compile Include="Migrations\202012142105223_CorreccionDBIcollection.designer.cs">
+      <DependentUpon>202012142105223_CorreccionDBIcollection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -105,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012132005378_horarioActual.resx">
       <DependentUpon>202012132005378_horarioActual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012142031331_cambiosEnFecha.resx">
+      <DependentUpon>202012142031331_cambiosEnFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012142105223_CorreccionDBIcollection.resx">
+      <DependentUpon>202012142105223_CorreccionDBIcollection.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

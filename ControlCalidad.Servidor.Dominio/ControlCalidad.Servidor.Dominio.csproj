@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calidad.cs" />
+    <Compile Include="CapaTransversal\EstrategiaTiempoLimite.cs" />
+    <Compile Include="CapaTransversal\FactoriaDeEstrategias.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="Defecto.cs" />
     <Compile Include="Empleado.cs" />

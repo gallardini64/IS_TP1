@@ -26,7 +26,8 @@ namespace ControlCalidad.Servidor.Servicio
 
         public bool FinalizarOp(OpDto op)
         {
-            return _controladorOP.FinalizarOp(op);
+            // return _controladorOP.FinalizarOp(op);
+            return false;
         }
 
         public (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp()
