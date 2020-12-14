@@ -26,5 +26,12 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.GetEspecificacionDeDefectoTipo(tipo);
             }
         }
+        public static bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.RegistrarDefecto();
+            }
+        }
     }
 }

@@ -19,10 +19,9 @@ namespace ControlCalidad.Servidor.Servicio
         {
             return _controladorLineas.GetLineas();
         }
-
-        public bool RegistrarDefecto()
+        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
-            throw new NotImplementedException();
+            return _controladorOP.RegistrarDefecto(idEspDefecto, numero, pie);
         }
 
         public bool FinalizarOp(OpDto op)
@@ -34,15 +33,9 @@ namespace ControlCalidad.Servidor.Servicio
         {
             return _controladorOP.IniciarOP();
         }
-
         public EspecificacionDeDefectoDto[] GetEspecificacionDeDefectoTipo(string tipo)
         {
             return _controladorEspec.GetEspecificaciones(tipo);
-        }
-
-        public void Prueba()
-        {
-
         }
     }
 }

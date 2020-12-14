@@ -24,5 +24,27 @@ namespace ControlCalidad.Servidor.Dominio
             Horarios = new List<Horario>();
             Estado = EstadoOP.Activa;
         }
+        public bool RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now)
+        {
+            //if (HorarioActual.Turno.SoyTurnoActual())
+            //{
+            //    HorarioActual.AgregarDefecto(numero, especDe, pie, now);
+            //    return true;
+            //}
+            //else
+            //{
+            //    if ((int)HorarioActual.Turno.HeFilalizadoHace().TotalMinutes <
+            //        FactoriaDeEstrategias.GetInstancia().GetEstrategiaTiempoLimite().getMinLimiteDeTiempoDeOperaciones)
+            //    {
+            //        HorarioActual.AgregarDefecto(numero, especDe, pie, now);
+            //        return true;
+            //    }
+            //}
+            return false;
+        }
+
+
+
+
     }
 }

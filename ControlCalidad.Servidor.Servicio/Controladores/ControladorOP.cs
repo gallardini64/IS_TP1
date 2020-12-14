@@ -12,8 +12,9 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
 {
     public class ControladorOP
     {
-        private Repositorio<Op> _repositorio = Repositorio<Op>.GetInstancia();
-
+        private Repositorio<Op> _repositorioOP = Repositorio<Op>.GetInstancia();
+        private Repositorio<EspecificacionDeDefecto> _repositorioEsp = Repositorio<EspecificacionDeDefecto>.GetInstancia();
+        private Op _op;
         public (ColorDto[], ModeloDto[], LineaDto[]) IniciarOP()
         {
 
@@ -28,7 +29,17 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             return (colores, modelos, lineas);
         }
 
+        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
+        {
+            var esp = _repositorioEsp.GetFiltered(e => e.Id == idEspDefecto).FirstOrDefault();
+            bool registrada = _op.RegistrarDefecto(1, esp, pie, DateTime.Now);
 
+
+
+
+
+            return registrada;
+        }
         public bool FinalizarOp(OpDto op)
         {
             throw new NotImplementedException();

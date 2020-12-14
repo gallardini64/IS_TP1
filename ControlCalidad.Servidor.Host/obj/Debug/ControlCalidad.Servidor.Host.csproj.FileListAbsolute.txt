@@ -56,3 +56,23 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\obj\Debug
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CopyComplete
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.exe
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe.config
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.exe
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Host.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Servicio.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\EntityFramework.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\EntityFramework.SqlServer.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Datos.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Dominio.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Servicio.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Servicio.dll.config
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\EntityFramework.xml
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\EntityFramework.SqlServer.xml
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Datos.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Datos.dll.config
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csprojAssemblyReference.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CoreCompileInputs.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.csproj.CopyComplete
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.exe
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Host\obj\Debug\ControlCalidad.Servidor.Host.pdb

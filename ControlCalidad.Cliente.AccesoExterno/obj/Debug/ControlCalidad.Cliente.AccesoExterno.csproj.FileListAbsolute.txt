@@ -15,3 +15,10 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\o
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.csproj.CoreCompileInputs.cache
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\bin\Debug\ControlCalidad.Cliente.AccesoExterno.dll.config
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\bin\Debug\ControlCalidad.Cliente.AccesoExterno.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\bin\Debug\ControlCalidad.Cliente.AccesoExterno.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.csprojAssemblyReference.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.csproj.CoreCompileInputs.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.pdb
