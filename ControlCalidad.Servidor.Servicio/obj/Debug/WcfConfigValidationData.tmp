@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <ValidationRecord xmlns="http://schemas.datacontract.org/2004/07/Microsoft.VisualStudio.ServiceModel.Validation" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><TimeStamps xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:dateTime>2020-12-13T23:24:41.894502Z</a:dateTime><a:dateTime>2020-12-14T00:33:51.1518925Z</a:dateTime><a:dateTime>2020-11-17T22:17:50.7326065Z</a:dateTime></TimeStamps></ValidationRecord>
 =======
 <ValidationRecord xmlns="http://schemas.datacontract.org/2004/07/Microsoft.VisualStudio.ServiceModel.Validation" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><TimeStamps xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:dateTime>2020-12-13T19:45:14.7191767Z</a:dateTime><a:dateTime>2020-12-13T21:11:39.6171535Z</a:dateTime><a:dateTime>2020-11-17T22:17:50.7326065Z</a:dateTime></TimeStamps></ValidationRecord>
 >>>>>>> 668e09455b42c3208ecb219e65c39befd4a570f7
+=======
+<ValidationRecord xmlns="http://schemas.datacontract.org/2004/07/Microsoft.VisualStudio.ServiceModel.Validation" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><TimeStamps xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:dateTime>2020-12-14T18:13:02.8199495Z</a:dateTime><a:dateTime>2020-12-14T17:41:35.3632583Z</a:dateTime><a:dateTime>2020-11-17T22:17:50.7326065Z</a:dateTime></TimeStamps></ValidationRecord>
+>>>>>>> bd991eb9da7c42665915c3eb65396ceda96e506c

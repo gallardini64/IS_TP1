@@ -15,7 +15,7 @@ namespace ControlCalidad.Servidor.Servicio
         LineaDto[] GetLineas();
 
         [OperationContract]
-        bool RegistrarDefecto();
+        bool RegistrarDefecto(int idEspDefecto, int numero, string pie);
 
         [OperationContract]
         bool FinalizarOp(OpDto op);
@@ -25,7 +25,6 @@ namespace ControlCalidad.Servidor.Servicio
 
         [OperationContract]
         EspecificacionDeDefectoDto[] GetEspecificacionDeDefectoTipo(string tipo);
-
 
     }
 

@@ -54,5 +54,9 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         {
             mov = 0;
         }
+
+        private void pReprocesado_Paint(object sender, PaintEventArgs e)
+        {
+                    }
     }
 }

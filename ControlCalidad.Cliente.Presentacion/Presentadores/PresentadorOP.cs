@@ -16,9 +16,17 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
         {
             _vista = vista;
         }
-        public void AgregarDefecto(int numero) 
+        public void RegistrarDefecto(int idEspDefecto,int numero,string pie) 
         {
-        
+            bool registrado = Adaptador.RegistrarDefecto(idEspDefecto,numero, pie);
+            if (registrado)
+            {
+                _vista.ActualizarNumeroDeDefectosTipo(idEspDefecto, numero, pie);
+            }
+            else
+            {
+                _vista.ActualizarNumeroDeDefectosTipo(idEspDefecto, numero, pie);
+            }
         }
 
         public dynamic[] ObtenerEspecificacionesDefectosTipo(string v)

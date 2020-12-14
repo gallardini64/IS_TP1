@@ -51,3 +51,21 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debu
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.pdb
 =======
 >>>>>>> 668e09455b42c3208ecb219e65c39befd4a570f7
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Datos.dll.config
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Datos.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Datos.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Dominio.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\EntityFramework.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\EntityFramework.SqlServer.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\EntityFramework.xml
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\bin\Debug\EntityFramework.SqlServer.xml
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.csprojAssemblyReference.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.Inicial.resources
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.horarioActual.resources
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.csproj.GenerateResource.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.csproj.CoreCompileInputs.cache
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.csproj.CopyComplete
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.pdb
+>>>>>>> bd991eb9da7c42665915c3eb65396ceda96e506c

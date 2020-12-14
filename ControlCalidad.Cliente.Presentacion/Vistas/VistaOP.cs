@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ControlCalidad.Cliente.Presentacion.Vistas
 {
-    public partial class VistaOP : Form, IVistaOP
+    public partial class VistaOP : FormBase, IVistaOP
     {
         private PresentadorOP _presentadorOP;
         private List<DefectoAgregar> _panelesDefecto = new List<DefectoAgregar>();
@@ -29,9 +29,9 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         //    throw new NotImplementedException();
         //}
 
-        public void AgregarDefecto(int id, string pie)
+        public void RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
-            throw new NotImplementedException();
+            _presentadorOP.RegistrarDefecto(idEspDefecto, numero, pie);
         }
 
         //public void CargarOrden(OpDto op)
@@ -55,23 +55,33 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             var i = 0;
             foreach (var item in especificacionDeDefectos)
             {
-                DefectoAgregar panelDefectos = new DefectoAgregar(_presentadorOP);
+                DefectoAgregar panelDefectos = new DefectoAgregar();
                 panelDefectos.setParametros(this, item.id, item.Descripcion);
-                panelDefectos.Location = new Point(defectoAgregar1.Location.X, defectoAgregar1.Location.Y + 90 * i);
+                panelDefectos.Location = new Point(defectoAgregarRep.Location.X, defectoAgregarObs.Location.Y + 90 * i);
                 pReprocesado.Controls.Add(panelDefectos);
                 _panelesDefecto.Add(panelDefectos);
                 i++;
             }
-
-            
-            //bindingSourceED.DataSource = especificacionDeDefectos;
-            //foreach (DataGridViewRow item in DataGridDefectos.Rows)
-            //{
-            //    item.Cells[2].Value = 0;
-            //}
+        }
+        public void ActualizarNumeroDeDefectosTipo(int idEspDefecto, int numero, string pie)
+        {
+            _panelesDefecto.FirstOrDefault(e => e._id == idEspDefecto).RegistrarDefectoTipo(numero);
         }
 
+        private void VistaOP_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseUp(sender, e);
+        }
 
+        private void VistaOP_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown(sender, e);
+        }
+
+        private void VistaOP_MouseMove(object sender, MouseEventArgs e)
+        {
+            mouseMove(sender, e);
+        }
 
 
 
