@@ -9,3 +9,9 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csproj.CoreCompileInputs.cache
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.pdb
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.dll
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Dominio\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csprojAssemblyReference.cache
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.csproj.CoreCompileInputs.cache
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.dll
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Dominio\obj\Debug\ControlCalidad.Servidor.Dominio.pdb

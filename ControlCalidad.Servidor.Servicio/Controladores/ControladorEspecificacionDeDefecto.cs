@@ -16,7 +16,9 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
         {
             return _repositorio.GetAll().Select(especificacion => new EspecificacionDeDefectoDto
             {
+
                 Id = especificacion.Id,
+
                 Descripcion = especificacion.Descripcion,
                 TipoDefecto = new TipoDefectoDto(especificacion.TipoDefecto.ToString()),
 
@@ -27,7 +29,9 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
         {
             return _repositorio.GetAll().Where(e => e.TipoDefecto.ToString() == tipo).Select(especificacion => new EspecificacionDeDefectoDto
             {
+
                 Id = especificacion.Id,
+
                 Descripcion = especificacion.Descripcion,
                 TipoDefecto = new TipoDefectoDto(especificacion.TipoDefecto.ToString()),
             }).ToArray();

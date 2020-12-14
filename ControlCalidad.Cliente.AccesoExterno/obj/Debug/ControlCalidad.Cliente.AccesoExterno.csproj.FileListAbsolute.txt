@@ -11,7 +11,6 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\bin\Debug\ControlCalidad.Cliente.AccesoExterno.dll.config
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\bin\Debug\ControlCalidad.Cliente.AccesoExterno.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\bin\Debug\ControlCalidad.Cliente.AccesoExterno.pdb
-E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.csprojAssemblyReference.cache
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.csproj.CoreCompileInputs.cache
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.pdb
