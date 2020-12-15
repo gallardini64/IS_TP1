@@ -9,6 +9,7 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
 {
     public interface IVistaSupervisorDeLinea
     {
+        void IniciarOP();
         void CargarOrden(OpDto op);
         void MostrarObjetivo(int objetivo);
         void ListarDefectos(ICollection<DefectoDto> defectos);

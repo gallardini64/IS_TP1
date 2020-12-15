@@ -33,7 +33,13 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.RegistrarDefecto(idEspDefecto,numero,pie);
             }
         }
-
+        public static (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp()
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.InicializarOp();
+            }
+        }
         public static string[] GetHorasDeTurnoActual()
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())

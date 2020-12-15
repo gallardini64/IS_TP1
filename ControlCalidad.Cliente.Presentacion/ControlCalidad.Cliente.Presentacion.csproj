@@ -64,6 +64,7 @@
     <Compile Include="Interfaces\IVistaSupervisorDeLinea.cs" />
     <Compile Include="Presentadores\PresentadorAcceso.cs" />
     <Compile Include="Presentadores\PresentadorInicio.cs" />
+    <Compile Include="Presentadores\PresentadorLinea.cs" />
     <Compile Include="Presentadores\PresentadorOP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaOP.resx">
       <DependentUpon>VistaOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VistaSupervisorDeLinea.resx">
+      <DependentUpon>VistaSupervisorDeLinea.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
