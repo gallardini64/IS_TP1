@@ -30,7 +30,15 @@ namespace ControlCalidad.Cliente.AccesoExterno
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {
-                return servicio.RegistrarDefecto();
+                return servicio.RegistrarDefecto(idEspDefecto,numero,pie);
+            }
+        }
+
+        public static string[] GetHorasDeTurnoActual()
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.ObtenerHorasDeTurnoActual();
             }
         }
     }

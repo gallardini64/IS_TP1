@@ -23,14 +23,6 @@ namespace ControlCalidad.Servidor.Dominio
         public Op()
         {
             Horarios = new List<Horario>();
-           
-            Estado = EstadoOP.Activa;
-            
-        }
-
-        public Op(int numero)
-        {
-            Numero = numero;
         }
 
         public bool RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now)
@@ -52,7 +44,36 @@ namespace ControlCalidad.Servidor.Dominio
             return false;
         }
 
+        public bool RegistrarPar(int numero, Calidad calidad)
+        {
+            if (HorarioActual.Turno.SoyTurnoActual())
+            {
+                HorarioActual.RegistrarPar(numero, calidad);
+                return true;
+            }
+            else
+            {
+                if ((int)HorarioActual.Turno.HeFilalizadoHace().TotalMinutes <
+                    FactoriaDeEstrategias.GetInstancia().GetEstrategiaTiempoLimite().getMinLimiteDeTiempoDeOperaciones())
+                {
+                    HorarioActual.RegistrarPar(numero, calidad);
+                    return true;
+                }
+            }
+            return false;
+        }
 
+        public void ConfirmarOP(Turno turno)
+        {
+            Estado = EstadoOP.Activa;
+            Horarios.Add(new Horario(turno));
+        }
+        public void IniciarNuevoHorario(Turno turno)
+        {
+            Horario h = new Horario(turno);
+            Horarios.Add(h);
+            HorarioActual = h;
+        }
 
 
     }

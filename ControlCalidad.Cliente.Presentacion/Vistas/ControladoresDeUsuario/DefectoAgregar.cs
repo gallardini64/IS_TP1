@@ -31,6 +31,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
             _vistaOP = vista;
             _id = id;
             lbDefecto.Text = $"{descripcion} {_id}";
+            defectoToolTip.ToolTipTitle = descripcion;
         }
         public void RegistrarDefectoTipo(int numero)
         {

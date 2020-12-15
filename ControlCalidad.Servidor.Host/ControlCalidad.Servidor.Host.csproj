@@ -61,6 +61,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ControlCalidad.Servidor.Dominio\ControlCalidad.Servidor.Dominio.csproj">
+      <Project>{01780A8C-808E-4C88-87F4-AEB6670EF535}</Project>
+      <Name>ControlCalidad.Servidor.Dominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ControlCalidad.Servidor.Servicio\ControlCalidad.Servidor.Servicio.csproj">
       <Project>{fed95e7d-be93-4492-8937-966116ff9da7}</Project>
       <Name>ControlCalidad.Servidor.Servicio</Name>

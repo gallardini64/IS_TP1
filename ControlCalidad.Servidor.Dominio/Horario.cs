@@ -21,7 +21,7 @@ namespace ControlCalidad.Servidor.Dominio
             Pares = new List<Par>();
             Turno = turno;
         }
-        public void AgregarPar(int numero, Calidad calidad)
+        public void RegistrarPar(int numero, Calidad calidad)
         {
             if (numero > 0)
             {

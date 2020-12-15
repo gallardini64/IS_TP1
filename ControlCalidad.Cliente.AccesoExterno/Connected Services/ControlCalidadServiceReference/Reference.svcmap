@@ -27,6 +27,7 @@
     <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="f8489568-adb2-4c48-b8a5-df3cc900c046" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?xsd=xsd0" />
     <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="d6eae391-4d0c-4c8d-be1a-f4f8d8909639" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?xsd=xsd3" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="e7fb72ed-6ba2-4560-98c2-f694548997b3" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?xsd=xsd2" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="e599b429-2bf9-4d09-823d-9fa098102bbb" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?xsd=xsd4" />
     <MetadataFile FileName="ControlCalidadServicio.wsdl" MetadataType="Wsdl" ID="8fdbc3b8-b2f2-4f5a-aa78-d54e85023312" SourceId="1" SourceUrl="http://localhost:8733/ControlCalidadServicio/?wsdl" />
   </Metadata>
   <Extensions>

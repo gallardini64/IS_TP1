@@ -16,6 +16,7 @@ namespace ControlCalidad.Servidor.Servicio
         public DateTime Fin { get; set; }
         [DataMember]
         public string Descripcion { get; set; }
-
+        [DataMember]
+        public IEnumerable<string> Horas { get; set; }
     }
 }

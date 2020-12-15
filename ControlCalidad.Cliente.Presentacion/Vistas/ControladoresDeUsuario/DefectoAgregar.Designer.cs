@@ -36,6 +36,7 @@
             this.btnAgregarDefectoIzq = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnQuitarDefectoDer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnQuitarDefectoIzq = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.defectoToolTip = new MetroFramework.Components.MetroToolTip();
             this.SuspendLayout();
             // 
             // lbDefecto
@@ -220,6 +221,12 @@
             this.btnQuitarDefectoIzq.Textcolor = System.Drawing.Color.White;
             this.btnQuitarDefectoIzq.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // defectoToolTip
+            // 
+            this.defectoToolTip.Style = MetroFramework.MetroColorStyle.Blue;
+            this.defectoToolTip.StyleManager = null;
+            this.defectoToolTip.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
             // DefectoAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,5 +255,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregarDefectoIzq;
         private Bunifu.Framework.UI.BunifuFlatButton btnQuitarDefectoDer;
         private Bunifu.Framework.UI.BunifuFlatButton btnQuitarDefectoIzq;
+        private MetroFramework.Components.MetroToolTip defectoToolTip;
     }
 }

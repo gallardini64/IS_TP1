@@ -15,6 +15,8 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
         private Repositorio<Op> _repositorioOP = Repositorio<Op>.GetInstancia();
         private Repositorio<EspecificacionDeDefecto> _repositorioEsp = Repositorio<EspecificacionDeDefecto>.GetInstancia();
         private Repositorio<Linea> _repositorioLineas = Repositorio<Linea>.GetInstancia();
+        private Repositorio<Turno> _repositorioTurnos = Repositorio<Turno>.GetInstancia();
+        
         private Op _op;
 
         public ControladorOP()
@@ -31,13 +33,18 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             var colores = controladorColor.GetColores();
             var modelos = controladorModelo.GetModelos();
             var lineas = controladorLineas.GetLineas();
-
+            _op = new Op();
             return (colores, modelos, lineas);
         }
 
         public bool ConfirmarOP()
         {
             return false;
+        }
+        public bool RegistrarPar(int numero, string calidad)
+        {
+            Calidad c = (Calidad) Enum.Parse(typeof(Calidad), calidad);
+            return _op.RegistrarPar(numero, c);
         }
 
         public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
@@ -46,6 +53,11 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             bool registrada = _op.RegistrarDefecto(1, esp, pie, DateTime.Now);
             _repositorioOP.Update(_op);
             return registrada;
+        }
+
+        public List<string> ObtenerHorasTurno()
+        {
+            return _op.HorarioActual.Turno.GetListaDeHoras();
         }
 
         public bool ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color, DateTime fecha)
@@ -57,15 +69,15 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             }
             else
             {
-                _op = new Op(numero);
+                var turnos = _repositorioTurnos.GetFiltered(t => t.SoyTurnoActual()).FirstOrDefault();
                 _op.Color = new Color { Codigo = color.Codigo, Descripcion = color.Descripcion };
                 _op.Modelo = new Modelo { Denominacion = modelo.Denominacion, Objetivo = modelo.Objetivo, Sku = modelo.Sku };
                 _op.FechaInicio = fecha;
+                _op.IniciarNuevoHorario(turnos);
                 _repositorioOP.Add(_op);
                 return true;
             }
         }
-
         
     }
 

@@ -6,6 +6,7 @@
       <xsd:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
       <xsd:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IControlCalidadServicio_GetLineas_InputMessage">
@@ -32,11 +33,23 @@
   <wsdl:message name="IControlCalidadServicio_InicializarOp_OutputMessage">
     <wsdl:part name="parameters" element="tns:InicializarOpResponse" />
   </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ConfirmarOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarOP" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ConfirmarOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarOPResponse" />
+  </wsdl:message>
   <wsdl:message name="IControlCalidadServicio_GetEspecificacionDeDefectoTipo_InputMessage">
     <wsdl:part name="parameters" element="tns:GetEspecificacionDeDefectoTipo" />
   </wsdl:message>
   <wsdl:message name="IControlCalidadServicio_GetEspecificacionDeDefectoTipo_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetEspecificacionDeDefectoTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ObtenerHorasDeTurnoActual_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHorasDeTurnoActual" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ObtenerHorasDeTurnoActual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHorasDeTurnoActualResponse" />
   </wsdl:message>
   <wsdl:portType name="IControlCalidadServicio">
     <wsdl:operation name="GetLineas">
@@ -55,9 +68,17 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/InicializarOp" message="tns:IControlCalidadServicio_InicializarOp_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/InicializarOpResponse" message="tns:IControlCalidadServicio_InicializarOp_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="ConfirmarOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ConfirmarOP" message="tns:IControlCalidadServicio_ConfirmarOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ConfirmarOPResponse" message="tns:IControlCalidadServicio_ConfirmarOP_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetEspecificacionDeDefectoTipo">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetEspecificacionDeDefectoTipo" message="tns:IControlCalidadServicio_GetEspecificacionDeDefectoTipo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetEspecificacionDeDefectoTipoResponse" message="tns:IControlCalidadServicio_GetEspecificacionDeDefectoTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerHorasDeTurnoActual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActual" message="tns:IControlCalidadServicio_ObtenerHorasDeTurnoActual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActualResponse" message="tns:IControlCalidadServicio_ObtenerHorasDeTurnoActual_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IControlCalidadServicio" type="tns:IControlCalidadServicio">
@@ -98,8 +119,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ConfirmarOP">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ConfirmarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetEspecificacionDeDefectoTipo">
       <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GetEspecificacionDeDefectoTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerHorasDeTurnoActual">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActual" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

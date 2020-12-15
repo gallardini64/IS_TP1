@@ -1,4 +1,5 @@
-﻿using ControlCalidad.Cliente.Presentacion.Interfaces;
+﻿using ControlCalidad.Cliente.AccesoExterno;
+using ControlCalidad.Cliente.Presentacion.Interfaces;
 using ControlCalidad.Cliente.Presentacion.Presentadores;
 using ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario;
 using System;
@@ -22,6 +23,12 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             InitializeComponent();
             _presentadorOP = new PresentadorOP(this);
             CargarDefectosDeReprocesado();
+            CargarHorasDeTurnoActual();
+        }
+
+        private void CargarHorasDeTurnoActual()
+        {
+            cbHora.DataSource = Adaptador.GetHorasDeTurnoActual();
         }
 
         //public void ActivarControles(OpDto op)
@@ -56,7 +63,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             foreach (var item in especificacionDeDefectos)
             {
                 DefectoAgregar panelDefectos = new DefectoAgregar();
-                panelDefectos.setParametros(this, item.id, item.Descripcion);
+                panelDefectos.setParametros(this, item.Id, item.Descripcion);
                 panelDefectos.Location = new Point(defectoAgregarRep.Location.X, defectoAgregarObs.Location.Y + 90 * i);
                 pReprocesado.Controls.Add(panelDefectos);
                 _panelesDefecto.Add(panelDefectos);

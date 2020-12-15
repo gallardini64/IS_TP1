@@ -46,7 +46,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lbReprocesado = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbPie = new MetroFramework.Controls.MetroComboBox();
+            this.cbHora = new MetroFramework.Controls.MetroComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbContadorDer = new System.Windows.Forms.Label();
@@ -283,18 +283,17 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Izquierdo";
             // 
-            // cbPie
+            // cbHora
             // 
-            this.cbPie.BackColor = System.Drawing.Color.White;
-            this.cbPie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
-            this.cbPie.FormattingEnabled = true;
-            this.cbPie.ItemHeight = 23;
-            this.cbPie.Location = new System.Drawing.Point(154, 73);
-            this.cbPie.Name = "cbPie";
-            this.cbPie.Size = new System.Drawing.Size(110, 29);
-            this.cbPie.TabIndex = 35;
-            this.cbPie.UseSelectable = true;
-            this.cbPie.Visible = false;
+            this.cbHora.BackColor = System.Drawing.Color.White;
+            this.cbHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.cbHora.FormattingEnabled = true;
+            this.cbHora.ItemHeight = 23;
+            this.cbHora.Location = new System.Drawing.Point(154, 73);
+            this.cbHora.Name = "cbHora";
+            this.cbHora.Size = new System.Drawing.Size(110, 29);
+            this.cbHora.TabIndex = 35;
+            this.cbHora.UseSelectable = true;
             // 
             // label2
             // 
@@ -471,7 +470,7 @@
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.hermanado1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cbPie);
+            this.Controls.Add(this.cbHora);
             this.Controls.Add(this.pReprocesado);
             this.Controls.Add(this.pObservado);
             this.Controls.Add(this.btHermanado);
@@ -516,7 +515,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbReprocesado;
         private System.Windows.Forms.Label label8;
-        private MetroFramework.Controls.MetroComboBox cbPie;
+        private MetroFramework.Controls.MetroComboBox cbHora;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label11;

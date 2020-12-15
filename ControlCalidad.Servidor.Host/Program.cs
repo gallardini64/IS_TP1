@@ -1,4 +1,5 @@
-﻿using ControlCalidad.Servidor.Servicio;
+﻿using ControlCalidad.Servidor.Dominio;
+using ControlCalidad.Servidor.Servicio;
 using ControlCalidad.Servidor.Servicio.Controladores;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,16 @@ namespace ControlCalidad.Servidor.Host
     {
         static void Main(string[] args)
         {
-           
+            Turno t = new Turno(DateTime.Now, DateTime.Now.AddHours(8));
+            List<string> horas = t.GetListaDeHoras().ToList();
+            foreach (var item in horas)
+            {
+                Console.WriteLine(item);
+            }
             System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);
+
+
+
         }
     }
 }

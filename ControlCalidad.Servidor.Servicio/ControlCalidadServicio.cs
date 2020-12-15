@@ -43,5 +43,10 @@ namespace ControlCalidad.Servidor.Servicio
         {
             return _controladorOP.ConfirmarOP(numero, linea, modelo, color, fecha);
         }
+
+        public List<string> ObtenerHorasDeTurnoActual()
+        {
+            return _controladorOP.ObtenerHorasTurno();
+        }
     }
 }

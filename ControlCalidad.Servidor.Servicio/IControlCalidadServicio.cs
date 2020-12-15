@@ -28,6 +28,11 @@ namespace ControlCalidad.Servidor.Servicio
 
         [OperationContract]
         EspecificacionDeDefectoDto[] GetEspecificacionDeDefectoTipo(string tipo);
+        [OperationContract]
+        List<string> ObtenerHorasDeTurnoActual();
+
+
+
 
     }
 
