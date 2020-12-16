@@ -1,4 +1,5 @@
-﻿using ControlCalidad.Servidor.Servicio;
+﻿using ControlCalidad.Cliente.Presentacion.Presentadores;
+using ControlCalidad.Servidor.Servicio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,6 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
         void LimpiarCamposOP();
         void RegistrarDefecto(int idEspDefecto,int numero, string pie);
         void ActualizarNumeroDeDefectosTipo(int id, int numero, string pie);
-
+        void SetPresentador(PresentadorOP presentadorOP);
     }
 }

@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{4A21905B-2CE8-
 		packages\ControlCalidadDB_log.ldf = packages\ControlCalidadDB_log.ldf
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlCalidad.Servidor.CapaTransversal", "ControlCalidad.Servidor.CapaTransversal\ControlCalidad.Servidor.CapaTransversal.csproj", "{6AA3D6A4-A4CF-4045-8E6B-453A860AA72E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{38E6AD54-08B2-440C-B5FB-15F69469E260}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38E6AD54-08B2-440C-B5FB-15F69469E260}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38E6AD54-08B2-440C-B5FB-15F69469E260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA3D6A4-A4CF-4045-8E6B-453A860AA72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA3D6A4-A4CF-4045-8E6B-453A860AA72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA3D6A4-A4CF-4045-8E6B-453A860AA72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA3D6A4-A4CF-4045-8E6B-453A860AA72E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{0502B0A4-8F78-4629-9657-B2EBAA96AEBF} = {C14F5A4A-78D3-491F-A65A-ACFC1BC47BD9}
 		{0DACCD32-B587-49D3-978F-29BDE1126E35} = {147A19B4-DBD0-4AED-BB4A-DB5B3F0FA052}
 		{38E6AD54-08B2-440C-B5FB-15F69469E260} = {147A19B4-DBD0-4AED-BB4A-DB5B3F0FA052}
+		{6AA3D6A4-A4CF-4045-8E6B-453A860AA72E} = {C14F5A4A-78D3-491F-A65A-ACFC1BC47BD9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D38848A9-EE1F-4B83-91DF-F361E066992F}

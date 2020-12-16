@@ -31,12 +31,13 @@ namespace ControlCalidad.Servidor.Servicio
         [OperationContract]
         List<string> ObtenerHorasDeTurnoActual();
 
-        
+        [OperationContract]
+        (bool, EmpleadoDto) IniciarSesion(string usuario, string password);
 
-        
+
 
 
     }
 
-    
+
 }

@@ -45,6 +45,12 @@
   <wsdl:message name="IControlCalidadServicio_ObtenerHorasDeTurnoActual_OutputMessage">
     <wsdl:part name="parameters" element="tns:ObtenerHorasDeTurnoActualResponse" />
   </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_IniciarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_IniciarSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesionResponse" />
+  </wsdl:message>
   <wsdl:portType name="IControlCalidadServicio">
     <wsdl:operation name="RegistrarDefecto">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto" message="tns:IControlCalidadServicio_RegistrarDefecto_InputMessage" />
@@ -69,6 +75,10 @@
     <wsdl:operation name="ObtenerHorasDeTurnoActual">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActual" message="tns:IControlCalidadServicio_ObtenerHorasDeTurnoActual_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActualResponse" message="tns:IControlCalidadServicio_ObtenerHorasDeTurnoActual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/IniciarSesion" message="tns:IControlCalidadServicio_IniciarSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/IniciarSesionResponse" message="tns:IControlCalidadServicio_IniciarSesion_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IControlCalidadServicio" type="tns:IControlCalidadServicio">
@@ -120,6 +130,15 @@
     </wsdl:operation>
     <wsdl:operation name="ObtenerHorasDeTurnoActual">
       <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesion">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/IniciarSesion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

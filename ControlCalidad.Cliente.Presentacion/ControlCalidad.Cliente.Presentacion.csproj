@@ -79,9 +79,9 @@
     <Compile Include="Interfaces\IVistaInteractiva.cs" />
     <Compile Include="Interfaces\IVistaLineaProduccion.cs" />
     <Compile Include="Interfaces\IVistaOP.cs" />
+    <Compile Include="Interfaces\IVistaSesion.cs" />
     <Compile Include="Interfaces\IVistaSupervisorDeLinea.cs" />
     <Compile Include="Presentadores\PresentadorAcceso.cs" />
-    <Compile Include="Presentadores\PresentadorInicio.cs" />
     <Compile Include="Presentadores\PresentadorLinea.cs" />
     <Compile Include="Presentadores\PresentadorOP.cs" />
     <Compile Include="Program.cs" />
@@ -109,12 +109,6 @@
     </Compile>
     <Compile Include="Vistas\VistaAcceso.Designer.cs">
       <DependentUpon>VistaAcceso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\VistaInicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\VistaInicio.Designer.cs">
-      <DependentUpon>VistaInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\VistaLineaProduccion.cs">
       <SubType>Form</SubType>
@@ -153,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VistaAcceso.resx">
+      <DependentUpon>VistaAcceso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaOP.resx">
       <DependentUpon>VistaOP.cs</DependentUpon>

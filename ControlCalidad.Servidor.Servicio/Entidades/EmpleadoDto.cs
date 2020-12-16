@@ -16,5 +16,12 @@ namespace ControlCalidad.Servidor.Servicio
         public string Nombre { get; set; }
         [DataMember]
         public string Email { get; set; }
+        [DataMember]
+        public string Usuario { get; set; }
+        [DataMember]
+        public string Contrasenia { get; set; }
+        [DataMember]
+        public string Rol { get; set; }
+
     }
 }

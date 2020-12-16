@@ -26,11 +26,11 @@ namespace ControlCalidad.Servidor.Dominio
             Pares = new List<Par>();
             Turno = turno;
         }
-        public void RegistrarPar(int numero, Calidad calidad)
+        public void RegistrarPar(int numero, Calidad calidad, Empleado empleado)
         {
             if (numero > 0)
             {
-                Par par = new Par(DateTime.Now, calidad);
+                Par par = new Par(DateTime.Now, calidad,empleado);
                 Pares.Add(par);
             }
             if (numero < 0)
@@ -40,11 +40,11 @@ namespace ControlCalidad.Servidor.Dominio
             }
         }
 
-        internal void RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now)
+        internal void RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now,Empleado empleado)
         {
             if (numero > 0)
             {
-                Defecto defecto = new Defecto(especDe, pie, now);
+                Defecto defecto = new Defecto(especDe, pie, now,empleado);
                 Defectos.Add(defecto);
             }
             if (numero < 0)

@@ -1,5 +1,6 @@
 ﻿using ControlCalidad.Servidor.Datos;
 using ControlCalidad.Servidor.Dominio;
+using ControlCalidad.Servidor.CapaTransversal;
 using ControlCalidad.Servidor.Servicio;
 using System;
 using System.Collections.Generic;
@@ -66,14 +67,16 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
         public bool RegistrarPar(int numero, string calidad)
         {
             Calidad c = (Calidad) Enum.Parse(typeof(Calidad), calidad);
-            return _op.RegistrarPar(numero, c);
+            bool bandera = _op.RegistrarPar(numero, c, Sesion.GetEmpleado());
+            _repositorioOP.Update(_op);
+            return bandera;
         }
 
         public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
             var esp = _repositorioEsp.GetFiltered(e => e.Id == idEspDefecto).FirstOrDefault();
             _repositorioEsp.Dispose();
-            bool registrada = _op.RegistrarDefecto(1, esp, pie, DateTime.Now);
+            bool registrada = _op.RegistrarDefecto(1, esp, pie, DateTime.Now,Sesion.GetEmpleado());
             _repositorioOP.Update(_op);
             return registrada;
         }
@@ -116,9 +119,9 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                 
                 var color1 = _repositorioColor.GetFiltered(c => c.Codigo == color.Codigo).FirstOrDefault();
                 var modelo1 = _repositorioModelo.GetFiltered(m => m.Sku == modelo.Sku).FirstOrDefault();
-                _op.ConfirmarOP(numero,color1, modelo1, turnoActual, lineaC);
+                _op.ConfirmarOP(numero,color1, modelo1, turnoActual, lineaC,Sesion.GetEmpleado());
                 _repositorioOP.Add(_op);
-                Op op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
+               
                 
 
                 return (true,"La OP se creó con éxito.");

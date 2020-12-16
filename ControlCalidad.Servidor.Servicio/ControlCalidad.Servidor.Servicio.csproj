@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ControladorDefectos.cs" />
+    <Compile Include="Controladores\ControladorEmpleados.cs" />
     <Compile Include="Controladores\ControladorEspecificacionDeDefecto.cs" />
     <Compile Include="Controladores\ControladorOP.cs" />
     <Compile Include="Entidades\ColorDto.cs" />
@@ -79,6 +80,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ControlCalidad.Servidor.CapaTransversal\ControlCalidad.Servidor.CapaTransversal.csproj">
+      <Project>{6aa3d6a4-a4cf-4045-8e6b-453a860aa72e}</Project>
+      <Name>ControlCalidad.Servidor.CapaTransversal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ControlCalidad.Servidor.Datos\ControlCalidad.Servidor.Datos.csproj">
       <Project>{83D72449-4CF7-463A-B8A6-87D27BC11144}</Project>
       <Name>ControlCalidad.Servidor.Datos</Name>

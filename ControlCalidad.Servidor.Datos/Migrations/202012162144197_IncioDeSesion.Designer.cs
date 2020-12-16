@@ -7,13 +7,13 @@ namespace ControlCalidad.Servidor.Datos.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class fechaFinNull : IMigrationMetadata
+    public sealed partial class IncioDeSesion : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(fechaFinNull));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(IncioDeSesion));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012160014175_fechaFinNull"; }
+            get { return "202012162144197_IncioDeSesion"; }
         }
         
         string IMigrationMetadata.Source

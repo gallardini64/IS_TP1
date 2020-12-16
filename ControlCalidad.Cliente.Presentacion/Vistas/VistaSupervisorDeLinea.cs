@@ -19,14 +19,20 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         private ModeloDto[] _modelos;
         private ColorDto[] _colores;
         private LineaDto[] _lineas;
+        
         public VistaSupervisorDeLinea()
         {
             InitializeComponent();
-            _presentadorLinea = new PresentadorLinea(this);
+            
             IniciarOP();
         }
 
-       
+        public void SetPresentador(PresentadorLinea presentador)
+        {
+            _presentadorLinea = presentador;
+        }
+
+        
 
         public void IniciarOP()
         {

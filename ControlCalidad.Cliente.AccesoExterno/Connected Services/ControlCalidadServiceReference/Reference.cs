@@ -201,6 +201,9 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescripcionField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -233,6 +236,19 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
                 if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
                     this.DescripcionField = value;
                     this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -305,6 +321,9 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         private System.DateTime FinField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime InicioField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -326,6 +345,19 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
                 if ((this.FinField.Equals(value) != true)) {
                     this.FinField = value;
                     this.RaisePropertyChanged("Fin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -443,6 +475,9 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         private string DenominacionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ObjetivoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -467,6 +502,19 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
                 if ((object.ReferenceEquals(this.DenominacionField, value) != true)) {
                     this.DenominacionField = value;
                     this.RaisePropertyChanged("Denominacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -629,6 +677,131 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EmpleadoDto", Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio")]
+    [System.SerializableAttribute()]
+    public partial class EmpleadoDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContraseniaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DocumentoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RolField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Contrasenia {
+            get {
+                return this.ContraseniaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContraseniaField, value) != true)) {
+                    this.ContraseniaField = value;
+                    this.RaisePropertyChanged("Contrasenia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Documento {
+            get {
+                return this.DocumentoField;
+            }
+            set {
+                if ((this.DocumentoField.Equals(value) != true)) {
+                    this.DocumentoField = value;
+                    this.RaisePropertyChanged("Documento");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Rol {
+            get {
+                return this.RolField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RolField, value) != true)) {
+                    this.RolField = value;
+                    this.RaisePropertyChanged("Rol");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ControlCalidadServiceReference.IControlCalidadServicio")]
     public interface IControlCalidadServicio {
@@ -670,6 +843,12 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActual", ReplyAction="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActualResponse")]
         System.Threading.Tasks.Task<string[]> ObtenerHorasDeTurnoActualAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/IniciarSesion", ReplyAction="http://tempuri.org/IControlCalidadServicio/IniciarSesionResponse")]
+        System.ValueTuple<bool, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto> IniciarSesion(string usuario, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/IniciarSesion", ReplyAction="http://tempuri.org/IControlCalidadServicio/IniciarSesionResponse")]
+        System.Threading.Tasks.Task<System.ValueTuple<bool, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto>> IniciarSesionAsync(string usuario, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -745,6 +924,14 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         public System.Threading.Tasks.Task<string[]> ObtenerHorasDeTurnoActualAsync() {
             return base.Channel.ObtenerHorasDeTurnoActualAsync();
+        }
+        
+        public System.ValueTuple<bool, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto> IniciarSesion(string usuario, string password) {
+            return base.Channel.IniciarSesion(usuario, password);
+        }
+        
+        public System.Threading.Tasks.Task<System.ValueTuple<bool, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto>> IniciarSesionAsync(string usuario, string password) {
+            return base.Channel.IniciarSesionAsync(usuario, password);
         }
     }
 }

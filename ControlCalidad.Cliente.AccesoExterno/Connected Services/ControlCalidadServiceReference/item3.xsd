@@ -36,4 +36,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ValueTupleOfbooleanstring" nillable="true" type="tns:ValueTupleOfbooleanstring" />
+  <xs:complexType name="ValueTupleOfbooleanEmpleadoDtoyEOT5PiO">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ValueTupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="EmpleadoDto" Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+        </GenericType>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Item1" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" name="Item2" nillable="true" type="q4:EmpleadoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValueTupleOfbooleanEmpleadoDtoyEOT5PiO" nillable="true" type="tns:ValueTupleOfbooleanEmpleadoDtoyEOT5PiO" />
 </xs:schema>

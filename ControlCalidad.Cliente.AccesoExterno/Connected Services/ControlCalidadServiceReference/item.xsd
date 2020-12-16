@@ -18,6 +18,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Codigo" type="xs:int" />
       <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ColorDto" nillable="true" type="tns:ColorDto" />
@@ -30,6 +31,7 @@
   <xs:complexType name="HorarioDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="Fin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Inicio" type="xs:dateTime" />
     </xs:sequence>
   </xs:complexType>
@@ -51,6 +53,7 @@
   <xs:complexType name="ModeloDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="Denominacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Objetivo" type="xs:int" />
       <xs:element minOccurs="0" name="Sku" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -94,4 +97,15 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TipoDefectoDto" nillable="true" type="tns:TipoDefectoDto" />
+  <xs:complexType name="EmpleadoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Documento" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmpleadoDto" nillable="true" type="tns:EmpleadoDto" />
 </xs:schema>

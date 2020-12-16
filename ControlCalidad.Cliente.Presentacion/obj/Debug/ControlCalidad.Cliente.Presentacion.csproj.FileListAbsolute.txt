@@ -65,7 +65,6 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.0\ControlDeCalidad-master\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaOP.resources
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csprojAssemblyReference.cache
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Properties.Resources.resources
-E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.CrearOPVista.resources
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.DefectoAgregar.resources
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado.resources
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.FormBase.resources
@@ -96,3 +95,6 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\bi
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csproj.CopyComplete
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaSupervisorDeLinea.resources
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaSupervisorDeLinea.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaAcceso.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.CapaTransversal.dll
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.CapaTransversal.pdb

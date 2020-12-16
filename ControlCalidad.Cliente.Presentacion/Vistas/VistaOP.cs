@@ -22,7 +22,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         public VistaOP()
         {
             InitializeComponent();
-            _presentadorOP = new PresentadorOP(this);
+            
             CargarDefectosDeReprocesado();
             CargarHorasDeTurnoActual();
         }
@@ -105,7 +105,9 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             mouseMove(sender, e);
         }
 
-
-
+        public void SetPresentador(PresentadorOP presentadorOP)
+        {
+            _presentadorOP = presentadorOP;
+        }
     }
 }

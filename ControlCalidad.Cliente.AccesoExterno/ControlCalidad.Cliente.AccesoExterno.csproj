@@ -59,6 +59,9 @@
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EspecificacionDeDefectoDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

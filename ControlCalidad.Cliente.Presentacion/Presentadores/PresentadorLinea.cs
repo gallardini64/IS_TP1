@@ -12,9 +12,13 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
     public class PresentadorLinea
     {
         private IVistaSupervisorDeLinea _vista;
-        public PresentadorLinea(IVistaSupervisorDeLinea vista)
+        public EmpleadoDto empleadoLinea { get; set; }
+        public PresentadorLinea(IVistaSupervisorDeLinea vista,EmpleadoDto empleado)
         {
+
+            empleadoLinea = empleado;
             _vista = vista;
+            _vista.SetPresentador(this);
         }
         public (ColorDto[], ModeloDto[], LineaDto[]) IniciarOP()
         {
@@ -25,5 +29,7 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
         {
             return Adaptador.ConfirmarOP(numero, linea, modelo, color);
         }
+
+        
     }
 }

@@ -15,6 +15,7 @@ namespace ControlCalidad.Servidor.Servicio
         
         private ControladorOP _controladorOP = new ControladorOP();
         private ControladorEspecificacionDeDefecto _controladorEspec = new ControladorEspecificacionDeDefecto();
+        private ControladorEmpleados _controladorEmpleado = new ControladorEmpleados();
         
         public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
@@ -45,5 +46,12 @@ namespace ControlCalidad.Servidor.Servicio
         {
             return _controladorOP.ObtenerHorasTurno();
         }
+
+        public (bool, EmpleadoDto) IniciarSesion(string usuario, string password)
+        {
+
+            return _controladorEmpleado.OtorgarPermisoDeSesion(usuario, password);
+        }
+
     }
 }

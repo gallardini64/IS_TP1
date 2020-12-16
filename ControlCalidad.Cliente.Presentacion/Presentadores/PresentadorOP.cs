@@ -12,9 +12,12 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
     public class PresentadorOP
     {
         private IVistaOP _vista;
-        public PresentadorOP(IVistaOP vista)
+        public EmpleadoDto empleadoCalidad { get; set; }
+        public PresentadorOP(IVistaOP vista,EmpleadoDto empleado)
         {
+            empleadoCalidad = empleado;
             _vista = vista;
+            _vista.SetPresentador(this);
         }
         public void RegistrarDefecto(int idEspDefecto,int numero,string pie) 
         {

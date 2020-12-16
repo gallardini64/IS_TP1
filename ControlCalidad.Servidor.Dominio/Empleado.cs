@@ -11,6 +11,10 @@ namespace ControlCalidad.Servidor.Dominio
         public int Documento { get; set; }
         public string Nombre { get; set; }
         public string Email { get; set; }
+        public string Usuario { get; set; }
+        public string Contrasenia { get; set; }
+        public Rol Rol { get; set; }
+
 
     }
 }

@@ -78,3 +78,5 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debu
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.fechaFinNull.resources
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.finhorarioNull.resources
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.nuevaReferencia1.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.nuevaReferencia1.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.IncioDeSesion.resources

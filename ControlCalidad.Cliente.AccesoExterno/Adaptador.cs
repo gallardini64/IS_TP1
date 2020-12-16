@@ -49,6 +49,14 @@ namespace ControlCalidad.Cliente.AccesoExterno
             }
         }
 
+        public static (bool, EmpleadoDto) IniciarSesion(string usuario, string password)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.IniciarSesion(usuario, password);
+            }
+        }
+
 
     }
 }

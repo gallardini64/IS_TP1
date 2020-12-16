@@ -18,7 +18,7 @@ namespace ControlCalidad.Cliente.Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VistaSupervisorDeLinea());
+            Application.Run(new VistaAcceso());
         }
     }
 }

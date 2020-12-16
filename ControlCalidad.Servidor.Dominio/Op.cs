@@ -16,6 +16,22 @@ namespace ControlCalidad.Servidor.Dominio
         public virtual ICollection<Horario> Horarios { get; set; }
         public virtual Linea Linea { get; set; }
 
+        private Empleado _empleado;
+        public virtual Empleado Empleado
+        {
+            get
+            {
+                return _empleado;
+            }
+            set
+            {
+                if (value.Rol == Rol.SupervisorLinea)
+                {
+                    _empleado = value;
+                }
+            }
+        }
+
         private EstadoOP _estado;
         public EstadoOP Estado{ 
             get
@@ -38,40 +54,40 @@ namespace ControlCalidad.Servidor.Dominio
             Horarios = new List<Horario>();
         }
 
-        public bool RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now)
+        public bool RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now, Empleado empleado)
         {
             Horario horarioActual = Horarios.LastOrDefault();
             if (horarioActual.Turno.SoyTurnoActual())
             {
-                horarioActual.RegistrarDefecto(numero, especDe, pie, now);
+                horarioActual.RegistrarDefecto(numero, especDe, pie, now,empleado);
                 return true;
             }
             else
             {
                 if ((int)horarioActual.Turno.HeFilalizadoHace().TotalMinutes < 10)
                 {
-                    horarioActual.RegistrarDefecto(numero, especDe, pie, now);
+                    horarioActual.RegistrarDefecto(numero, especDe, pie, now,empleado);
                     return true;
                 }
             }
             return false;
         }
 
-        public bool RegistrarPar(int numero, Calidad calidad, Horario horario = null)
+        public bool RegistrarPar(int numero, Calidad calidad,Empleado empleado, Horario horario = null)
         {
             if (horario == null)
             {
                 Horario horarioActual = Horarios.LastOrDefault();
                 if (horarioActual.Turno.SoyTurnoActual())
                 {
-                    horarioActual.RegistrarPar(numero, calidad);
+                    horarioActual.RegistrarPar(numero, calidad, empleado);
                     return true;
                 }
                 else
                 {
                     if ((int)horarioActual.Turno.HeFilalizadoHace().TotalMinutes < 10)
                     {
-                        horarioActual.RegistrarPar(numero, calidad);
+                        horarioActual.RegistrarPar(numero, calidad, empleado);
                         return true;
                     }
                 }
@@ -79,7 +95,7 @@ namespace ControlCalidad.Servidor.Dominio
             }
             else
             {
-                horario.RegistrarPar(numero, calidad);
+                horario.RegistrarPar(numero, calidad, empleado);
                 return true;
             }
         }
@@ -93,10 +109,11 @@ namespace ControlCalidad.Servidor.Dominio
         //TODO: una vez pausada la op se ejecuta este metodo
         public void CerrarHorario()
         {
+            Estado = EstadoOP.Pausada;
             Horarios.Last().Fin = DateTime.Now;
         }
 
-        public void ConfirmarOP(int numero,Color color1, Modelo modelo1, Turno turno, Linea lineaC)
+        public void ConfirmarOP(int numero,Color color1, Modelo modelo1, Turno turno, Linea lineaC, Empleado empleado)
         {
             Id = numero;
             Numero = numero;
@@ -106,6 +123,9 @@ namespace ControlCalidad.Servidor.Dominio
             IniciarNuevoHorario(turno);
             Linea = lineaC;
             Estado = EstadoOP.Activa;
+            Empleado = empleado;
         }
+
+        //TODO crear metodo finalizar OP
     }
 }

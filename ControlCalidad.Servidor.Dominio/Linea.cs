@@ -11,6 +11,8 @@ namespace ControlCalidad.Servidor.Dominio
         public int Numero { get; set; }
         public virtual ICollection<Op> OPs{ get; set; }
 
+        
+
         public Linea()
         {
 
