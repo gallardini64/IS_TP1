@@ -81,6 +81,10 @@
     <Compile Include="Migrations\202012160043428_finhorarioNull.designer.cs">
       <DependentUpon>202012160043428_finhorarioNull.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012160545521_nuevaReferencia1.cs" />
+    <Compile Include="Migrations\202012160545521_nuevaReferencia1.designer.cs">
+      <DependentUpon>202012160545521_nuevaReferencia1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -133,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012160043428_finhorarioNull.resx">
       <DependentUpon>202012160043428_finhorarioNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012160545521_nuevaReferencia1.resx">
+      <DependentUpon>202012160545521_nuevaReferencia1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

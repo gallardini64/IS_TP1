@@ -11,7 +11,6 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
     {
         
         void DesactivarControles();
-        
         void LimpiarCamposOP();
         void RegistrarDefecto(int idEspDefecto,int numero, string pie);
         void ActualizarNumeroDeDefectosTipo(int id, int numero, string pie);

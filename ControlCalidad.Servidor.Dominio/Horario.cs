@@ -12,16 +12,16 @@ namespace ControlCalidad.Servidor.Dominio
         public virtual Turno Turno { get; set; }
         public virtual ICollection<Defecto> Defectos { get; set; }
         public virtual ICollection<Par> Pares { get; set; }
+        public virtual Op Op { get; set; }
 
         public Horario()
         {
 
         }
         
-        public Horario(Turno turno, int id)
+        public Horario(Turno turno)
         {
             Inicio = DateTime.Now;
-            Id = id;
             Defectos = new List<Defecto>();
             Pares = new List<Par>();
             Turno = turno;

@@ -80,7 +80,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
 
         public List<string> ObtenerHorasTurno()
         {
-            return _op.HorarioActual.Turno.GetListaDeHoras();
+            return _op.Horarios.LastOrDefault().Turno.GetListaDeHoras();
         }
 
         public (bool,string) ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color)
@@ -99,7 +99,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                 
                 if (turnos == null)
                 {
-                    return (false, "No hay turnos");
+                    return (false, "No hay turnos disponibles.");
                 }
                 foreach (var turno in turnos)
                 {
@@ -111,17 +111,17 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                 }
                 if(turnoActual == null)
                 {
-                    return (false, "no existe turno para este horario");
+                    return (false, "No existe turno para este horario.");
                 }
                 
                 var color1 = _repositorioColor.GetFiltered(c => c.Codigo == color.Codigo).FirstOrDefault();
                 var modelo1 = _repositorioModelo.GetFiltered(m => m.Sku == modelo.Sku).FirstOrDefault();
-                var IdHorario = _repositorioHorario.Next();
-                _op.ConfirmarOP(numero,color1, modelo1, turnoActual, lineaC, IdHorario);
+                _op.ConfirmarOP(numero,color1, modelo1, turnoActual, lineaC);
                 _repositorioOP.Add(_op);
+                Op op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
                 
 
-                return (true,"la OP se creo con exito");
+                return (true,"La OP se creó con éxito.");
             }
         }
         

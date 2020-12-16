@@ -12,7 +12,7 @@ namespace ControlCalidad.Servidor.Dominio
 
         public virtual bool IsNew()
         {
-            return Id == 0;
+            return Id == 1;
         }
     }
 }

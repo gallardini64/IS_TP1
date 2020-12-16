@@ -44,42 +44,18 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             tbObjetivo.Text = _modelos.FirstOrDefault().Objetivo.ToString();
             cbLinea.DataSource = _lineas;
             cbLinea.DisplayMember = "Numero";
-
         }
 
-        
-
-        
-
-        
-
-        public void MostrarObjetivo(int objetivo)
+        private void btnCrearOP_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            IniciarOP();
         }
 
-
-        private void VistaSupervisorDeLinea_MouseUp(object sender, MouseEventArgs e)
-        {
-            mouseUp(sender, e);
-        }
-
-        private void VistaSupervisorDeLinea_MouseDown(object sender, MouseEventArgs e)
-        {
-            mouseDown(sender, e);
-        }
-
-        private void VistaSupervisorDeLinea_MouseMove(object sender, MouseEventArgs e)
-        {
-            mouseMove(sender, e);
-        }
-
-        private void cbModelo_SelectedIndexChanged(object sender, EventArgs e)
+        public void MostrarObjetivo()
         {
             ModeloDto modelo = (ModeloDto)cbModelo.SelectedItem;
             tbObjetivo.Text = modelo.Objetivo.ToString();
         }
-
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             try
@@ -91,24 +67,47 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
 
                 (bool,string) resultado = _presentadorLinea.ConfirmarOP(numero, linea, modelo, color);
                
-
                 if (resultado.Item1)
                 {
-                    MessageBox.Show("Creacion OP", $"{resultado.Item2}", MessageBoxButtons.OK ,MessageBoxIcon.Information);
+                    MessageBox.Show($"{resultado.Item2}","Creacion OP", MessageBoxButtons.OK ,MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Creacion OP", $"{resultado.Item2}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"{resultado.Item2}", "Creacion OP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error", "ingrese bien los datos", MessageBoxButtons.OK , MessageBoxIcon.Error);
+                MessageBox.Show("No se han ingresado los datos correctamente", "Error", MessageBoxButtons.OK , MessageBoxIcon.Error);
             }
             
         }
+
+
+
+
+
+
+
+
+        #region Movimiento
+        private void VistaSupervisorDeLinea_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseUp(sender, e);
+        }
+        private void VistaSupervisorDeLinea_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown(sender, e);
+        }
+        private void VistaSupervisorDeLinea_MouseMove(object sender, MouseEventArgs e)
+        {
+            mouseMove(sender, e);
+        }
+        private void cbModelo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MostrarObjetivo();
+        }
+        #endregion
+
     }
 }

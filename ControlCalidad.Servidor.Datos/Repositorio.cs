@@ -55,7 +55,7 @@ namespace ControlCalidad.Servidor.Datos
 
         public int Next()
         {
-            return GetAll() == null ? 0 : GetAll().Count();
+            return GetAll() == null ? 1 : GetAll().Count() + 1;
         }
 
         public void Dispose()

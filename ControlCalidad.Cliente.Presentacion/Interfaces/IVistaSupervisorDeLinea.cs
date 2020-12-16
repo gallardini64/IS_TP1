@@ -11,7 +11,7 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
     {
         void IniciarOP();
         //void CargarOrden(OpDto op);
-        void MostrarObjetivo(int objetivo);
+        void MostrarObjetivo();
         //void ListarDefectos(ICollection<DefectoDto> defectos);
     }
 }

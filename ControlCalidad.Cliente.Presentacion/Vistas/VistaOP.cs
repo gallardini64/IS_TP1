@@ -71,6 +71,20 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
                 i++;
             }
         }
+        private void CargarDefectosDeObservado()
+        {
+            EspecificacionDeDefectoDto[] especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Observado");
+            var i = 0;
+            foreach (var item in especificacionDeDefectos)
+            {
+                DefectoAgregar panelDefectos = new DefectoAgregar();
+                panelDefectos.setParametros(this, item.Id, item.Descripcion);
+                panelDefectos.Location = new Point(defectoAgregarObs.Location.X, defectoAgregarObs.Location.Y + 90 * i);
+                pReprocesado.Controls.Add(panelDefectos);
+                _panelesDefecto.Add(panelDefectos);
+                i++;
+            }
+        }
         public void ActualizarNumeroDeDefectosTipo(int idEspDefecto, int numero, string pie)
         {
             _panelesDefecto.FirstOrDefault(e => e._id == idEspDefecto).RegistrarDefectoTipo(numero);

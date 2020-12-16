@@ -86,12 +86,6 @@
     <Compile Include="Presentadores\PresentadorOP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vistas\ControladoresDeUsuario\CrearOPVista.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Vistas\ControladoresDeUsuario\CrearOPVista.Designer.cs">
-      <DependentUpon>CrearOPVista.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\ControladoresDeUsuario\DefectoAgregar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,10 +143,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\ControladoresDeUsuario\CrearOPVista.resx">
-      <DependentUpon>CrearOPVista.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ControladoresDeUsuario\DefectoAgregar.resx">
       <DependentUpon>DefectoAgregar.cs</DependentUpon>
       <SubType>Designer</SubType>
