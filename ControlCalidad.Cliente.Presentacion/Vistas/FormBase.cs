@@ -30,7 +30,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
 
         public void MostrarMensaje(string mensaje, bool esError = false)
         {
-            MessageBox.Show(mensaje, "PAV", MessageBoxButtons.OK,
+            MessageBox.Show(mensaje, "soft", MessageBoxButtons.OK,
                 esError ? MessageBoxIcon.Error : MessageBoxIcon.Information);
         }
         protected void FormBase_Load(object sender, EventArgs e)

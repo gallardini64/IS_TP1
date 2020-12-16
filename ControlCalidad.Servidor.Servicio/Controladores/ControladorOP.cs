@@ -16,6 +16,9 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
         private Repositorio<EspecificacionDeDefecto> _repositorioEsp = Repositorio<EspecificacionDeDefecto>.GetInstancia();
         private Repositorio<Linea> _repositorioLineas = Repositorio<Linea>.GetInstancia();
         private Repositorio<Turno> _repositorioTurnos = Repositorio<Turno>.GetInstancia();
+        private Repositorio<Color> _repositorioColor = Repositorio<Color>.GetInstancia();
+        private Repositorio<Modelo> _repositorioModelo = Repositorio<Modelo>.GetInstancia();
+        private Repositorio<Horario> _repositorioHorario = Repositorio<Horario>.GetInstancia();
         
         private Op _op;
 
@@ -23,24 +26,43 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
         {
            
         }
+
         public (ColorDto[], ModeloDto[], LineaDto[]) IniciarOP()
         {
 
-            var controladorLineas = new ControladorLineas();
-            var controladorColor = new ControladorColor();
-            var controladorModelo = new ControladorModelo();
+            var colores = _repositorioColor.GetAll().Select(color => new ColorDto
+            {
+                Id = color.Id,
+                Descripcion = color.Descripcion,
+                Codigo = color.Codigo,
 
-            var colores = controladorColor.GetColores();
-            var modelos = controladorModelo.GetModelos();
-            var lineas = controladorLineas.GetLineas();
-            _op = new Op();
+            }).ToArray();
+           
+
+            var modelos = _repositorioModelo.GetAll().Select(modelo => new ModeloDto()
+            {
+                Id = modelo.Id,
+                Sku = modelo.Sku,
+                Objetivo = modelo.Objetivo,
+                Denominacion = modelo.Denominacion,
+
+            }).ToArray();
+            
+
+            var lineas = _repositorioLineas
+                .GetAll()
+                .Select(l => new LineaDto
+                {
+                    Id = l.Id,
+                    Numero = l.Numero,
+                })
+                .ToArray();
+          
+            
             return (colores, modelos, lineas);
         }
 
-        public bool ConfirmarOP()
-        {
-            return false;
-        }
+        
         public bool RegistrarPar(int numero, string calidad)
         {
             Calidad c = (Calidad) Enum.Parse(typeof(Calidad), calidad);
@@ -50,6 +72,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
         public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
             var esp = _repositorioEsp.GetFiltered(e => e.Id == idEspDefecto).FirstOrDefault();
+            _repositorioEsp.Dispose();
             bool registrada = _op.RegistrarDefecto(1, esp, pie, DateTime.Now);
             _repositorioOP.Update(_op);
             return registrada;
@@ -60,22 +83,45 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             return _op.HorarioActual.Turno.GetListaDeHoras();
         }
 
-        public bool ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color, DateTime fecha)
+        public (bool,string) ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color)
         {
-            var lineaC = _repositorioLineas.GetFiltered(l => l.Numero == linea.Numero && l.EstoyLibre());
-            if (lineaC == null)
+            _op = new Op();
+            var lineaC = _repositorioLineas.GetFiltered(l => l.Numero == linea.Numero).FirstOrDefault();
+          
+            if (lineaC == null || !lineaC.EstoyLibre())
             {
-                return false;
+                return (false, "Linea Opcupada o inexistente");
             }
             else
             {
-                var turnos = _repositorioTurnos.GetFiltered(t => t.SoyTurnoActual()).FirstOrDefault();
-                _op.Color = new Color { Codigo = color.Codigo, Descripcion = color.Descripcion };
-                _op.Modelo = new Modelo { Denominacion = modelo.Denominacion, Objetivo = modelo.Objetivo, Sku = modelo.Sku };
-                _op.FechaInicio = fecha;
-                _op.IniciarNuevoHorario(turnos);
+                Turno turnoActual = null;
+                var turnos = _repositorioTurnos.GetAll();
+                
+                if (turnos == null)
+                {
+                    return (false, "No hay turnos");
+                }
+                foreach (var turno in turnos)
+                {
+                    if(turno.SoyTurnoActual())
+                    {
+                        turnoActual = turno;
+                        break;
+                    }
+                }
+                if(turnoActual == null)
+                {
+                    return (false, "no existe turno para este horario");
+                }
+                
+                var color1 = _repositorioColor.GetFiltered(c => c.Codigo == color.Codigo).FirstOrDefault();
+                var modelo1 = _repositorioModelo.GetFiltered(m => m.Sku == modelo.Sku).FirstOrDefault();
+                var IdHorario = _repositorioHorario.Next();
+                _op.ConfirmarOP(numero,color1, modelo1, turnoActual, lineaC, IdHorario);
                 _repositorioOP.Add(_op);
-                return true;
+                
+
+                return (true,"la OP se creo con exito");
             }
         }
         

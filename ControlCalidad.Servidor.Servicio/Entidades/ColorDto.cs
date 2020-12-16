@@ -10,6 +10,8 @@ namespace ControlCalidad.Servidor.Servicio
     [DataContract]
     public class ColorDto
     {
+        [DataMember]
+        public int Id { get; set; }
 
         [DataMember]
         public string Descripcion { get; set; }

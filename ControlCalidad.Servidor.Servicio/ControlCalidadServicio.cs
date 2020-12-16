@@ -12,13 +12,10 @@ namespace ControlCalidad.Servidor.Servicio
     
     public class ControlCalidadServicio : IControlCalidadServicio
     {
-        private ControladorLineas _controladorLineas = new ControladorLineas();
+        
         private ControladorOP _controladorOP = new ControladorOP();
         private ControladorEspecificacionDeDefecto _controladorEspec = new ControladorEspecificacionDeDefecto();
-        public LineaDto[] GetLineas()
-        {
-            return _controladorLineas.GetLineas();
-        }
+        
         public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
             return _controladorOP.RegistrarDefecto(idEspDefecto, numero, pie);
@@ -39,9 +36,9 @@ namespace ControlCalidad.Servidor.Servicio
             return _controladorEspec.GetEspecificaciones(tipo);
         }
 
-        public bool ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color, DateTime fecha)
+        public (bool,string)ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color)
         {
-            return _controladorOP.ConfirmarOP(numero, linea, modelo, color, fecha);
+            return _controladorOP.ConfirmarOP(numero, linea, modelo, color);
         }
 
         public List<string> ObtenerHorasDeTurnoActual()

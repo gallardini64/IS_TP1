@@ -11,6 +11,10 @@ namespace ControlCalidad.Servidor.Dominio
         public int Numero { get; set; }
         public virtual ICollection<Op> OPs{ get; set; }
 
+        public Linea()
+        {
+
+        }
         public bool EstoyLibre()
         {
             foreach (var op in OPs)

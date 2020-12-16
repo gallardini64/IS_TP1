@@ -20,5 +20,10 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
         {
             return Adaptador.InicializarOp();
         }
+
+        public (bool,string) ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color)
+        {
+            return Adaptador.ConfirmarOP(numero, linea, modelo, color);
+        }
     }
 }

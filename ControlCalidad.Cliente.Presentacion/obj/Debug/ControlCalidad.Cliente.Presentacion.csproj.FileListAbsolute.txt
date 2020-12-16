@@ -94,3 +94,4 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\bi
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\bin\Debug\EntityFramework.xml
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csproj.CopyComplete
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaSupervisorDeLinea.resources

@@ -2,6 +2,7 @@
 using ControlCalidad.Cliente.Presentacion.Interfaces;
 using ControlCalidad.Cliente.Presentacion.Presentadores;
 using ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario;
+using ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,7 +59,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
 
         private void CargarDefectosDeReprocesado()
         {
-            dynamic[] especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Reprocesado");
+            EspecificacionDeDefectoDto[] especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Reprocesado");
             var i = 0;
             foreach (var item in especificacionDeDefectos)
             {

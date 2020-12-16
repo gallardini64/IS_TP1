@@ -11,13 +11,7 @@ namespace ControlCalidad.Cliente.AccesoExterno
     public static class Adaptador
     {
         // cambio en el adaptador
-        public static LineaDto[] GetLineas()
-        {
-            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
-            {
-                return servicio.GetLineas();
-            }
-        }
+       
 
         public static EspecificacionDeDefectoDto[] ObtenerEspecificacionesDefectosTipo(string tipo)
         {
@@ -47,5 +41,14 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.ObtenerHorasDeTurnoActual();
             }
         }
+        public static (bool,string) ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.ConfirmarOP(numero,linea,modelo,color);
+            }
+        }
+
+
     }
 }

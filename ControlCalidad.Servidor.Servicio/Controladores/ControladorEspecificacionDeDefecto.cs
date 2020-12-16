@@ -23,6 +23,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                 TipoDefecto = new TipoDefectoDto(especificacion.TipoDefecto.ToString()),
 
             }).ToArray();
+            
         }
 
         public EspecificacionDeDefectoDto[] GetEspecificaciones(string tipo)

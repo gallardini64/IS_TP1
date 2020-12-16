@@ -73,3 +73,5 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debu
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.CorreccionDBIcollection.resources
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.cambiosEnFecha.resources
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.CorreccionDBIcollection.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.fechaFinNull.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Datos\obj\Debug\ControlCalidad.Servidor.Datos.Migrations.finhorarioNull.resources

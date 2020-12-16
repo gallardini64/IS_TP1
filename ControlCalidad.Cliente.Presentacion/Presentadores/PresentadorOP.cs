@@ -1,6 +1,6 @@
 ﻿using ControlCalidad.Cliente.AccesoExterno;
 using ControlCalidad.Cliente.Presentacion.Interfaces;
-
+using ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,9 +29,11 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
             }
         }
 
-        public dynamic[] ObtenerEspecificacionesDefectosTipo(string v)
+        public EspecificacionDeDefectoDto[] ObtenerEspecificacionesDefectosTipo(string v)
         {
             return Adaptador.ObtenerEspecificacionesDefectosTipo(v);
         }
+
+        
     }
 }

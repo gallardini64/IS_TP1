@@ -73,6 +73,14 @@
     <Compile Include="Migrations\202012142105223_CorreccionDBIcollection.designer.cs">
       <DependentUpon>202012142105223_CorreccionDBIcollection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012160014175_fechaFinNull.cs" />
+    <Compile Include="Migrations\202012160014175_fechaFinNull.designer.cs">
+      <DependentUpon>202012160014175_fechaFinNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012160043428_finhorarioNull.cs" />
+    <Compile Include="Migrations\202012160043428_finhorarioNull.designer.cs">
+      <DependentUpon>202012160043428_finhorarioNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -119,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012142105223_CorreccionDBIcollection.resx">
       <DependentUpon>202012142105223_CorreccionDBIcollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012160014175_fechaFinNull.resx">
+      <DependentUpon>202012160014175_fechaFinNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012160043428_finhorarioNull.resx">
+      <DependentUpon>202012160043428_finhorarioNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

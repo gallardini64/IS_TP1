@@ -3,18 +3,6 @@
   <xs:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
   <xs:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
   <xs:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:element name="GetLineas">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetLineasResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="GetLineasResult" nillable="true" type="q1:ArrayOfLineaDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="RegistrarDefecto">
     <xs:complexType>
       <xs:sequence>
@@ -34,7 +22,7 @@
   <xs:element name="FinalizarOp">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="op" nillable="true" type="q2:OpDto" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="op" nillable="true" type="q1:OpDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -53,7 +41,7 @@
   <xs:element name="InicializarOpResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="InicializarOpResult" type="q3:ValueTupleOfArrayOfColorDtoArrayOfModeloDtoArrayOfLineaDtomqx32tkj" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="InicializarOpResult" type="q2:ValueTupleOfArrayOfColorDtoArrayOfModeloDtoArrayOfLineaDtomqx32tkj" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -61,17 +49,16 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="numero" type="xs:int" />
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="linea" nillable="true" type="q4:LineaDto" />
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="modelo" nillable="true" type="q5:ModeloDto" />
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="color" nillable="true" type="q6:ColorDto" />
-        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="linea" nillable="true" type="q3:LineaDto" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="modelo" nillable="true" type="q4:ModeloDto" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="color" nillable="true" type="q5:ColorDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ConfirmarOPResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="ConfirmarOPResult" type="xs:boolean" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="ConfirmarOPResult" type="q6:ValueTupleOfbooleanstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

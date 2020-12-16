@@ -19,7 +19,7 @@ namespace ControlCalidad.Servidor.Datos
         {
             if (_context == null)
             {
-                _context = new ControlCalidadContext();
+                _context = ControlCalidadContext.GetInstancia();
             }
 
         }

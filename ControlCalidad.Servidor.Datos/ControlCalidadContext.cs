@@ -17,6 +17,15 @@ namespace ControlCalidad.Servidor.Datos
 
         }
 
+        private static ControlCalidadContext Instancia { get; set; } = null;
+
+        public static ControlCalidadContext GetInstancia()
+        {
+            return Instancia ?? (Instancia = new ControlCalidadContext());
+        }
+
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

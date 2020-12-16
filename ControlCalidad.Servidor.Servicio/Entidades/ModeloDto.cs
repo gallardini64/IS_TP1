@@ -11,6 +11,9 @@ namespace ControlCalidad.Servidor.Servicio
     public class ModeloDto
     {
         [DataMember]
+        public int Id { get; set; }
+
+        [DataMember]
         public string Sku { get; set; }
         [DataMember]
         public string Denominacion { get; set; }

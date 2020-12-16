@@ -8,15 +8,20 @@ namespace ControlCalidad.Servidor.Dominio
     {
        
         public DateTime Inicio { get; set; }
-        public DateTime Fin { get; set; }
+        public Nullable<DateTime> Fin { get; set; }
         public virtual Turno Turno { get; set; }
         public virtual ICollection<Defecto> Defectos { get; set; }
         public virtual ICollection<Par> Pares { get; set; }
 
-
-        
-        public Horario(Turno turno)
+        public Horario()
         {
+
+        }
+        
+        public Horario(Turno turno, int id)
+        {
+            Inicio = DateTime.Now;
+            Id = id;
             Defectos = new List<Defecto>();
             Pares = new List<Par>();
             Turno = turno;
@@ -48,7 +53,6 @@ namespace ControlCalidad.Servidor.Dominio
                                                                    d.Pie.ToString().Equals(pie));
                 Defectos.Remove(defecto);
             }
-
         }
     }
 }

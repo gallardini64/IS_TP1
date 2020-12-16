@@ -11,12 +11,26 @@ namespace ControlCalidad.Servidor.Dominio
     {
         public int Numero { get; set; }
         public DateTime FechaInicio { get; set; }
-        public DateTime FechaFin { get; set; }
+        public Nullable<DateTime> FechaFin { get; set; } 
         public virtual Modelo Modelo { get; set; }
         public virtual Color Color { get; set; }
         public virtual ICollection<Horario> Horarios { get; set; }
         public virtual Linea Linea { get; set; }
-        public EstadoOP Estado{ get; set; }
+
+        private EstadoOP _estado;
+        public EstadoOP Estado{ 
+            get
+            {
+                return _estado;
+            } 
+            set
+            {
+                if (_estado != EstadoOP.Finalizada)
+                {
+                    _estado = value;
+                }
+            } 
+        }
         public Horario HorarioActual { get; set; }
 
 
@@ -34,8 +48,7 @@ namespace ControlCalidad.Servidor.Dominio
             }
             else
             {
-                if ((int)HorarioActual.Turno.HeFilalizadoHace().TotalMinutes <
-                    FactoriaDeEstrategias.GetInstancia().GetEstrategiaTiempoLimite().getMinLimiteDeTiempoDeOperaciones())
+                if ((int)HorarioActual.Turno.HeFilalizadoHace().TotalMinutes < 10)
                 {
                     HorarioActual.RegistrarDefecto(numero, especDe, pie, now);
                     return true;
@@ -53,8 +66,7 @@ namespace ControlCalidad.Servidor.Dominio
             }
             else
             {
-                if ((int)HorarioActual.Turno.HeFilalizadoHace().TotalMinutes <
-                    FactoriaDeEstrategias.GetInstancia().GetEstrategiaTiempoLimite().getMinLimiteDeTiempoDeOperaciones())
+                if ((int)HorarioActual.Turno.HeFilalizadoHace().TotalMinutes < 10)
                 {
                     HorarioActual.RegistrarPar(numero, calidad);
                     return true;
@@ -63,18 +75,29 @@ namespace ControlCalidad.Servidor.Dominio
             return false;
         }
 
-        public void ConfirmarOP(Turno turno)
+        
+        public void IniciarNuevoHorario(Turno turno, int id)
         {
-            Estado = EstadoOP.Activa;
-            Horarios.Add(new Horario(turno));
-        }
-        public void IniciarNuevoHorario(Turno turno)
-        {
-            Horario h = new Horario(turno);
+            Horario h = new Horario(turno, id);
             Horarios.Add(h);
             HorarioActual = h;
         }
+        //TODO: una vez pausada la op se ejecuta este metodo
+        public void CerrarHorario()
+        {
 
+        }
 
+        public void ConfirmarOP(int numero,Color color1, Modelo modelo1, Turno turno, Linea lineaC, int idHorario)
+        {
+            Id = numero;
+            Numero = numero;
+            FechaInicio = DateTime.Now;
+            Color = color1;
+            Modelo = modelo1;
+            IniciarNuevoHorario(turno, idHorario);
+            Linea = lineaC;
+            Estado = EstadoOP.Activa;
+        }
     }
 }

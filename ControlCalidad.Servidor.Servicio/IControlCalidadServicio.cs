@@ -11,8 +11,7 @@ namespace ControlCalidad.Servidor.Servicio
     [ServiceContract]
     public interface IControlCalidadServicio
     {
-        [OperationContract]
-        LineaDto[] GetLineas();
+        
 
         [OperationContract]
         bool RegistrarDefecto(int idEspDefecto, int numero, string pie);
@@ -24,14 +23,17 @@ namespace ControlCalidad.Servidor.Servicio
         (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp();
 
         [OperationContract]
-        bool ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color, DateTime fecha);
+        (bool,string) ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color);
 
         [OperationContract]
         EspecificacionDeDefectoDto[] GetEspecificacionDeDefectoTipo(string tipo);
+        
         [OperationContract]
         List<string> ObtenerHorasDeTurnoActual();
 
+        
 
+        
 
 
     }

@@ -11,6 +11,8 @@ namespace ControlCalidad.Servidor.Servicio
     public class HorarioDto
     {
         [DataMember]
+        public int Id { get; set; }
+        [DataMember]
         public DateTime Inicio { get; set; }
         [DataMember]
         public DateTime Fin { get; set; }

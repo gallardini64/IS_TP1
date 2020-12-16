@@ -18,6 +18,10 @@ namespace ControlCalidad.Servidor.Dominio
             Inicio = inicio;
             Fin = fin;
         }
+        public Turno()
+        {
+
+        }
 
         public override string ToString()
         {
@@ -37,9 +41,16 @@ namespace ControlCalidad.Servidor.Dominio
         }
         public bool SoyTurnoActual()
         {
-            if (Inicio.Hour <= DateTime.Now.Hour && DateTime.Now.Hour <= Fin.Hour) return true;
-            else return false;
+            var HoraInicio = Inicio.TimeOfDay;
+            var HoraFin = Fin.TimeOfDay;
+            var hora = DateTime.Now.TimeOfDay;
+
+            return HoraInicio <= HoraFin ?
+            hora >= HoraInicio && hora < HoraFin:
+            hora >= HoraInicio || hora < HoraFin;
         }
+
+        
         public TimeSpan HeFilalizadoHace()
         {
             return DateTime.Now.Subtract(Fin);
