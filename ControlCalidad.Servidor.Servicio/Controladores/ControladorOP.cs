@@ -63,7 +63,81 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             return (colores, modelos, lineas);
         }
 
-        
+        public (bool,string) ReanudarOP(int numero)
+        {
+            _op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
+
+            Turno turnoActual = null;
+            var turnos = _repositorioTurnos.GetAll();
+
+            if (turnos == null)
+            {
+                return(false, "No hay turnos disponibles.");
+            }
+            foreach (var turno in turnos)
+            {
+                if (turno.SoyTurnoActual())
+                {
+                    turnoActual = turno;
+                    break;
+                }
+            }
+            if (turnoActual == null)
+            {
+                return (false, "No existe turno para este horario.");
+            }
+
+
+            _op.ReanudarOP(turnoActual);
+            _repositorioOP.Update(_op);
+            return (true, null);
+            
+        }
+
+        public bool PausarOP(int numero)
+        {
+            _op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
+            _op.PausarOP();
+            try
+            {
+                _repositorioOP.Update(_op);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
+        }
+
+        internal OpDto GetOP(string usuario)
+        {
+            Op op = _repositorioOP.GetFiltered(o => o.Empleado.Usuario == usuario && o.Estado != EstadoOP.Finalizada).FirstOrDefault();
+            if (op == null)
+            {
+                return null;
+            }
+            return new OpDto()
+            {
+                Numero = op.Numero,
+                Modelo = new ModeloDto
+                {
+                    Denominacion = op.Modelo.Denominacion,
+                    Objetivo = op.Modelo.Objetivo
+                },
+                Linea = new LineaDto
+                {
+                    Numero = op.Linea.Numero
+                },
+                Color = new ColorDto
+                {
+                    Descripcion = op.Color.Descripcion
+                },
+                FechaInicio = op.FechaInicio,
+                Estado = op.Estado.ToString()
+            };
+        }
+
         public bool RegistrarPar(int numero, string calidad)
         {
             Calidad c = (Calidad) Enum.Parse(typeof(Calidad), calidad);

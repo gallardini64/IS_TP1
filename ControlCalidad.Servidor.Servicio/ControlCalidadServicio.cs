@@ -53,5 +53,19 @@ namespace ControlCalidad.Servidor.Servicio
             return _controladorEmpleado.OtorgarPermisoDeSesion(usuario, password);
         }
 
+        public OpDto GetOP(string usuario)
+        {
+           return _controladorOP.GetOP(usuario);
+        }
+
+        public bool PausarOP(int numero)
+        {
+            return _controladorOP.PausarOP(numero);
+        }
+
+        public (bool,string) ReanudarOP(int numero)
+        {
+            return _controladorOP.ReanudarOP(numero);
+        }
     }
 }

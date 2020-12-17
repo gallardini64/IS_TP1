@@ -1,4 +1,5 @@
 ﻿
+using ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference;
 using ControlCalidad.Cliente.Presentacion.Presentadores;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,11 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
 {
     public interface IVistaSupervisorDeLinea
     {
-        void IniciarOP();
+        void IniciarOP(OpDto op);
         //void CargarOrden(OpDto op);
         void MostrarObjetivo();
-        void SetPresentador(PresentadorLinea presentadorLinea);
+        void SetPresentador(PresentadorLinea presentadorLinea, string usuario);
+        void Desplegar();
         //void ListarDefectos(ICollection<DefectoDto> defectos);
     }
 }

@@ -51,6 +51,24 @@
   <wsdl:message name="IControlCalidadServicio_IniciarSesion_OutputMessage">
     <wsdl:part name="parameters" element="tns:IniciarSesionResponse" />
   </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOP" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_GetOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_PausarOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:PausarOP" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_PausarOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PausarOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ReanudarOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReanudarOP" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_ReanudarOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReanudarOPResponse" />
+  </wsdl:message>
   <wsdl:portType name="IControlCalidadServicio">
     <wsdl:operation name="RegistrarDefecto">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto" message="tns:IControlCalidadServicio_RegistrarDefecto_InputMessage" />
@@ -79,6 +97,18 @@
     <wsdl:operation name="IniciarSesion">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/IniciarSesion" message="tns:IControlCalidadServicio_IniciarSesion_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/IniciarSesionResponse" message="tns:IControlCalidadServicio_IniciarSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetOP" message="tns:IControlCalidadServicio_GetOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetOPResponse" message="tns:IControlCalidadServicio_GetOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PausarOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/PausarOP" message="tns:IControlCalidadServicio_PausarOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/PausarOPResponse" message="tns:IControlCalidadServicio_PausarOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReanudarOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ReanudarOP" message="tns:IControlCalidadServicio_ReanudarOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ReanudarOPResponse" message="tns:IControlCalidadServicio_ReanudarOP_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IControlCalidadServicio" type="tns:IControlCalidadServicio">
@@ -139,6 +169,33 @@
     </wsdl:operation>
     <wsdl:operation name="IniciarSesion">
       <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/IniciarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOP">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/GetOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PausarOP">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/PausarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReanudarOP">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ReanudarOP" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -34,6 +34,35 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.InicializarOp();
             }
         }
+
+        
+        public static OpDto GetOP(string usuario)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.GetOP(usuario);
+            }
+        }
+
+        
+        public static (bool,string) ReanudarOP(int numero)
+    {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.ReanudarOP(numero);
+            }
+        }
+
+        public static bool PausarOP(int numero)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.PausarOP(numero);
+            }
+        }
+
+        
+
         public static string[] GetHorasDeTurnoActual()
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())

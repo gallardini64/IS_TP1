@@ -26,7 +26,7 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto ColorField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EstadoOPDto EstadoField;
+        private string EstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime FechaFinField;
@@ -73,7 +73,7 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EstadoOPDto Estado {
+        public string Estado {
             get {
                 return this.EstadoField;
             }
@@ -249,51 +249,6 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EstadoOPDto", Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio")]
-    [System.SerializableAttribute()]
-    public partial class EstadoOPDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EstadoField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
                 }
             }
         }
@@ -849,6 +804,24 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/IniciarSesion", ReplyAction="http://tempuri.org/IControlCalidadServicio/IniciarSesionResponse")]
         System.Threading.Tasks.Task<System.ValueTuple<bool, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto>> IniciarSesionAsync(string usuario, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/GetOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/GetOPResponse")]
+        ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto GetOP(string usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/GetOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/GetOPResponse")]
+        System.Threading.Tasks.Task<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto> GetOPAsync(string usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/PausarOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/PausarOPResponse")]
+        bool PausarOP(int numero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/PausarOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/PausarOPResponse")]
+        System.Threading.Tasks.Task<bool> PausarOPAsync(int numero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ReanudarOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/ReanudarOPResponse")]
+        System.ValueTuple<bool, string> ReanudarOP(int numero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ReanudarOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/ReanudarOPResponse")]
+        System.Threading.Tasks.Task<System.ValueTuple<bool, string>> ReanudarOPAsync(int numero);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -932,6 +905,30 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         public System.Threading.Tasks.Task<System.ValueTuple<bool, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto>> IniciarSesionAsync(string usuario, string password) {
             return base.Channel.IniciarSesionAsync(usuario, password);
+        }
+        
+        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto GetOP(string usuario) {
+            return base.Channel.GetOP(usuario);
+        }
+        
+        public System.Threading.Tasks.Task<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto> GetOPAsync(string usuario) {
+            return base.Channel.GetOPAsync(usuario);
+        }
+        
+        public bool PausarOP(int numero) {
+            return base.Channel.PausarOP(numero);
+        }
+        
+        public System.Threading.Tasks.Task<bool> PausarOPAsync(int numero) {
+            return base.Channel.PausarOPAsync(numero);
+        }
+        
+        public System.ValueTuple<bool, string> ReanudarOP(int numero) {
+            return base.Channel.ReanudarOP(numero);
+        }
+        
+        public System.Threading.Tasks.Task<System.ValueTuple<bool, string>> ReanudarOPAsync(int numero) {
+            return base.Channel.ReanudarOPAsync(numero);
         }
     }
 }

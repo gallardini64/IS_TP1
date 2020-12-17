@@ -103,4 +103,46 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="GetOPResult" nillable="true" type="q10:OpDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PausarOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numero" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PausarOPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PausarOPResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReanudarOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numero" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReanudarOPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="ReanudarOPResult" type="q11:ValueTupleOfbooleanstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -51,6 +51,7 @@ namespace ControlCalidad.Servidor.Datos
             DbSet.Attach(entity);
             var entry = _context.Entry(entity);
             entry.State = System.Data.Entity.EntityState.Modified;
+            _context.SaveChanges();
         }
 
         public int Next()

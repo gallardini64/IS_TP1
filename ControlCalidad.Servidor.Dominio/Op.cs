@@ -100,7 +100,19 @@ namespace ControlCalidad.Servidor.Dominio
             }
         }
 
-        
+        public void ReanudarOP(Turno turnoActual)
+        {
+            Estado = EstadoOP.Activa;
+            IniciarNuevoHorario(turnoActual);
+
+        }
+
+        public void PausarOP()
+        {
+            Estado = EstadoOP.Pausada;
+            CerrarHorario();
+        }
+
         public void IniciarNuevoHorario(Turno turno)
         {
             if(Horarios.Count > 0) CerrarHorario();
@@ -109,7 +121,6 @@ namespace ControlCalidad.Servidor.Dominio
         //TODO: una vez pausada la op se ejecuta este metodo
         public void CerrarHorario()
         {
-            Estado = EstadoOP.Pausada;
             Horarios.Last().Fin = DateTime.Now;
         }
 

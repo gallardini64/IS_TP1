@@ -34,8 +34,15 @@ namespace ControlCalidad.Servidor.Servicio
         [OperationContract]
         (bool, EmpleadoDto) IniciarSesion(string usuario, string password);
 
+        [OperationContract]
+        OpDto GetOP(string usuario);
+        
+        [OperationContract]
+        bool PausarOP(int numero);
+        [OperationContract]
+        (bool,string) ReanudarOP(int numero);
 
-
+        
 
     }
 

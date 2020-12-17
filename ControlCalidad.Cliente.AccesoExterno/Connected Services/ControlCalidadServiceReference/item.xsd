@@ -3,7 +3,7 @@
   <xs:complexType name="OpDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="Color" nillable="true" type="tns:ColorDto" />
-      <xs:element minOccurs="0" name="Estado" nillable="true" type="tns:EstadoOPDto" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
       <xs:element minOccurs="0" name="HorarioActual" nillable="true" type="tns:HorarioDto" />
@@ -22,12 +22,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ColorDto" nillable="true" type="tns:ColorDto" />
-  <xs:complexType name="EstadoOPDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="EstadoOPDto" nillable="true" type="tns:EstadoOPDto" />
   <xs:complexType name="HorarioDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="Fin" type="xs:dateTime" />

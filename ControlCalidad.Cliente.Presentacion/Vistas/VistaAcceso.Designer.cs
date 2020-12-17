@@ -40,7 +40,6 @@
             // 
             this.tbContrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
             this.tbContrasenia.BorderColor = System.Drawing.Color.SeaGreen;
-            this.tbContrasenia.Enabled = false;
             this.tbContrasenia.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.tbContrasenia.ForeColor = System.Drawing.Color.White;
             this.tbContrasenia.Location = new System.Drawing.Point(177, 102);
@@ -52,7 +51,6 @@
             // 
             this.tbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
             this.tbUsuario.BorderColor = System.Drawing.Color.SeaGreen;
-            this.tbUsuario.Enabled = false;
             this.tbUsuario.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.tbUsuario.ForeColor = System.Drawing.Color.White;
             this.tbUsuario.Location = new System.Drawing.Point(177, 44);

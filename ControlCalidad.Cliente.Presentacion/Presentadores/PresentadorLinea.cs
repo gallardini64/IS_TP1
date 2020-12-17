@@ -18,7 +18,8 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
 
             empleadoLinea = empleado;
             _vista = vista;
-            _vista.SetPresentador(this);
+            _vista.SetPresentador(this,empleado.Usuario);
+            _vista.Desplegar();
         }
         public (ColorDto[], ModeloDto[], LineaDto[]) IniciarOP()
         {
@@ -30,6 +31,19 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
             return Adaptador.ConfirmarOP(numero, linea, modelo, color);
         }
 
-        
+        public OpDto GetOp(string usuario)
+        {
+            return Adaptador.GetOP(usuario);
+        }
+
+        public bool PausarOP(int numero)
+        {
+            return Adaptador.PausarOP(numero);
+        }
+
+        public (bool,string) ReanudarOP(int numero)
+        {
+           return Adaptador.ReanudarOP(numero);
+        }
     }
 }

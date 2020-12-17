@@ -8,5 +8,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
 {
     public class ControladorDefectos
     {
+
+
     }
 }

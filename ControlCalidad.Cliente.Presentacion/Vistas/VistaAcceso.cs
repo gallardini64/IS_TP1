@@ -1,15 +1,8 @@
 ﻿using ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference;
 using ControlCalidad.Cliente.Presentacion.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using ControlCalidad.Cliente.Presentacion.Presentadores;
+using System;
+using System.Windows.Forms;
 
 namespace ControlCalidad.Cliente.Presentacion.Vistas
 {
@@ -18,9 +11,8 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         PresentadorAcceso _presentador;
         public VistaAcceso()
         {
-            _presentador = new PresentadorAcceso(this);
             InitializeComponent();
-
+            _presentador = new PresentadorAcceso(this);
         }
 
         public void IniciarSesion(EmpleadoDto empleado, bool sesion)
@@ -31,29 +23,34 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
                 {
 
                     PresentadorLinea presentador = new PresentadorLinea(new VistaSupervisorDeLinea(), empleado);
-                    
-                    this.Close();
+
+                    this.Visible = false;
                 }
                 else
                 {
                     if (empleado.Rol == "SupervisorCalidad")
                     {
                         PresentadorOP presentador = new PresentadorOP(new VistaOP(), empleado);
+                        this.Visible = false;
                     }
                 }
             }
             else
             {
+                if (empleado != null)
+                {
+                    MessageBox.Show("No hay ninguna OP activa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 MessageBox.Show("Error al iniciar sesión", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
+
         }
 
         private void btIniciarSesion_Click(object sender, EventArgs e)
         {
             var tupla = _presentador.IniciarSesion(tbUsuario.Text, tbContrasenia.Text);
-            IniciarSesion(tupla.Item2,tupla.Item1);
+            IniciarSesion(tupla.Item2, tupla.Item1);
         }
 
 

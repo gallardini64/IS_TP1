@@ -23,8 +23,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         {
             InitializeComponent();
             
-            CargarDefectosDeReprocesado();
-            CargarHorasDeTurnoActual();
+            
         }
 
         private void CargarHorasDeTurnoActual()
@@ -108,6 +107,8 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         public void SetPresentador(PresentadorOP presentadorOP)
         {
             _presentadorOP = presentadorOP;
+            CargarDefectosDeReprocesado();
+            CargarHorasDeTurnoActual();
         }
     }
 }

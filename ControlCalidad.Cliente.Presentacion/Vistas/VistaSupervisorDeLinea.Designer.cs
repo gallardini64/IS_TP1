@@ -52,12 +52,13 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tbNumero = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.cbColor = new MetroFramework.Controls.MetroComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pNuevaOP = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tbFecOpAct = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panel1.SuspendLayout();
+            this.btReanudarOP = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pNuevaOP.SuspendLayout();
             this.SuspendLayout();
             // 
             // btCancelar
@@ -259,6 +260,7 @@
             this.btnPausarOP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPausarOP.Textcolor = System.Drawing.Color.White;
             this.btnPausarOP.TextFont = new System.Drawing.Font("Century Gothic", 18F);
+            this.btnPausarOP.Click += new System.EventHandler(this.btnPausarOP_Click);
             // 
             // btnFinalizarOP
             // 
@@ -485,26 +487,37 @@
             this.cbColor.TabIndex = 43;
             this.cbColor.UseSelectable = true;
             // 
-            // panel1
+            // pNuevaOP
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.panel1.Controls.Add(this.cbColor);
-            this.panel1.Controls.Add(this.tbNumero);
-            this.panel1.Controls.Add(this.bunifuCustomLabel1);
-            this.panel1.Controls.Add(this.bunifuCustomLabel4);
-            this.panel1.Controls.Add(this.bunifuCustomLabel7);
-            this.panel1.Controls.Add(this.cbModelo);
-            this.panel1.Controls.Add(this.btnConfirmar);
-            this.panel1.Controls.Add(this.bunifuCustomLabel2);
-            this.panel1.Controls.Add(this.bunifuCustomLabel3);
-            this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.cbLinea);
-            this.panel1.Controls.Add(this.tbObjetivo);
-            this.panel1.Controls.Add(this.lbLinea);
-            this.panel1.Location = new System.Drawing.Point(12, 276);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 480);
-            this.panel1.TabIndex = 44;
+            this.pNuevaOP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.pNuevaOP.Controls.Add(this.cbColor);
+            this.pNuevaOP.Controls.Add(this.tbNumero);
+            this.pNuevaOP.Controls.Add(this.bunifuCustomLabel1);
+            this.pNuevaOP.Controls.Add(this.bunifuCustomLabel4);
+            this.pNuevaOP.Controls.Add(this.bunifuCustomLabel7);
+            this.pNuevaOP.Controls.Add(this.cbModelo);
+            this.pNuevaOP.Controls.Add(this.btnConfirmar);
+            this.pNuevaOP.Controls.Add(this.bunifuCustomLabel2);
+            this.pNuevaOP.Controls.Add(this.bunifuCustomLabel3);
+            this.pNuevaOP.Controls.Add(this.btnCancelar);
+            this.pNuevaOP.Controls.Add(this.cbLinea);
+            this.pNuevaOP.Controls.Add(this.tbObjetivo);
+            this.pNuevaOP.Controls.Add(this.lbLinea);
+            this.pNuevaOP.Location = new System.Drawing.Point(12, 276);
+            this.pNuevaOP.Name = "pNuevaOP";
+            this.pNuevaOP.Size = new System.Drawing.Size(1000, 480);
+            this.pNuevaOP.TabIndex = 44;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(445, 10);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(135, 30);
+            this.bunifuCustomLabel7.TabIndex = 44;
+            this.bunifuCustomLabel7.Text = "Nueva OP";
             // 
             // tbFecOpAct
             // 
@@ -540,16 +553,44 @@
             this.bunifuCustomLabel11.TabIndex = 44;
             this.bunifuCustomLabel11.Text = "Fecha";
             // 
-            // bunifuCustomLabel7
+            // btReanudarOP
             // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(445, 10);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(135, 30);
-            this.bunifuCustomLabel7.TabIndex = 44;
-            this.bunifuCustomLabel7.Text = "Nueva OP";
+            this.btReanudarOP.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btReanudarOP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btReanudarOP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btReanudarOP.BorderRadius = 0;
+            this.btReanudarOP.ButtonText = "Reanudar OP Actual";
+            this.btReanudarOP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btReanudarOP.DisabledColor = System.Drawing.Color.Gray;
+            this.btReanudarOP.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btReanudarOP.ForeColor = System.Drawing.Color.White;
+            this.btReanudarOP.Iconcolor = System.Drawing.Color.Transparent;
+            this.btReanudarOP.Iconimage = null;
+            this.btReanudarOP.Iconimage_right = null;
+            this.btReanudarOP.Iconimage_right_Selected = null;
+            this.btReanudarOP.Iconimage_Selected = null;
+            this.btReanudarOP.IconMarginLeft = 0;
+            this.btReanudarOP.IconMarginRight = 0;
+            this.btReanudarOP.IconRightVisible = true;
+            this.btReanudarOP.IconRightZoom = 0D;
+            this.btReanudarOP.IconVisible = true;
+            this.btReanudarOP.IconZoom = 90D;
+            this.btReanudarOP.IsTab = false;
+            this.btReanudarOP.Location = new System.Drawing.Point(7, 88);
+            this.btReanudarOP.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btReanudarOP.Name = "btReanudarOP";
+            this.btReanudarOP.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btReanudarOP.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btReanudarOP.OnHoverTextColor = System.Drawing.Color.White;
+            this.btReanudarOP.selected = false;
+            this.btReanudarOP.Size = new System.Drawing.Size(262, 70);
+            this.btReanudarOP.TabIndex = 46;
+            this.btReanudarOP.Text = "Reanudar OP Actual";
+            this.btReanudarOP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btReanudarOP.Textcolor = System.Drawing.Color.White;
+            this.btReanudarOP.TextFont = new System.Drawing.Font("Century Gothic", 18F);
+            this.btReanudarOP.Visible = false;
+            this.btReanudarOP.Click += new System.EventHandler(this.btReanudarOP_Click);
             // 
             // VistaSupervisorDeLinea
             // 
@@ -557,6 +598,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.btReanudarOP);
             this.Controls.Add(this.btnFinalizarOP);
             this.Controls.Add(this.btnPausarOP);
             this.Controls.Add(this.btnCrearOP);
@@ -572,14 +614,14 @@
             this.Controls.Add(this.tbLineaOpAct);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.btCancelar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pNuevaOP);
             this.Name = "VistaSupervisorDeLinea";
             this.Text = "VistaSupervisorDeLinea";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VistaSupervisorDeLinea_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.VistaSupervisorDeLinea_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VistaSupervisorDeLinea_MouseUp);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pNuevaOP.ResumeLayout(false);
+            this.pNuevaOP.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,10 +653,11 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbNumero;
         private MetroFramework.Controls.MetroComboBox cbColor;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pNuevaOP;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbFecOpAct;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
+        private Bunifu.Framework.UI.BunifuFlatButton btReanudarOP;
     }
 }

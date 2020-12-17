@@ -19,42 +19,69 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         private ModeloDto[] _modelos;
         private ColorDto[] _colores;
         private LineaDto[] _lineas;
-        
+        public OpDto opActual { get; set; }
+
         public VistaSupervisorDeLinea()
         {
             InitializeComponent();
             
-            IniciarOP();
+            
         }
 
-        public void SetPresentador(PresentadorLinea presentador)
+        public void SetPresentador(PresentadorLinea presentador, string usuario)
         {
             _presentadorLinea = presentador;
+            IniciarOP(_presentadorLinea.GetOp(usuario));
         }
 
         
 
-        public void IniciarOP()
+        public void IniciarOP(OpDto op)
         {
-            var tupla = _presentadorLinea.IniciarOP();
+            if (op == null)
+            {
+                var tupla = _presentadorLinea.IniciarOP();
 
-            _colores = tupla.Item1;
-            _modelos = tupla.Item2;
-            _lineas = tupla.Item3;
+                _colores = tupla.Item1;
+                _modelos = tupla.Item2;
+                _lineas = tupla.Item3;
 
-            cbColor.DataSource = _colores;
-            cbColor.DisplayMember = "Descripcion";
-            cbModelo.DataSource = _modelos;
-            cbModelo.DisplayMember = "Denominacion";
-            
-            tbObjetivo.Text = _modelos.FirstOrDefault().Objetivo.ToString();
-            cbLinea.DataSource = _lineas;
-            cbLinea.DisplayMember = "Numero";
+                cbColor.DataSource = _colores;
+                cbColor.DisplayMember = "Descripcion";
+                cbModelo.DataSource = _modelos;
+                cbModelo.DisplayMember = "Denominacion";
+
+                tbObjetivo.Text = _modelos.FirstOrDefault().Objetivo.ToString();
+                cbLinea.DataSource = _lineas;
+                cbLinea.DisplayMember = "Numero";
+            }
+            else
+            {
+                pNuevaOP.Visible = false;
+                btnCrearOP.Enabled = false;
+                opActual = op;
+                CargarOpActual(opActual);
+                if (opActual.Estado == "Pausada")
+                {
+                    btReanudarOP.Visible = true;
+                }
+            }
+
+
+        }
+
+        private void CargarOpActual(OpDto op)
+        {
+            tbFecOpAct.Text = op.FechaInicio.ToString("dd/MM/yyyy");
+            tbLineaOpAct.Text = op.Linea.Numero.ToString();
+            tbModeloOpAct.Text = op.Modelo.Denominacion;
+            tbNroOpAct.Text = op.Numero.ToString();
+            tbObjetivoOpAct.Text = op.Modelo.Objetivo.ToString();
         }
 
         private void btnCrearOP_Click(object sender, EventArgs e)
         {
-            IniciarOP();
+            
         }
 
         public void MostrarObjetivo()
@@ -71,10 +98,20 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
                 ModeloDto modelo = (ModeloDto)cbModelo.SelectedItem;
                 ColorDto color = (ColorDto)cbColor.SelectedItem;
 
+                
+                
                 (bool,string) resultado = _presentadorLinea.ConfirmarOP(numero, linea, modelo, color);
                
                 if (resultado.Item1)
                 {
+                    opActual = new OpDto();
+                    opActual.Numero = numero;
+                    opActual.Linea = linea;
+                    opActual.Modelo = modelo;
+                    opActual.Color = color;
+                    opActual.FechaInicio = DateTime.Now;
+                    CargarOpActual(opActual);
+                    pNuevaOP.Visible = false;
                     MessageBox.Show($"{resultado.Item2}","Creacion OP", MessageBoxButtons.OK ,MessageBoxIcon.Information);
                 }
                 else
@@ -114,6 +151,40 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             MostrarObjetivo();
         }
         #endregion
+        public void Desplegar()
+        {
+            Show();
+        }
 
+        private void btnPausarOP_Click(object sender, EventArgs e)
+        {
+           
+           var resultado = _presentadorLinea.PausarOP(opActual.Numero);
+            
+            if (resultado)
+            {
+                btReanudarOP.Visible = true;
+                opActual.Estado = "Pausada";
+            }
+            else
+            {
+                MessageBox.Show("Error al pausar la OP"); 
+            }
+        }
+
+        private void btReanudarOP_Click(object sender, EventArgs e)
+        {
+            var resultado =_presentadorLinea.ReanudarOP(opActual.Numero);
+            if (resultado.Item1)
+            {
+                opActual.Estado = "Activa";
+                btReanudarOP.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show($"{resultado.Item2}", "Reanudar OP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
     }
 }
