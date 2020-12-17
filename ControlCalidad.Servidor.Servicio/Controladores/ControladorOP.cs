@@ -28,6 +28,10 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
            
         }
 
+
+        #region Vista Supervisor De Linea
+
+ 
         public (ColorDto[], ModeloDto[], LineaDto[]) IniciarOP()
         {
 
@@ -74,7 +78,6 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             _repositorioOP.Update(_op);
             return true;
         }
-
         public (bool,string) ReanudarOP(int numero)
         {
             _op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
@@ -105,7 +108,6 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             return (true, null);
             
         }
-
         public bool PausarOP(int numero)
         {
             _op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
@@ -121,8 +123,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             }
             
         }
-
-        internal OpDto GetOP(string usuario)
+        public OpDto GetOP(string usuario)
         {
             Op op = _repositorioOP.GetFiltered(o => o.Empleado.Usuario == usuario && o.Estado != EstadoOP.Finalizada).FirstOrDefault();
             if (op == null)
@@ -149,7 +150,79 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                 Estado = op.Estado.ToString()
             };
         }
+        public (bool, string) ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color)
+        {
+            _op = new Op();
+            var lineaC = _repositorioLineas.GetFiltered(l => l.Numero == linea.Numero).FirstOrDefault();
 
+            if (lineaC == null || !lineaC.EstoyLibre())
+            {
+                return (false, "Linea Opcupada o inexistente");
+            }
+            else
+            {
+                Turno turnoActual = null;
+                var turnos = _repositorioTurnos.GetAll();
+
+                if (turnos == null)
+                {
+                    return (false, "No hay turnos disponibles.");
+                }
+                foreach (var turno in turnos)
+                {
+                    if (turno.SoyTurnoActual())
+                    {
+                        turnoActual = turno;
+                        break;
+                    }
+                }
+                if (turnoActual == null)
+                {
+                    return (false, "No existe turno para este horario.");
+                }
+
+                var color1 = _repositorioColor.GetFiltered(c => c.Codigo == color.Codigo).FirstOrDefault();
+                var modelo1 = _repositorioModelo.GetFiltered(m => m.Sku == modelo.Sku).FirstOrDefault();
+                _op.ConfirmarOP(numero, color1, modelo1, turnoActual, lineaC, Sesion.GetEmpleado());
+                _repositorioOP.Add(_op);
+
+                return (true, "La OP se creó con éxito.");
+            }
+        }
+
+        #endregion
+
+
+        public OpDto AsignarOPaSupervisorDeCalidad()
+        {
+
+            Op op = _repositorioOP.GetFiltered(o => o.Estado == EstadoOP.Activa).FirstOrDefault();
+            if (op != null)
+            {
+                return new OpDto()
+                {
+                    Numero = op.Numero,
+                    Modelo = new ModeloDto
+                    {
+                        Denominacion = op.Modelo.Denominacion,
+                        Objetivo = op.Modelo.Objetivo
+                    },
+                    Linea = new LineaDto
+                    {
+                        Numero = op.Linea.Numero
+                    },
+                    Color = new ColorDto
+                    {
+                        Descripcion = op.Color.Descripcion
+                    },
+                    FechaInicio = op.FechaInicio,
+                    Estado = op.Estado.ToString()
+                };
+            }
+            return null;
+            
+
+        }
         public bool RegistrarPar(int numero, string calidad)
         {
             Calidad c = (Calidad) Enum.Parse(typeof(Calidad), calidad);
@@ -157,7 +230,6 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             _repositorioOP.Update(_op);
             return bandera;
         }
-
         public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
             var esp = _repositorioEsp.GetFiltered(e => e.Id == idEspDefecto).FirstOrDefault();
@@ -167,51 +239,11 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             return registrada;
         }
 
-        public List<string> ObtenerHorasTurno()
+        public TurnoDto ObtenerDatosDeTurno(int numeroOP)
         {
-            return _op.Horarios.LastOrDefault().Turno.GetListaDeHoras();
-        }
-
-        public (bool,string) ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color)
-        {
-            _op = new Op();
-            var lineaC = _repositorioLineas.GetFiltered(l => l.Numero == linea.Numero).FirstOrDefault();
-          
-            if (lineaC == null || !lineaC.EstoyLibre())
-            {
-                return (false, "Linea Opcupada o inexistente");
-            }
-            else
-            {
-                Turno turnoActual = null;
-                var turnos = _repositorioTurnos.GetAll();
-                
-                if (turnos == null)
-                {
-                    return (false, "No hay turnos disponibles.");
-                }
-                foreach (var turno in turnos)
-                {
-                    if(turno.SoyTurnoActual())
-                    {
-                        turnoActual = turno;
-                        break;
-                    }
-                }
-                if(turnoActual == null)
-                {
-                    return (false, "No existe turno para este horario.");
-                }
-                
-                var color1 = _repositorioColor.GetFiltered(c => c.Codigo == color.Codigo).FirstOrDefault();
-                var modelo1 = _repositorioModelo.GetFiltered(m => m.Sku == modelo.Sku).FirstOrDefault();
-                _op.ConfirmarOP(numero,color1, modelo1, turnoActual, lineaC,Sesion.GetEmpleado());
-                _repositorioOP.Add(_op);
-               
-                
-
-                return (true,"La OP se creó con éxito.");
-            }
+            _op = _repositorioOP.GetFiltered(o => o.Numero == numeroOP).FirstOrDefault();
+            Turno t = _op.Horarios.LastOrDefault().Turno;
+            return new TurnoDto() { Id = t.Id, Inicio = t.Inicio, Fin = t.Fin, Descripcion = t.Descripcion, Horas = t.GetListaDeHoras() };
         }
         
     }

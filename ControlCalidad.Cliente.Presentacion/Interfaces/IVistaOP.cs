@@ -13,8 +13,10 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
         
         void DesactivarControles();
         void LimpiarCamposOP();
+        void CargarOpActual();
         void RegistrarDefecto(int idEspDefecto,int numero, string pie);
         void ActualizarNumeroDeDefectosTipo(int id, int numero, string pie);
-        void SetPresentador(PresentadorOP presentadorOP);
+        void SetPresentador(PresentadorOP presentadorOP, string usuario);
+        void Desplegar();
     }
 }

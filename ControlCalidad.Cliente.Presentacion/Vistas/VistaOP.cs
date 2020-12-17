@@ -19,33 +19,37 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
     {
         private PresentadorOP _presentadorOP;
         private List<DefectoAgregar> _panelesDefecto = new List<DefectoAgregar>();
+        public OpDto opActual { get; set; }
+        public TurnoDto turnoActual { get; set; }
         public VistaOP()
         {
             InitializeComponent();
-            
-            
-        }
 
-        private void CargarHorasDeTurnoActual()
+        }
+        public void SetPresentador(PresentadorOP presentadorOP, string empleado)
         {
-            cbHora.DataSource = Adaptador.GetHorasDeTurnoActual();
+            _presentadorOP = presentadorOP;
+        }
+        public void CargarOpActual()
+        {
+            opActual = _presentadorOP.AsignarOPaSupervisorDeCalidad();
+            tbOpNum.Text = opActual.Numero.ToString();
+
         }
 
-        //public void ActivarControles(OpDto op)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
+
+
+        private void CargarDatosDeTurnoActual()
+        {
+            turnoActual = _presentadorOP.ObtenerDatosDeTurnoActual(opActual);
+            cbHora.DataSource = turnoActual.Horas;
+            tbTurno.Text = turnoActual.Descripcion;
+        }
         public void RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
             _presentadorOP.RegistrarDefecto(idEspDefecto, numero, pie);
         }
-
-        //public void CargarOrden(OpDto op)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         public void DesactivarControles()
         {
             throw new NotImplementedException();
@@ -55,7 +59,13 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         {
             throw new NotImplementedException();
         }
-
+        public void Desplegar()
+        {
+            CargarDatosDeTurnoActual();
+            CargarDefectosDeReprocesado();
+            CargarDefectosDeObservado();
+            Show();
+        }
         private void CargarDefectosDeReprocesado()
         {
             EspecificacionDeDefectoDto[] especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Reprocesado");
@@ -104,11 +114,5 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             mouseMove(sender, e);
         }
 
-        public void SetPresentador(PresentadorOP presentadorOP)
-        {
-            _presentadorOP = presentadorOP;
-            CargarDefectosDeReprocesado();
-            CargarHorasDeTurnoActual();
-        }
     }
 }

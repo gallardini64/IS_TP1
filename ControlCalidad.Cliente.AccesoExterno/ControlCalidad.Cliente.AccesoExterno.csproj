@@ -74,6 +74,9 @@
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.TurnoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidadServicio.wsdl" />
     <None Include="Connected Services\ControlCalidadServiceReference\item.xsd">
       <SubType>Designer</SubType>

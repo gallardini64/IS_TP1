@@ -12,10 +12,8 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
     public interface IVistaSupervisorDeLinea
     {
         void IniciarOP(OpDto op);
-        //void CargarOrden(OpDto op);
         void MostrarObjetivo();
         void SetPresentador(PresentadorLinea presentadorLinea, string usuario);
         void Desplegar();
-        //void ListarDefectos(ICollection<DefectoDto> defectos);
     }
 }

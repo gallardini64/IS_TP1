@@ -17,7 +17,9 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
         {
             empleadoCalidad = empleado;
             _vista = vista;
-            _vista.SetPresentador(this);
+            _vista.SetPresentador(this, empleadoCalidad.Usuario);
+            _vista.CargarOpActual();
+            _vista.Desplegar();
         }
         public void RegistrarDefecto(int idEspDefecto,int numero,string pie) 
         {
@@ -30,6 +32,16 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
             {
                 _vista.ActualizarNumeroDeDefectosTipo(idEspDefecto, numero, pie);
             }
+        }
+
+        public OpDto AsignarOPaSupervisorDeCalidad()
+        {
+            return Adaptador.AsignarOPaSupervisorDeCalidad();
+        }
+
+        public TurnoDto ObtenerDatosDeTurnoActual(OpDto opActual)
+        {
+            return Adaptador.ObtenerDatosDeTurnoActual(opActual.Numero);
         }
 
         public EspecificacionDeDefectoDto[] ObtenerEspecificacionesDefectosTipo(string v)

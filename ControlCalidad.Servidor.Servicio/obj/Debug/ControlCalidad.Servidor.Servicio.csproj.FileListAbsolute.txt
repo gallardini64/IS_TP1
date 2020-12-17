@@ -72,3 +72,5 @@ J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 >>>>>>> bd991eb9da7c42665915c3eb65396ceda96e506c
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.CapaTransversal.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.CapaTransversal.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.CapaTransversal.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.Servicio\bin\Debug\ControlCalidad.Servidor.CapaTransversal.pdb

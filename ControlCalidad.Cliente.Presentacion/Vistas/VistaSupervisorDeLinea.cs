@@ -25,8 +25,6 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         public VistaSupervisorDeLinea()
         {
             InitializeComponent();
-            
-            
         }
 
         public void SetPresentador(PresentadorLinea presentador, string usuario)
@@ -34,8 +32,6 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             _presentadorLinea = presentador;
             IniciarOP(_presentadorLinea.GetOp(usuario));
         }
-
-        
 
         public void IniciarOP(OpDto op)
         {
@@ -80,7 +76,10 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
 
         private void btnCrearOP_Click(object sender, EventArgs e)
         {
-            
+            if(opActual != null)
+            {
+                MessageBox.Show("Ya existe una OP en proceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void MostrarObjetivo()
@@ -97,8 +96,6 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
                 ModeloDto modelo = (ModeloDto)cbModelo.SelectedItem;
                 ColorDto color = (ColorDto)cbColor.SelectedItem;
 
-                
-                
                 (bool,string) resultado = _presentadorLinea.ConfirmarOP(numero, linea, modelo, color);
                
                 if (resultado.Item1)

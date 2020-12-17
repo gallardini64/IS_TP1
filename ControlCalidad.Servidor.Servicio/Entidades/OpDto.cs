@@ -27,7 +27,5 @@ namespace ControlCalidad.Servidor.Servicio
         public LineaDto Linea { get; set; }
         [DataMember]
         public string Estado { get; set; }
-        [DataMember]
-        public HorarioDto HorarioActual { get; set; }
     }
 }

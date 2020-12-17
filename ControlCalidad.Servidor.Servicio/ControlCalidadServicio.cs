@@ -38,11 +38,6 @@ namespace ControlCalidad.Servidor.Servicio
             return _controladorOP.ConfirmarOP(numero, linea, modelo, color);
         }
 
-        public List<string> ObtenerHorasDeTurnoActual()
-        {
-            return _controladorOP.ObtenerHorasTurno();
-        }
-
         public (bool, EmpleadoDto) IniciarSesion(string usuario, string password)
         {
 
@@ -67,6 +62,16 @@ namespace ControlCalidad.Servidor.Servicio
         public bool FinalizarOP(int numero)
         {
             return _controladorOP.FinalizarOP(numero);
+        }
+
+        public OpDto AsignarOPaSupervisorDeCalidad()
+        {
+            return _controladorOP.AsignarOPaSupervisorDeCalidad();
+        }
+
+        public TurnoDto ObtenerDatosDeTurnoActual(int numeroOP)
+        {
+            return _controladorOP.ObtenerDatosDeTurno(numeroOP);
         }
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:complexType name="ArrayOfColorDto">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ColorDto" nillable="true" type="tns:ColorDto" />
@@ -63,6 +64,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TipoDefectoDto" nillable="true" type="tns:TipoDefectoDto" />
+  <xs:complexType name="TurnoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fin" type="xs:dateTime" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Horas" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Inicio" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TurnoDto" nillable="true" type="tns:TurnoDto" />
   <xs:complexType name="EmpleadoDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
@@ -80,7 +91,6 @@
       <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="HorarioActual" nillable="true" type="tns:HorarioDto" />
       <xs:element minOccurs="0" name="Horarios" nillable="true" type="tns:ArrayOfHorarioDto" />
       <xs:element minOccurs="0" name="Linea" nillable="true" type="tns:LineaDto" />
       <xs:element minOccurs="0" name="Modelo" nillable="true" type="tns:ModeloDto" />
@@ -88,6 +98,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="OpDto" nillable="true" type="tns:OpDto" />
+  <xs:complexType name="ArrayOfHorarioDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HorarioDto" nillable="true" type="tns:HorarioDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHorarioDto" nillable="true" type="tns:ArrayOfHorarioDto" />
   <xs:complexType name="HorarioDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="Fin" type="xs:dateTime" />
@@ -96,10 +112,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="HorarioDto" nillable="true" type="tns:HorarioDto" />
-  <xs:complexType name="ArrayOfHorarioDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="HorarioDto" nillable="true" type="tns:HorarioDto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfHorarioDto" nillable="true" type="tns:ArrayOfHorarioDto" />
 </xs:schema>

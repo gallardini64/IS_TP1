@@ -26,7 +26,7 @@ namespace ControlCalidad.Servidor.Servicio
         EspecificacionDeDefectoDto[] GetEspecificacionDeDefectoTipo(string tipo);
         
         [OperationContract]
-        List<string> ObtenerHorasDeTurnoActual();
+        TurnoDto ObtenerDatosDeTurnoActual(int numeroOP);
 
         [OperationContract]
         (bool, EmpleadoDto) IniciarSesion(string usuario, string password);
@@ -36,13 +36,15 @@ namespace ControlCalidad.Servidor.Servicio
         
         [OperationContract]
         bool PausarOP(int numero);
+
         [OperationContract]
         (bool,string) ReanudarOP(int numero);
+
         [OperationContract]
         bool FinalizarOP(int numero);
 
-        
-
+        [OperationContract]
+        OpDto AsignarOPaSupervisorDeCalidad();
     }
 
 

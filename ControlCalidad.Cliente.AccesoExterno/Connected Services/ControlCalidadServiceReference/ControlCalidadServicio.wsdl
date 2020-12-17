@@ -33,11 +33,11 @@
   <wsdl:message name="IControlCalidadServicio_GetEspecificacionDeDefectoTipo_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetEspecificacionDeDefectoTipoResponse" />
   </wsdl:message>
-  <wsdl:message name="IControlCalidadServicio_ObtenerHorasDeTurnoActual_InputMessage">
-    <wsdl:part name="parameters" element="tns:ObtenerHorasDeTurnoActual" />
+  <wsdl:message name="IControlCalidadServicio_ObtenerDatosDeTurnoActual_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosDeTurnoActual" />
   </wsdl:message>
-  <wsdl:message name="IControlCalidadServicio_ObtenerHorasDeTurnoActual_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ObtenerHorasDeTurnoActualResponse" />
+  <wsdl:message name="IControlCalidadServicio_ObtenerDatosDeTurnoActual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosDeTurnoActualResponse" />
   </wsdl:message>
   <wsdl:message name="IControlCalidadServicio_IniciarSesion_InputMessage">
     <wsdl:part name="parameters" element="tns:IniciarSesion" />
@@ -69,6 +69,12 @@
   <wsdl:message name="IControlCalidadServicio_FinalizarOP_OutputMessage">
     <wsdl:part name="parameters" element="tns:FinalizarOPResponse" />
   </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_AsignarOPaSupervisorDeCalidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:AsignarOPaSupervisorDeCalidad" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_AsignarOPaSupervisorDeCalidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AsignarOPaSupervisorDeCalidadResponse" />
+  </wsdl:message>
   <wsdl:portType name="IControlCalidadServicio">
     <wsdl:operation name="RegistrarDefecto">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto" message="tns:IControlCalidadServicio_RegistrarDefecto_InputMessage" />
@@ -86,9 +92,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetEspecificacionDeDefectoTipo" message="tns:IControlCalidadServicio_GetEspecificacionDeDefectoTipo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/GetEspecificacionDeDefectoTipoResponse" message="tns:IControlCalidadServicio_GetEspecificacionDeDefectoTipo_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ObtenerHorasDeTurnoActual">
-      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActual" message="tns:IControlCalidadServicio_ObtenerHorasDeTurnoActual_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActualResponse" message="tns:IControlCalidadServicio_ObtenerHorasDeTurnoActual_OutputMessage" />
+    <wsdl:operation name="ObtenerDatosDeTurnoActual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerDatosDeTurnoActual" message="tns:IControlCalidadServicio_ObtenerDatosDeTurnoActual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/ObtenerDatosDeTurnoActualResponse" message="tns:IControlCalidadServicio_ObtenerDatosDeTurnoActual_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="IniciarSesion">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/IniciarSesion" message="tns:IControlCalidadServicio_IniciarSesion_InputMessage" />
@@ -109,6 +115,10 @@
     <wsdl:operation name="FinalizarOP">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/FinalizarOP" message="tns:IControlCalidadServicio_FinalizarOP_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/FinalizarOPResponse" message="tns:IControlCalidadServicio_FinalizarOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignarOPaSupervisorDeCalidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/AsignarOPaSupervisorDeCalidad" message="tns:IControlCalidadServicio_AsignarOPaSupervisorDeCalidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/AsignarOPaSupervisorDeCalidadResponse" message="tns:IControlCalidadServicio_AsignarOPaSupervisorDeCalidad_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IControlCalidadServicio" type="tns:IControlCalidadServicio">
@@ -149,8 +159,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ObtenerHorasDeTurnoActual">
-      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ObtenerHorasDeTurnoActual" style="document" />
+    <wsdl:operation name="ObtenerDatosDeTurnoActual">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/ObtenerDatosDeTurnoActual" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -196,6 +206,15 @@
     </wsdl:operation>
     <wsdl:operation name="FinalizarOP">
       <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/FinalizarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignarOPaSupervisorDeCalidad">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/AsignarOPaSupervisorDeCalidad" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

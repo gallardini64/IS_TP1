@@ -48,7 +48,6 @@ J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\EntityFramework.xml
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csprojAssemblyReference.cache
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Properties.Resources.resources
-J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.CrearOPVista.resources
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.DefectoAgregar.resources
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.FormBase.resources
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaOP.resources
@@ -98,3 +97,6 @@ J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaAcceso.resources
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.CapaTransversal.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.CapaTransversal.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.CapaTransversal.dll
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\bin\Debug\ControlCalidad.Servidor.CapaTransversal.pdb
+J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaAcceso.resources

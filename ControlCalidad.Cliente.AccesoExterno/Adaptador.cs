@@ -44,7 +44,14 @@ namespace ControlCalidad.Cliente.AccesoExterno
             }
         }
 
-        
+        public static OpDto AsignarOPaSupervisorDeCalidad()
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.AsignarOPaSupervisorDeCalidad();
+            }
+        }
+
         public static (bool,string) ReanudarOP(int numero)
     {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
@@ -72,13 +79,11 @@ namespace ControlCalidad.Cliente.AccesoExterno
             }
         }
 
-        
-
-        public static string[] GetHorasDeTurnoActual()
+        public static TurnoDto ObtenerDatosDeTurnoActual(int numeroOP)
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {
-                return servicio.ObtenerHorasDeTurnoActual();
+                return servicio.ObtenerDatosDeTurnoActual(numeroOP);
             }
         }
         public static (bool,string) ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color)

@@ -181,14 +181,14 @@
         Vu+NkQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnQuitarDefectoIzq.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnQuitarPar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAADVJREFUSEtj
         GAWjYBSMAhLB/3fv9v9/+/Y/hXgv1DhMAJQ8jKaYHHwQatwoGAWjYBQQBxgYAOqTiWfv7uTSAAAAAElF
         TkSuQmCC
 </value>
   </data>
-  <data name="btnAgregarDefectoIzq.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAgregarPar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAERJREFUSEtj
         GAVUBf/fvv0PwlAu9cGoBQTBqAUEAcUWwAygFEONwwTYFJODocaRDig2gBAYtYAgGLWAIKC5BSMRMDAA
