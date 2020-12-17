@@ -49,11 +49,11 @@
             this.cbHora = new MetroFramework.Controls.MetroComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbContadorDer = new System.Windows.Forms.Label();
+            this.lbContadorPrimera = new System.Windows.Forms.Label();
             this.btnQuitarPar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregarPar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.hermanado1 = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado();
+            this.Phermanado = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado();
             this.btSalir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pObservado.SuspendLayout();
             this.pReprocesado.SuspendLayout();
@@ -124,6 +124,7 @@
             // 
             this.tbTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
             this.tbTurno.BorderColor = System.Drawing.Color.SeaGreen;
+            this.tbTurno.Enabled = false;
             this.tbTurno.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.tbTurno.ForeColor = System.Drawing.Color.White;
             this.tbTurno.Location = new System.Drawing.Point(717, 29);
@@ -311,7 +312,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.panel1.Controls.Add(this.lbContadorDer);
+            this.panel1.Controls.Add(this.lbContadorPrimera);
             this.panel1.Controls.Add(this.btnQuitarPar);
             this.panel1.Controls.Add(this.btnAgregarPar);
             this.panel1.Controls.Add(this.label11);
@@ -320,16 +321,16 @@
             this.panel1.Size = new System.Drawing.Size(487, 61);
             this.panel1.TabIndex = 34;
             // 
-            // lbContadorDer
+            // lbContadorPrimera
             // 
-            this.lbContadorDer.AutoSize = true;
-            this.lbContadorDer.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.lbContadorDer.ForeColor = System.Drawing.Color.White;
-            this.lbContadorDer.Location = new System.Drawing.Point(335, 22);
-            this.lbContadorDer.Name = "lbContadorDer";
-            this.lbContadorDer.Size = new System.Drawing.Size(21, 22);
-            this.lbContadorDer.TabIndex = 32;
-            this.lbContadorDer.Text = "0";
+            this.lbContadorPrimera.AutoSize = true;
+            this.lbContadorPrimera.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.lbContadorPrimera.ForeColor = System.Drawing.Color.White;
+            this.lbContadorPrimera.Location = new System.Drawing.Point(335, 22);
+            this.lbContadorPrimera.Name = "lbContadorPrimera";
+            this.lbContadorPrimera.Size = new System.Drawing.Size(21, 22);
+            this.lbContadorPrimera.TabIndex = 32;
+            this.lbContadorPrimera.Text = "0";
             // 
             // btnQuitarPar
             // 
@@ -367,6 +368,7 @@
             this.btnQuitarPar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnQuitarPar.Textcolor = System.Drawing.Color.White;
             this.btnQuitarPar.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarPar.Click += new System.EventHandler(this.btnQuitarPar_Click);
             // 
             // btnAgregarPar
             // 
@@ -404,6 +406,7 @@
             this.btnAgregarPar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregarPar.Textcolor = System.Drawing.Color.White;
             this.btnAgregarPar.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarPar.Click += new System.EventHandler(this.btnAgregarPar_Click);
             // 
             // label11
             // 
@@ -417,13 +420,13 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "PAR PRIMERA";
             // 
-            // hermanado1
+            // Phermanado
             // 
-            this.hermanado1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.hermanado1.Location = new System.Drawing.Point(517, 565);
-            this.hermanado1.Name = "hermanado1";
-            this.hermanado1.Size = new System.Drawing.Size(382, 162);
-            this.hermanado1.TabIndex = 36;
+            this.Phermanado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.Phermanado.Location = new System.Drawing.Point(517, 565);
+            this.Phermanado.Name = "Phermanado";
+            this.Phermanado.Size = new System.Drawing.Size(382, 162);
+            this.Phermanado.TabIndex = 36;
             // 
             // btSalir
             // 
@@ -468,7 +471,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.btSalir);
-            this.Controls.Add(this.hermanado1);
+            this.Controls.Add(this.Phermanado);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbHora);
             this.Controls.Add(this.pReprocesado);
@@ -521,8 +524,8 @@
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregarPar;
         private Bunifu.Framework.UI.BunifuFlatButton btnQuitarPar;
-        private System.Windows.Forms.Label lbContadorDer;
-        private ControladoresDeUsuario.Hermanado hermanado1;
+        private System.Windows.Forms.Label lbContadorPrimera;
+        private ControladoresDeUsuario.Hermanado Phermanado;
         private Bunifu.Framework.UI.BunifuFlatButton btSalir;
         private ControladoresDeUsuario.DefectoAgregar defectoAgregarObs;
         private ControladoresDeUsuario.DefectoAgregar defectoAgregarRep;

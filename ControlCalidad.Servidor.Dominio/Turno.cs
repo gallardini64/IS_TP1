@@ -30,7 +30,7 @@ namespace ControlCalidad.Servidor.Dominio
         public List<string> GetListaDeHoras()
         {
             List<string> listaHoras = new List<string>();
-            int total = Fin.Subtract(Inicio).Hours;
+            int total = Math.Abs(Fin.Subtract(Inicio).Hours);
             DateTime inicio = Inicio;
             for (int i = 1; i <= total; i++)
             {

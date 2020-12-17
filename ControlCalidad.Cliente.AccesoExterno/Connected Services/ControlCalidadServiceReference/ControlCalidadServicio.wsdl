@@ -15,6 +15,12 @@
   <wsdl:message name="IControlCalidadServicio_RegistrarDefecto_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegistrarDefectoResponse" />
   </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_RegistrarPar_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarPar" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_RegistrarPar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarParResponse" />
+  </wsdl:message>
   <wsdl:message name="IControlCalidadServicio_InicializarOp_InputMessage">
     <wsdl:part name="parameters" element="tns:InicializarOp" />
   </wsdl:message>
@@ -75,10 +81,20 @@
   <wsdl:message name="IControlCalidadServicio_AsignarOPaSupervisorDeCalidad_OutputMessage">
     <wsdl:part name="parameters" element="tns:AsignarOPaSupervisorDeCalidadResponse" />
   </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_auxiliar_InputMessage">
+    <wsdl:part name="parameters" element="tns:auxiliar" />
+  </wsdl:message>
+  <wsdl:message name="IControlCalidadServicio_auxiliar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:auxiliarResponse" />
+  </wsdl:message>
   <wsdl:portType name="IControlCalidadServicio">
     <wsdl:operation name="RegistrarDefecto">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto" message="tns:IControlCalidadServicio_RegistrarDefecto_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefectoResponse" message="tns:IControlCalidadServicio_RegistrarDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarPar" message="tns:IControlCalidadServicio_RegistrarPar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/RegistrarParResponse" message="tns:IControlCalidadServicio_RegistrarPar_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="InicializarOp">
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/InicializarOp" message="tns:IControlCalidadServicio_InicializarOp_InputMessage" />
@@ -120,11 +136,24 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/AsignarOPaSupervisorDeCalidad" message="tns:IControlCalidadServicio_AsignarOPaSupervisorDeCalidad_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/AsignarOPaSupervisorDeCalidadResponse" message="tns:IControlCalidadServicio_AsignarOPaSupervisorDeCalidad_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="auxiliar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlCalidadServicio/auxiliar" message="tns:IControlCalidadServicio_auxiliar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlCalidadServicio/auxiliarResponse" message="tns:IControlCalidadServicio_auxiliar_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IControlCalidadServicio" type="tns:IControlCalidadServicio">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="RegistrarDefecto">
       <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPar">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/RegistrarPar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -215,6 +244,15 @@
     </wsdl:operation>
     <wsdl:operation name="AsignarOPaSupervisorDeCalidad">
       <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/AsignarOPaSupervisorDeCalidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auxiliar">
+      <soap:operation soapAction="http://tempuri.org/IControlCalidadServicio/auxiliar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

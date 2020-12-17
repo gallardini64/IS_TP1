@@ -29,7 +29,7 @@ namespace ControlCalidad.Servidor.Dominio
         public Defecto(EspecificacionDeDefecto especDe, string pie, DateTime now,Empleado empleado)
         {
             EspecificacionDeDefecto = especDe;
-            if (pie == "Izquiedo")
+            if (pie == "IZQUIERDO")
             {
                 Pie = Pie.Izquierdo;
             }
@@ -39,6 +39,11 @@ namespace ControlCalidad.Servidor.Dominio
             }
             Hora = now;
             Empleado = empleado;
+        }
+
+        public Defecto()
+        {
+
         }
     }
 }

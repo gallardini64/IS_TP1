@@ -14,7 +14,10 @@ namespace ControlCalidad.Servidor.Servicio
         
 
         [OperationContract]
-        bool RegistrarDefecto(int idEspDefecto, int numero, string pie);
+        bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP);
+
+        [OperationContract]
+        bool RegistrarPar(int numero, string calidad, int numeroOP);
 
         [OperationContract]
         (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp();
@@ -45,6 +48,10 @@ namespace ControlCalidad.Servidor.Servicio
 
         [OperationContract]
         OpDto AsignarOPaSupervisorDeCalidad();
+
+        [OperationContract]
+
+        (HorarioDto,DefectoDto,ParDto) auxiliar();
     }
 
 

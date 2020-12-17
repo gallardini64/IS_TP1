@@ -54,16 +54,10 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="TipoDefecto" nillable="true" type="tns:TipoDefectoDto" />
+      <xs:element minOccurs="0" name="TipoDefecto" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EspecificacionDeDefectoDto" nillable="true" type="tns:EspecificacionDeDefectoDto" />
-  <xs:complexType name="TipoDefectoDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="TipoDefectoDto" nillable="true" type="tns:TipoDefectoDto" />
   <xs:complexType name="TurnoDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
@@ -88,6 +82,7 @@
   <xs:complexType name="OpDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="Color" nillable="true" type="tns:ColorDto" />
+      <xs:element minOccurs="0" name="Defectos" nillable="true" type="tns:ArrayOfDefectoDto" />
       <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
@@ -95,9 +90,25 @@
       <xs:element minOccurs="0" name="Linea" nillable="true" type="tns:LineaDto" />
       <xs:element minOccurs="0" name="Modelo" nillable="true" type="tns:ModeloDto" />
       <xs:element minOccurs="0" name="Numero" type="xs:int" />
+      <xs:element minOccurs="0" name="Pares" nillable="true" type="tns:ArrayOfParDto" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="OpDto" nillable="true" type="tns:OpDto" />
+  <xs:complexType name="ArrayOfDefectoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DefectoDto" nillable="true" type="tns:DefectoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDefectoDto" nillable="true" type="tns:ArrayOfDefectoDto" />
+  <xs:complexType name="DefectoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="EspecificacionDeDefecto" nillable="true" type="tns:EspecificacionDeDefectoDto" />
+      <xs:element minOccurs="0" name="Hora" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Pie" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DefectoDto" nillable="true" type="tns:DefectoDto" />
   <xs:complexType name="ArrayOfHorarioDto">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="HorarioDto" nillable="true" type="tns:HorarioDto" />
@@ -106,10 +117,24 @@
   <xs:element name="ArrayOfHorarioDto" nillable="true" type="tns:ArrayOfHorarioDto" />
   <xs:complexType name="HorarioDto">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Defectos" nillable="true" type="tns:ArrayOfDefectoDto" />
       <xs:element minOccurs="0" name="Fin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Pares" nillable="true" type="tns:ArrayOfParDto" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="HorarioDto" nillable="true" type="tns:HorarioDto" />
+  <xs:complexType name="ArrayOfParDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParDto" nillable="true" type="tns:ParDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParDto" nillable="true" type="tns:ArrayOfParDto" />
+  <xs:complexType name="ParDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="calidad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParDto" nillable="true" type="tns:ParDto" />
 </xs:schema>

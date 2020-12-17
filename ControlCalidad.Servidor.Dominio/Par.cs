@@ -13,6 +13,11 @@ namespace ControlCalidad.Servidor.Dominio
             Calidad = calidad;
         }
 
+        public Par()
+        {
+
+        }
+
         private Empleado _empleado;
         public virtual Empleado Empleado
         {

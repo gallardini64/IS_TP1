@@ -21,16 +21,29 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
             _vista.CargarOpActual();
             _vista.Desplegar();
         }
-        public void RegistrarDefecto(int idEspDefecto,int numero,string pie) 
+        public void RegistrarDefecto(int idEspDefecto,int numero,string pie,int numeroOP) 
         {
-            bool registrado = Adaptador.RegistrarDefecto(idEspDefecto,numero, pie);
+            bool registrado = Adaptador.RegistrarDefecto(idEspDefecto,numero, pie, numeroOP);
             if (registrado)
             {
                 _vista.ActualizarNumeroDeDefectosTipo(idEspDefecto, numero, pie);
             }
             else
             {
-                _vista.ActualizarNumeroDeDefectosTipo(idEspDefecto, numero, pie);
+                _vista.MostrarMensaje("Error al cargar Defecto");
+            }
+        }
+
+        public void RegistrarPar(int numero,string calidad,int numeroOP)
+        {
+            bool registrado = Adaptador.RegistrarPar(numero, calidad, numeroOP);
+            if (registrado)
+            {
+                _vista.ActualizarParesCalidad(numero, calidad);
+            }
+            else
+            {
+                _vista.MostrarMensaje("Error al cargar Par");
             }
         }
 

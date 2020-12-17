@@ -16,5 +16,25 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
         {
             InitializeComponent();
         }
+
+        public void Deshabilitarse()
+        {
+            btAgregarPrimera.Enabled = false;
+            btAgregarSegunda.Enabled = false;
+            btQuitarPrimera.Enabled = false;
+            btQuitarSegunda.Enabled = false;
+        }
+        public void Habilitarse()
+        {
+            btAgregarPrimera.Enabled = true;
+            btAgregarSegunda.Enabled = true;
+            btQuitarPrimera.Enabled = true;
+            btQuitarSegunda.Enabled = true;
+        }
+        public void ActualizarContador(int primera, int segunda)
+        {
+            lbContadorPrimera.Text = primera.ToString();
+            lbContadorSegunda.Text = segunda.ToString();
+        }
     }
 }

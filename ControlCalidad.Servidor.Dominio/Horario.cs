@@ -35,8 +35,12 @@ namespace ControlCalidad.Servidor.Dominio
             }
             if (numero < 0)
             {
-                var par = Pares.ToList().LastOrDefault(p => p.Calidad.Equals(calidad));
-                Pares.Remove(par);
+                if (Pares.Count() > 0)
+                {
+                    var par = Pares.ToList().LastOrDefault(p => p.Calidad.Equals(calidad));
+                    Pares.Remove(par);
+                }
+               
             }
         }
 

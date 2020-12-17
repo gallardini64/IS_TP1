@@ -59,10 +59,16 @@
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.DefectoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EspecificacionDeDefectoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto.datasource">
@@ -72,6 +78,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ParDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ControlCalidadServiceReference\ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.TurnoDto.datasource">

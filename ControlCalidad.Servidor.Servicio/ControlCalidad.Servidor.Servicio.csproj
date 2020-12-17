@@ -66,8 +66,7 @@
     <Compile Include="Entidades\LineaDto.cs" />
     <Compile Include="Entidades\ModeloDto.cs" />
     <Compile Include="Entidades\OpDto.cs" />
-    <Compile Include="Entidades\PieDto.cs" />
-    <Compile Include="Entidades\TipoDefectoDto.cs" />
+    <Compile Include="Entidades\ParDto.cs" />
     <Compile Include="Entidades\TurnoDto.cs" />
     <Compile Include="IControlCalidadServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

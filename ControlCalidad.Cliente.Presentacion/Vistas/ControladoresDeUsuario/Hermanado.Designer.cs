@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hermanado));
-            this.btAgregarSegunda = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btAgregarPrimera = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btQuitarSegunda = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btQuitarPrimera = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btAgregarSegunda = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btAgregarPrimera = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbContadorSegunda = new System.Windows.Forms.Label();
             this.lbContadorPrimera = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,80 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btAgregarSegunda
-            // 
-            this.btAgregarSegunda.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
-            this.btAgregarSegunda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
-            this.btAgregarSegunda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btAgregarSegunda.BackgroundImage")));
-            this.btAgregarSegunda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btAgregarSegunda.BorderRadius = 5;
-            this.btAgregarSegunda.ButtonText = "";
-            this.btAgregarSegunda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAgregarSegunda.DisabledColor = System.Drawing.Color.Gray;
-            this.btAgregarSegunda.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btAgregarSegunda.ForeColor = System.Drawing.Color.White;
-            this.btAgregarSegunda.Iconcolor = System.Drawing.Color.Transparent;
-            this.btAgregarSegunda.Iconimage = null;
-            this.btAgregarSegunda.Iconimage_right = null;
-            this.btAgregarSegunda.Iconimage_right_Selected = null;
-            this.btAgregarSegunda.Iconimage_Selected = null;
-            this.btAgregarSegunda.IconMarginLeft = 0;
-            this.btAgregarSegunda.IconMarginRight = 0;
-            this.btAgregarSegunda.IconRightVisible = true;
-            this.btAgregarSegunda.IconRightZoom = 0D;
-            this.btAgregarSegunda.IconVisible = true;
-            this.btAgregarSegunda.IconZoom = 90D;
-            this.btAgregarSegunda.IsTab = false;
-            this.btAgregarSegunda.Location = new System.Drawing.Point(131, 99);
-            this.btAgregarSegunda.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btAgregarSegunda.Name = "btAgregarSegunda";
-            this.btAgregarSegunda.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
-            this.btAgregarSegunda.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
-            this.btAgregarSegunda.OnHoverTextColor = System.Drawing.Color.White;
-            this.btAgregarSegunda.selected = false;
-            this.btAgregarSegunda.Size = new System.Drawing.Size(41, 40);
-            this.btAgregarSegunda.TabIndex = 43;
-            this.btAgregarSegunda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btAgregarSegunda.Textcolor = System.Drawing.Color.White;
-            this.btAgregarSegunda.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btAgregarPrimera
-            // 
-            this.btAgregarPrimera.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
-            this.btAgregarPrimera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
-            this.btAgregarPrimera.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btAgregarPrimera.BackgroundImage")));
-            this.btAgregarPrimera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btAgregarPrimera.BorderRadius = 5;
-            this.btAgregarPrimera.ButtonText = "";
-            this.btAgregarPrimera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAgregarPrimera.DisabledColor = System.Drawing.Color.Gray;
-            this.btAgregarPrimera.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btAgregarPrimera.ForeColor = System.Drawing.Color.White;
-            this.btAgregarPrimera.Iconcolor = System.Drawing.Color.Transparent;
-            this.btAgregarPrimera.Iconimage = null;
-            this.btAgregarPrimera.Iconimage_right = null;
-            this.btAgregarPrimera.Iconimage_right_Selected = null;
-            this.btAgregarPrimera.Iconimage_Selected = null;
-            this.btAgregarPrimera.IconMarginLeft = 0;
-            this.btAgregarPrimera.IconMarginRight = 0;
-            this.btAgregarPrimera.IconRightVisible = true;
-            this.btAgregarPrimera.IconRightZoom = 0D;
-            this.btAgregarPrimera.IconVisible = true;
-            this.btAgregarPrimera.IconZoom = 90D;
-            this.btAgregarPrimera.IsTab = false;
-            this.btAgregarPrimera.Location = new System.Drawing.Point(131, 34);
-            this.btAgregarPrimera.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btAgregarPrimera.Name = "btAgregarPrimera";
-            this.btAgregarPrimera.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
-            this.btAgregarPrimera.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
-            this.btAgregarPrimera.OnHoverTextColor = System.Drawing.Color.White;
-            this.btAgregarPrimera.selected = false;
-            this.btAgregarPrimera.Size = new System.Drawing.Size(41, 40);
-            this.btAgregarPrimera.TabIndex = 44;
-            this.btAgregarPrimera.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btAgregarPrimera.Textcolor = System.Drawing.Color.White;
-            this.btAgregarPrimera.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btQuitarSegunda
             // 
@@ -140,7 +66,7 @@
             this.btQuitarSegunda.IconVisible = true;
             this.btQuitarSegunda.IconZoom = 90D;
             this.btQuitarSegunda.IsTab = false;
-            this.btQuitarSegunda.Location = new System.Drawing.Point(194, 99);
+            this.btQuitarSegunda.Location = new System.Drawing.Point(131, 99);
             this.btQuitarSegunda.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btQuitarSegunda.Name = "btQuitarSegunda";
             this.btQuitarSegunda.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
@@ -148,7 +74,7 @@
             this.btQuitarSegunda.OnHoverTextColor = System.Drawing.Color.White;
             this.btQuitarSegunda.selected = false;
             this.btQuitarSegunda.Size = new System.Drawing.Size(41, 40);
-            this.btQuitarSegunda.TabIndex = 41;
+            this.btQuitarSegunda.TabIndex = 43;
             this.btQuitarSegunda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btQuitarSegunda.Textcolor = System.Drawing.Color.White;
             this.btQuitarSegunda.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,7 +103,7 @@
             this.btQuitarPrimera.IconVisible = true;
             this.btQuitarPrimera.IconZoom = 90D;
             this.btQuitarPrimera.IsTab = false;
-            this.btQuitarPrimera.Location = new System.Drawing.Point(194, 34);
+            this.btQuitarPrimera.Location = new System.Drawing.Point(131, 34);
             this.btQuitarPrimera.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btQuitarPrimera.Name = "btQuitarPrimera";
             this.btQuitarPrimera.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
@@ -185,10 +111,84 @@
             this.btQuitarPrimera.OnHoverTextColor = System.Drawing.Color.White;
             this.btQuitarPrimera.selected = false;
             this.btQuitarPrimera.Size = new System.Drawing.Size(41, 40);
-            this.btQuitarPrimera.TabIndex = 42;
+            this.btQuitarPrimera.TabIndex = 44;
             this.btQuitarPrimera.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btQuitarPrimera.Textcolor = System.Drawing.Color.White;
             this.btQuitarPrimera.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btAgregarSegunda
+            // 
+            this.btAgregarSegunda.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btAgregarSegunda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btAgregarSegunda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btAgregarSegunda.BackgroundImage")));
+            this.btAgregarSegunda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btAgregarSegunda.BorderRadius = 5;
+            this.btAgregarSegunda.ButtonText = "";
+            this.btAgregarSegunda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAgregarSegunda.DisabledColor = System.Drawing.Color.Gray;
+            this.btAgregarSegunda.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btAgregarSegunda.ForeColor = System.Drawing.Color.White;
+            this.btAgregarSegunda.Iconcolor = System.Drawing.Color.Transparent;
+            this.btAgregarSegunda.Iconimage = null;
+            this.btAgregarSegunda.Iconimage_right = null;
+            this.btAgregarSegunda.Iconimage_right_Selected = null;
+            this.btAgregarSegunda.Iconimage_Selected = null;
+            this.btAgregarSegunda.IconMarginLeft = 0;
+            this.btAgregarSegunda.IconMarginRight = 0;
+            this.btAgregarSegunda.IconRightVisible = true;
+            this.btAgregarSegunda.IconRightZoom = 0D;
+            this.btAgregarSegunda.IconVisible = true;
+            this.btAgregarSegunda.IconZoom = 90D;
+            this.btAgregarSegunda.IsTab = false;
+            this.btAgregarSegunda.Location = new System.Drawing.Point(194, 99);
+            this.btAgregarSegunda.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btAgregarSegunda.Name = "btAgregarSegunda";
+            this.btAgregarSegunda.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btAgregarSegunda.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btAgregarSegunda.OnHoverTextColor = System.Drawing.Color.White;
+            this.btAgregarSegunda.selected = false;
+            this.btAgregarSegunda.Size = new System.Drawing.Size(41, 40);
+            this.btAgregarSegunda.TabIndex = 41;
+            this.btAgregarSegunda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btAgregarSegunda.Textcolor = System.Drawing.Color.White;
+            this.btAgregarSegunda.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btAgregarPrimera
+            // 
+            this.btAgregarPrimera.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btAgregarPrimera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btAgregarPrimera.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btAgregarPrimera.BackgroundImage")));
+            this.btAgregarPrimera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btAgregarPrimera.BorderRadius = 5;
+            this.btAgregarPrimera.ButtonText = "";
+            this.btAgregarPrimera.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAgregarPrimera.DisabledColor = System.Drawing.Color.Gray;
+            this.btAgregarPrimera.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btAgregarPrimera.ForeColor = System.Drawing.Color.White;
+            this.btAgregarPrimera.Iconcolor = System.Drawing.Color.Transparent;
+            this.btAgregarPrimera.Iconimage = null;
+            this.btAgregarPrimera.Iconimage_right = null;
+            this.btAgregarPrimera.Iconimage_right_Selected = null;
+            this.btAgregarPrimera.Iconimage_Selected = null;
+            this.btAgregarPrimera.IconMarginLeft = 0;
+            this.btAgregarPrimera.IconMarginRight = 0;
+            this.btAgregarPrimera.IconRightVisible = true;
+            this.btAgregarPrimera.IconRightZoom = 0D;
+            this.btAgregarPrimera.IconVisible = true;
+            this.btAgregarPrimera.IconZoom = 90D;
+            this.btAgregarPrimera.IsTab = false;
+            this.btAgregarPrimera.Location = new System.Drawing.Point(194, 34);
+            this.btAgregarPrimera.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btAgregarPrimera.Name = "btAgregarPrimera";
+            this.btAgregarPrimera.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btAgregarPrimera.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btAgregarPrimera.OnHoverTextColor = System.Drawing.Color.White;
+            this.btAgregarPrimera.selected = false;
+            this.btAgregarPrimera.Size = new System.Drawing.Size(41, 40);
+            this.btAgregarPrimera.TabIndex = 42;
+            this.btAgregarPrimera.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btAgregarPrimera.Textcolor = System.Drawing.Color.White;
+            this.btAgregarPrimera.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // lbContadorSegunda
             // 
@@ -272,10 +272,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.Controls.Add(this.btAgregarSegunda);
-            this.Controls.Add(this.btAgregarPrimera);
             this.Controls.Add(this.btQuitarSegunda);
             this.Controls.Add(this.btQuitarPrimera);
+            this.Controls.Add(this.btAgregarSegunda);
+            this.Controls.Add(this.btAgregarPrimera);
             this.Controls.Add(this.lbContadorSegunda);
             this.Controls.Add(this.lbContadorPrimera);
             this.Controls.Add(this.label5);
@@ -292,10 +292,10 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuFlatButton btAgregarSegunda;
-        private Bunifu.Framework.UI.BunifuFlatButton btAgregarPrimera;
         private Bunifu.Framework.UI.BunifuFlatButton btQuitarSegunda;
         private Bunifu.Framework.UI.BunifuFlatButton btQuitarPrimera;
+        private Bunifu.Framework.UI.BunifuFlatButton btAgregarSegunda;
+        private Bunifu.Framework.UI.BunifuFlatButton btAgregarPrimera;
         private System.Windows.Forms.Label lbContadorSegunda;
         private System.Windows.Forms.Label lbContadorPrimera;
         private System.Windows.Forms.Label label5;

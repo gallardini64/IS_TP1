@@ -26,12 +26,14 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
         {
             _vistaOP.RegistrarDefecto(_id,1, "DERECHO");
         }
-        public void setParametros(VistaOP vista, int id, string descripcion)
+        public void setParametros(VistaOP vista, int id, string descripcion,(int derecho, int izquierdo) tupla)
         {
             _vistaOP = vista;
             _id = id;
             lbDefecto.Text = $"{descripcion} {_id}";
             defectoToolTip.ToolTipTitle = descripcion;
+            lbContadorDer.Text = tupla.derecho.ToString();
+            lbContadorIzq.Text = tupla.izquierdo.ToString();
         }
         public void RegistrarDefectoTipo(int numero)
         {
@@ -56,7 +58,19 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
             btnQuitarDefectoIzq.Enabled = true;
         }
 
+        private void btnQuitarDefectoDer_Click(object sender, EventArgs e)
+        {
+            _vistaOP.RegistrarDefecto(_id, -1, "DERECHO");
+        }
 
+        private void btnAgregarDefectoIzq_Click(object sender, EventArgs e)
+        {
+            _vistaOP.RegistrarDefecto(_id, 1, "IZQUIERDO");
+        }
 
+        private void btnQuitarDefectoIzq_Click(object sender, EventArgs e)
+        {
+            _vistaOP.RegistrarDefecto(_id, -1, "IZQUIERDO");
+        }
     }
 }

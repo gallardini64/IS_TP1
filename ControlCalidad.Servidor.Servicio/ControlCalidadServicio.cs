@@ -17,12 +17,16 @@ namespace ControlCalidad.Servidor.Servicio
         private ControladorEspecificacionDeDefecto _controladorEspec = new ControladorEspecificacionDeDefecto();
         private ControladorEmpleados _controladorEmpleado = new ControladorEmpleados();
         
-        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
+        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP)
         {
-            return _controladorOP.RegistrarDefecto(idEspDefecto, numero, pie);
+            return _controladorOP.RegistrarDefecto(idEspDefecto, numero, pie, numeroOP);
         }
 
-        
+        public bool RegistrarPar(int numero, string calidad, int numeroOP)
+        {
+            return _controladorOP.RegistrarPar(numero,calidad,numeroOP);
+        }
+
 
         public (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp()
         {
@@ -72,6 +76,11 @@ namespace ControlCalidad.Servidor.Servicio
         public TurnoDto ObtenerDatosDeTurnoActual(int numeroOP)
         {
             return _controladorOP.ObtenerDatosDeTurno(numeroOP);
+        }
+
+        public (HorarioDto,DefectoDto,ParDto) auxiliar()
+        {
+            return (null,null,null);
         }
     }
 }

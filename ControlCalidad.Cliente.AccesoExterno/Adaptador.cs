@@ -20,13 +20,23 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.GetEspecificacionDeDefectoTipo(tipo);
             }
         }
-        public static bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
+        public static bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP)
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {
-                return servicio.RegistrarDefecto(idEspDefecto,numero,pie);
+                return servicio.RegistrarDefecto(idEspDefecto,numero,pie,numeroOP);
             }
         }
+        public static bool RegistrarPar(int numero, string calidad,int numeroOP)
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.RegistrarPar(numero,calidad,numeroOP);
+            }
+        }
+
+
+
         public static (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp()
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
@@ -99,6 +109,14 @@ namespace ControlCalidad.Cliente.AccesoExterno
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {
                 return servicio.IniciarSesion(usuario, password);
+            }
+        }
+
+        public static (HorarioDto,DefectoDto,ParDto) auxiliar()
+        {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.auxiliar();
             }
         }
 

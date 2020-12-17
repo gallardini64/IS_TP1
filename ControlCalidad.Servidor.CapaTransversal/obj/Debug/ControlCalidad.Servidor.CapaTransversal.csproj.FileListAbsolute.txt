@@ -2,7 +2,6 @@ E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.CapaTransversa
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.CapaTransversal\bin\Debug\ControlCalidad.Servidor.CapaTransversal.pdb
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.CapaTransversal\bin\Debug\ControlCalidad.Servidor.Dominio.dll
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.CapaTransversal\bin\Debug\ControlCalidad.Servidor.Dominio.pdb
-E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.CapaTransversal\obj\Debug\ControlCalidad.Servidor.CapaTransversal.csprojAssemblyReference.cache
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.CapaTransversal\obj\Debug\ControlCalidad.Servidor.CapaTransversal.csproj.CoreCompileInputs.cache
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.CapaTransversal\obj\Debug\ControlCalidad.Servidor.CapaTransversal.csproj.CopyComplete
 E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.CapaTransversal\obj\Debug\ControlCalidad.Servidor.CapaTransversal.dll

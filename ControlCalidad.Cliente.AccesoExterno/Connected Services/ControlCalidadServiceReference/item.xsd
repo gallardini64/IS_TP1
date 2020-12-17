@@ -52,4 +52,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ValueTupleOfbooleanEmpleadoDtoyEOT5PiO" nillable="true" type="tns:ValueTupleOfbooleanEmpleadoDtoyEOT5PiO" />
+  <xs:complexType name="ValueTupleOfHorarioDtoDefectoDtoParDtomqx32tkj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ValueTupleOf{0}{1}{2}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="HorarioDto" Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+          <GenericParameter Name="DefectoDto" Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+          <GenericParameter Name="ParDto" Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+        </GenericType>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" name="Item1" nillable="true" type="q5:HorarioDto" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" name="Item2" nillable="true" type="q6:DefectoDto" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" name="Item3" nillable="true" type="q7:ParDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValueTupleOfHorarioDtoDefectoDtoParDtomqx32tkj" nillable="true" type="tns:ValueTupleOfHorarioDtoDefectoDtoParDtomqx32tkj" />
 </xs:schema>

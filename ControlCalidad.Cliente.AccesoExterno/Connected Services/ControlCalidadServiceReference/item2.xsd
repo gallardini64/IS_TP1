@@ -8,6 +8,7 @@
         <xs:element minOccurs="0" name="idEspDefecto" type="xs:int" />
         <xs:element minOccurs="0" name="numero" type="xs:int" />
         <xs:element minOccurs="0" name="pie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numeroOP" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -15,6 +16,22 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="RegistrarDefectoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarPar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numero" type="xs:int" />
+        <xs:element minOccurs="0" name="calidad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numeroOP" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarParResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrarParResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -155,6 +172,18 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="AsignarOPaSupervisorDeCalidadResult" nillable="true" type="q11:OpDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="auxiliar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="auxiliarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="auxiliarResult" type="q12:ValueTupleOfHorarioDtoDefectoDtoParDtomqx32tkj" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

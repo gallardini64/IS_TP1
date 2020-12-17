@@ -196,10 +196,10 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
         public OpDto AsignarOPaSupervisorDeCalidad()
         {
 
-            Op op = _repositorioOP.GetFiltered(o => o.Estado == EstadoOP.Activa).FirstOrDefault();
+            Op op = _repositorioOP.GetFiltered(o => o.Estado == EstadoOP.Activa || o.Estado == EstadoOP.Pausada).FirstOrDefault();
             if (op != null)
             {
-                return new OpDto()
+                var opE = new OpDto()
                 {
                     Numero = op.Numero,
                     Modelo = new ModeloDto
@@ -217,23 +217,69 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                     },
                     FechaInicio = op.FechaInicio,
                     Estado = op.Estado.ToString()
+
                 };
+                var HorariosE = new List<HorarioDto>();
+                foreach (var horario in op.Horarios)
+                {
+                    var h = new HorarioDto()
+                    {
+                        Id = horario.Id,
+                        Inicio = horario.Inicio
+                    };
+                    var defectos = new List<DefectoDto>();
+                    foreach (var defecto in horario.Defectos)
+                    {
+                        var espD = new EspecificacionDeDefectoDto()
+                        {
+                            Descripcion = defecto.EspecificacionDeDefecto.Descripcion,
+                            Id = defecto.EspecificacionDeDefecto.Id,
+                            TipoDefecto = defecto.EspecificacionDeDefecto.TipoDefecto.ToString()
+                        };
+
+                        var d = new DefectoDto()
+                        {
+                            EspecificacionDeDefecto = espD,
+                            Pie = defecto.Pie.ToString(),
+                            Hora = defecto.Hora
+                        };
+                        defectos.Add(d);
+                    }
+                    h.Defectos = defectos;
+                    var pares = new List<ParDto>();
+                    foreach (var par in horario.Pares)
+                    {
+                        var p = new ParDto()
+                        {
+                            calidad = par.Calidad.ToString()
+                        };
+                        pares.Add(p);
+                    }
+                    h.Pares = pares;
+                    HorariosE.Add(h);
+                }
+
+                opE.Horarios = HorariosE;
+
+
+                return opE;
             }
             return null;
             
 
         }
-        public bool RegistrarPar(int numero, string calidad)
+        public bool RegistrarPar(int numero, string calidad, int numeroOP)
         {
             Calidad c = (Calidad) Enum.Parse(typeof(Calidad), calidad);
+            _op = _repositorioOP.GetFiltered(o => o.Numero == numeroOP).FirstOrDefault();
             bool bandera = _op.RegistrarPar(numero, c, Sesion.GetEmpleado());
             _repositorioOP.Update(_op);
             return bandera;
         }
-        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie)
+        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie, int numeroOP)
         {
             var esp = _repositorioEsp.GetFiltered(e => e.Id == idEspDefecto).FirstOrDefault();
-            _repositorioEsp.Dispose();
+            _op = _repositorioOP.GetFiltered(o => o.Numero == numeroOP).FirstOrDefault();
             bool registrada = _op.RegistrarDefecto(1, esp, pie, DateTime.Now,Sesion.GetEmpleado());
             _repositorioOP.Update(_op);
             return registrada;

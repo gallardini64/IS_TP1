@@ -33,12 +33,35 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         public void CargarOpActual()
         {
             opActual = _presentadorOP.AsignarOPaSupervisorDeCalidad();
+            VerificarEstadoOP();
             tbOpNum.Text = opActual.Numero.ToString();
+            tbFec.Text = opActual.FechaInicio.ToString("dd/MM/yyyy");
 
         }
 
+        private void VerificarEstadoOP()
+        {
+            if (opActual.Estado == "Activa")
+            {
+                OpActiva();
+            }
+            else
+            {
+                OpPausada();
+            }
+        }
 
+        private void OpPausada()
+        {
+            Phermanado.Habilitarse();
+            btHermanado.Enabled = true;
+        }
 
+        private void OpActiva()
+        {
+            Phermanado.Deshabilitarse();
+            btHermanado.Enabled = false;
+        }
 
         private void CargarDatosDeTurnoActual()
         {
@@ -48,7 +71,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         }
         public void RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
-            _presentadorOP.RegistrarDefecto(idEspDefecto, numero, pie);
+            _presentadorOP.RegistrarDefecto(idEspDefecto, numero, pie,opActual.Numero);
         }
         public void DesactivarControles()
         {
@@ -70,11 +93,11 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         {
             EspecificacionDeDefectoDto[] especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Reprocesado");
             var i = 0;
-            foreach (var item in especificacionDeDefectos)
+            foreach (var especificacion in especificacionDeDefectos)
             {
                 DefectoAgregar panelDefectos = new DefectoAgregar();
-                panelDefectos.setParametros(this, item.Id, item.Descripcion);
-                panelDefectos.Location = new Point(defectoAgregarRep.Location.X, defectoAgregarObs.Location.Y + 90 * i);
+                panelDefectos.setParametros(this, especificacion.Id, especificacion.Descripcion,CargarContadoresDefecto(especificacion.Id));
+                panelDefectos.Location = new Point(defectoAgregarRep.Location.X, defectoAgregarRep.Location.Y + 90 * i);
                 pReprocesado.Controls.Add(panelDefectos);
                 _panelesDefecto.Add(panelDefectos);
                 i++;
@@ -84,16 +107,30 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         {
             EspecificacionDeDefectoDto[] especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Observado");
             var i = 0;
-            foreach (var item in especificacionDeDefectos)
+            foreach (var especificacion in especificacionDeDefectos)
             {
                 DefectoAgregar panelDefectos = new DefectoAgregar();
-                panelDefectos.setParametros(this, item.Id, item.Descripcion);
+                panelDefectos.setParametros(this, especificacion.Id, especificacion.Descripcion,CargarContadoresDefecto(especificacion.Id));
                 panelDefectos.Location = new Point(defectoAgregarObs.Location.X, defectoAgregarObs.Location.Y + 90 * i);
-                pReprocesado.Controls.Add(panelDefectos);
+                pObservado.Controls.Add(panelDefectos);
                 _panelesDefecto.Add(panelDefectos);
                 i++;
             }
         }
+
+        private (int,int) CargarContadoresDefecto(int id)
+        {
+            var horario = opActual.Horarios.LastOrDefault();
+            
+            if (horario != null)
+            {
+                var contadorderecho = horario.Defectos.Where(e => e.EspecificacionDeDefecto.Id == id && e.Pie == "Derecho").Count();
+                var contadorizquierdo = horario.Defectos.Where(e => e.EspecificacionDeDefecto.Id == id && e.Pie == "Izquierdo").Count();
+                return (contadorderecho, contadorizquierdo);
+            }
+            return (0, 0);
+        }
+
         public void ActualizarNumeroDeDefectosTipo(int idEspDefecto, int numero, string pie)
         {
             _panelesDefecto.FirstOrDefault(e => e._id == idEspDefecto).RegistrarDefectoTipo(numero);
@@ -114,5 +151,27 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             mouseMove(sender, e);
         }
 
+        public void ActualizarParesCalidad(int numero, string calidad)
+        {
+            lbContadorPrimera.Text = (Int32.Parse(lbContadorPrimera.Text) + numero).ToString();
+        }
+
+        public void MostrarMensaje(string v)
+        {
+            MessageBox.Show(v);
+        }
+
+        private void btnAgregarPar_Click(object sender, EventArgs e)
+        {
+            _presentadorOP.RegistrarPar(1, "Primera", opActual.Numero);
+        }
+
+        private void btnQuitarPar_Click(object sender, EventArgs e)
+        {
+            if (Int32.Parse(lbContadorPrimera.Text) != 0)
+            {
+                _presentadorOP.RegistrarPar(-1, "Primera", opActual.Numero);
+            }
+        }
     }
 }

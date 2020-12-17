@@ -24,8 +24,14 @@ namespace ControlCalidad.Servidor.Servicio
         [DataMember]
         public List<HorarioDto> Horarios { get; set; }
         [DataMember]
+        public List<DefectoDto> Defectos { get; set; }
+        [DataMember]
+        public List<ParDto> Pares { get; set; }
+        [DataMember]
         public LineaDto Linea { get; set; }
         [DataMember]
         public string Estado { get; set; }
+
+
     }
 }

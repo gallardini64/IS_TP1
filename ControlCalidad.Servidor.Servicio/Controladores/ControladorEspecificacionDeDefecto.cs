@@ -20,7 +20,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                 Id = especificacion.Id,
 
                 Descripcion = especificacion.Descripcion,
-                TipoDefecto = new TipoDefectoDto(especificacion.TipoDefecto.ToString()),
+                TipoDefecto = especificacion.TipoDefecto.ToString(),
 
             }).ToArray();
             
@@ -34,7 +34,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                 Id = especificacion.Id,
 
                 Descripcion = especificacion.Descripcion,
-                TipoDefecto = new TipoDefectoDto(especificacion.TipoDefecto.ToString()),
+                TipoDefecto = especificacion.TipoDefecto.ToString(),
             }).ToArray();
         }
 

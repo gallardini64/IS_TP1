@@ -16,5 +16,12 @@ namespace ControlCalidad.Servidor.Servicio
         public DateTime Inicio { get; set; }
         [DataMember]
         public DateTime Fin { get; set; }
+
+        [DataMember]
+        public List<DefectoDto> Defectos { get; set; }
+        
+        [DataMember]
+        public List<ParDto> Pares { get; set; }
+
     }
 }

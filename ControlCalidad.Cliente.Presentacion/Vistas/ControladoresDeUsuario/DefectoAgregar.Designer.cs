@@ -146,6 +146,7 @@
             this.btnAgregarDefectoIzq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregarDefectoIzq.Textcolor = System.Drawing.Color.White;
             this.btnAgregarDefectoIzq.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarDefectoIzq.Click += new System.EventHandler(this.btnAgregarDefectoIzq_Click);
             // 
             // btnQuitarDefectoDer
             // 
@@ -183,6 +184,7 @@
             this.btnQuitarDefectoDer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnQuitarDefectoDer.Textcolor = System.Drawing.Color.White;
             this.btnQuitarDefectoDer.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarDefectoDer.Click += new System.EventHandler(this.btnQuitarDefectoDer_Click);
             // 
             // btnQuitarDefectoIzq
             // 
@@ -220,6 +222,7 @@
             this.btnQuitarDefectoIzq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnQuitarDefectoIzq.Textcolor = System.Drawing.Color.White;
             this.btnQuitarDefectoIzq.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarDefectoIzq.Click += new System.EventHandler(this.btnQuitarDefectoIzq_Click);
             // 
             // defectoToolTip
             // 

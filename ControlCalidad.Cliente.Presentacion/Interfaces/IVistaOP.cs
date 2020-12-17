@@ -18,5 +18,7 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
         void ActualizarNumeroDeDefectosTipo(int id, int numero, string pie);
         void SetPresentador(PresentadorOP presentadorOP, string usuario);
         void Desplegar();
+        void ActualizarParesCalidad(int numero, string calidad);
+        void MostrarMensaje(string v);
     }
 }
