@@ -53,6 +53,17 @@ namespace ControlCalidad.Cliente.AccesoExterno
             }
         }
 
+      
+        
+
+        public static bool FinalizarOP(int numero)
+    {
+            using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
+            {
+                return servicio.FinalizarOP(numero);
+            }
+        }
+
         public static bool PausarOP(int numero)
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())

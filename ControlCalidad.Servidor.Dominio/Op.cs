@@ -44,6 +44,7 @@ namespace ControlCalidad.Servidor.Dominio
                 {
                     _estado = value;
                 }
+                
             } 
         }
 
@@ -98,6 +99,13 @@ namespace ControlCalidad.Servidor.Dominio
                 horario.RegistrarPar(numero, calidad, empleado);
                 return true;
             }
+        }
+
+        public void FinalizarOP()
+        {
+            Estado = EstadoOP.Finalizada;
+            CerrarHorario();
+            FechaFin = DateTime.Now;
         }
 
         public void ReanudarOP(Turno turnoActual)

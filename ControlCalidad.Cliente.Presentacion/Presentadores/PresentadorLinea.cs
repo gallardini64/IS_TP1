@@ -45,5 +45,10 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
         {
            return Adaptador.ReanudarOP(numero);
         }
+
+        public bool FinalizarOP(int numero)
+        {
+           return Adaptador.FinalizarOP(numero);
+        }
     }
 }

@@ -17,9 +17,6 @@ namespace ControlCalidad.Servidor.Servicio
         bool RegistrarDefecto(int idEspDefecto, int numero, string pie);
 
         [OperationContract]
-        bool FinalizarOp(OpDto op);
-
-        [OperationContract]
         (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp();
 
         [OperationContract]
@@ -41,6 +38,8 @@ namespace ControlCalidad.Servidor.Servicio
         bool PausarOP(int numero);
         [OperationContract]
         (bool,string) ReanudarOP(int numero);
+        [OperationContract]
+        bool FinalizarOP(int numero);
 
         
 

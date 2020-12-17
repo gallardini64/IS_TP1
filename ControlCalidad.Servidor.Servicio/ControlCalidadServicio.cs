@@ -22,11 +22,7 @@ namespace ControlCalidad.Servidor.Servicio
             return _controladorOP.RegistrarDefecto(idEspDefecto, numero, pie);
         }
 
-        public bool FinalizarOp(OpDto op)
-        {
-            // return _controladorOP.FinalizarOp(op);
-            return false;
-        }
+        
 
         public (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp()
         {
@@ -66,6 +62,11 @@ namespace ControlCalidad.Servidor.Servicio
         public (bool,string) ReanudarOP(int numero)
         {
             return _controladorOP.ReanudarOP(numero);
+        }
+
+        public bool FinalizarOP(int numero)
+        {
+            return _controladorOP.FinalizarOP(numero);
         }
     }
 }

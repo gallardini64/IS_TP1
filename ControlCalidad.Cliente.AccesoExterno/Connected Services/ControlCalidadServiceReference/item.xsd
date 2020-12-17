@@ -1,105 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="OpDto">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+  <xs:import schemaLocation="http://localhost:8733/ControlCalidadServicio/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ValueTupleOfArrayOfColorDtoArrayOfModeloDtoArrayOfLineaDtomqx32tkj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ValueTupleOf{0}{1}{2}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfColorDto" Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+          <GenericParameter Name="ArrayOfModeloDto" Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+          <GenericParameter Name="ArrayOfLineaDto" Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+        </GenericType>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" name="Color" nillable="true" type="tns:ColorDto" />
-      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="HorarioActual" nillable="true" type="tns:HorarioDto" />
-      <xs:element minOccurs="0" name="Horarios" nillable="true" type="tns:ArrayOfHorarioDto" />
-      <xs:element minOccurs="0" name="Linea" nillable="true" type="tns:LineaDto" />
-      <xs:element minOccurs="0" name="Modelo" nillable="true" type="tns:ModeloDto" />
-      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" name="Item1" nillable="true" type="q1:ArrayOfColorDto" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" name="Item2" nillable="true" type="q2:ArrayOfModeloDto" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" name="Item3" nillable="true" type="q3:ArrayOfLineaDto" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="OpDto" nillable="true" type="tns:OpDto" />
-  <xs:complexType name="ColorDto">
+  <xs:element name="ValueTupleOfArrayOfColorDtoArrayOfModeloDtoArrayOfLineaDtomqx32tkj" nillable="true" type="tns:ValueTupleOfArrayOfColorDtoArrayOfModeloDtoArrayOfLineaDtomqx32tkj" />
+  <xs:complexType name="ValueTupleOfbooleanstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ValueTupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
-      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element name="Item1" type="xs:boolean" />
+      <xs:element name="Item2" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ColorDto" nillable="true" type="tns:ColorDto" />
-  <xs:complexType name="HorarioDto">
+  <xs:element name="ValueTupleOfbooleanstring" nillable="true" type="tns:ValueTupleOfbooleanstring" />
+  <xs:complexType name="ValueTupleOfbooleanEmpleadoDtoyEOT5PiO">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ValueTupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="EmpleadoDto" Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" />
+        </GenericType>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" name="Fin" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Inicio" type="xs:dateTime" />
+      <xs:element name="Item1" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" name="Item2" nillable="true" type="q4:EmpleadoDto" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="HorarioDto" nillable="true" type="tns:HorarioDto" />
-  <xs:complexType name="ArrayOfHorarioDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="HorarioDto" nillable="true" type="tns:HorarioDto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfHorarioDto" nillable="true" type="tns:ArrayOfHorarioDto" />
-  <xs:complexType name="LineaDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Numero" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="LineaDto" nillable="true" type="tns:LineaDto" />
-  <xs:complexType name="ModeloDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Denominacion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Objetivo" type="xs:int" />
-      <xs:element minOccurs="0" name="Sku" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ModeloDto" nillable="true" type="tns:ModeloDto" />
-  <xs:complexType name="ArrayOfColorDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ColorDto" nillable="true" type="tns:ColorDto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfColorDto" nillable="true" type="tns:ArrayOfColorDto" />
-  <xs:complexType name="ArrayOfModeloDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModeloDto" nillable="true" type="tns:ModeloDto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfModeloDto" nillable="true" type="tns:ArrayOfModeloDto" />
-  <xs:complexType name="ArrayOfLineaDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineaDto" nillable="true" type="tns:LineaDto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfLineaDto" nillable="true" type="tns:ArrayOfLineaDto" />
-  <xs:complexType name="ArrayOfEspecificacionDeDefectoDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="EspecificacionDeDefectoDto" nillable="true" type="tns:EspecificacionDeDefectoDto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEspecificacionDeDefectoDto" nillable="true" type="tns:ArrayOfEspecificacionDeDefectoDto" />
-  <xs:complexType name="EspecificacionDeDefectoDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="TipoDefecto" nillable="true" type="tns:TipoDefectoDto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="EspecificacionDeDefectoDto" nillable="true" type="tns:EspecificacionDeDefectoDto" />
-  <xs:complexType name="TipoDefectoDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="TipoDefectoDto" nillable="true" type="tns:TipoDefectoDto" />
-  <xs:complexType name="EmpleadoDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Documento" type="xs:int" />
-      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Rol" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="EmpleadoDto" nillable="true" type="tns:EmpleadoDto" />
+  <xs:element name="ValueTupleOfbooleanEmpleadoDtoyEOT5PiO" nillable="true" type="tns:ValueTupleOfbooleanEmpleadoDtoyEOT5PiO" />
 </xs:schema>

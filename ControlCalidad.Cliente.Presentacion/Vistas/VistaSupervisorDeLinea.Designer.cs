@@ -298,6 +298,7 @@
             this.btnFinalizarOP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFinalizarOP.Textcolor = System.Drawing.Color.White;
             this.btnFinalizarOP.TextFont = new System.Drawing.Font("Century Gothic", 18F);
+            this.btnFinalizarOP.Click += new System.EventHandler(this.btnFinalizarOP_Click);
             // 
             // lbLinea
             // 

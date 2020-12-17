@@ -63,6 +63,18 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             return (colores, modelos, lineas);
         }
 
+        public bool FinalizarOP(int numero)
+        {
+            _op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
+            if (_op == null)
+            {
+                return false;
+            }
+            _op.FinalizarOP();
+            _repositorioOP.Update(_op);
+            return true;
+        }
+
         public (bool,string) ReanudarOP(int numero)
         {
             _op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();

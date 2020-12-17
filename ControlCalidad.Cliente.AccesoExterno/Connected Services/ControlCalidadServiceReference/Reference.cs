@@ -15,179 +15,6 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OpDto", Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio")]
-    [System.SerializableAttribute()]
-    public partial class OpDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto ColorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaFinField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaInicioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto HorarioActualField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto[] HorariosField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto LineaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto ModeloField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int NumeroField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto Color {
-            get {
-                return this.ColorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ColorField, value) != true)) {
-                    this.ColorField = value;
-                    this.RaisePropertyChanged("Color");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaFin {
-            get {
-                return this.FechaFinField;
-            }
-            set {
-                if ((this.FechaFinField.Equals(value) != true)) {
-                    this.FechaFinField = value;
-                    this.RaisePropertyChanged("FechaFin");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaInicio {
-            get {
-                return this.FechaInicioField;
-            }
-            set {
-                if ((this.FechaInicioField.Equals(value) != true)) {
-                    this.FechaInicioField = value;
-                    this.RaisePropertyChanged("FechaInicio");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto HorarioActual {
-            get {
-                return this.HorarioActualField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HorarioActualField, value) != true)) {
-                    this.HorarioActualField = value;
-                    this.RaisePropertyChanged("HorarioActual");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto[] Horarios {
-            get {
-                return this.HorariosField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HorariosField, value) != true)) {
-                    this.HorariosField = value;
-                    this.RaisePropertyChanged("Horarios");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto Linea {
-            get {
-                return this.LineaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LineaField, value) != true)) {
-                    this.LineaField = value;
-                    this.RaisePropertyChanged("Linea");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto Modelo {
-            get {
-                return this.ModeloField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ModeloField, value) != true)) {
-                    this.ModeloField = value;
-                    this.RaisePropertyChanged("Modelo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Numero {
-            get {
-                return this.NumeroField;
-            }
-            set {
-                if ((this.NumeroField.Equals(value) != true)) {
-                    this.NumeroField = value;
-                    this.RaisePropertyChanged("Numero");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ColorDto", Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio")]
     [System.SerializableAttribute()]
     public partial class ColorDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -249,160 +76,6 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="HorarioDto", Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio")]
-    [System.SerializableAttribute()]
-    public partial class HorarioDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FinField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime InicioField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Fin {
-            get {
-                return this.FinField;
-            }
-            set {
-                if ((this.FinField.Equals(value) != true)) {
-                    this.FinField = value;
-                    this.RaisePropertyChanged("Fin");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Inicio {
-            get {
-                return this.InicioField;
-            }
-            set {
-                if ((this.InicioField.Equals(value) != true)) {
-                    this.InicioField = value;
-                    this.RaisePropertyChanged("Inicio");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LineaDto", Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio")]
-    [System.SerializableAttribute()]
-    public partial class LineaDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int NumeroField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Numero {
-            get {
-                return this.NumeroField;
-            }
-            set {
-                if ((this.NumeroField.Equals(value) != true)) {
-                    this.NumeroField = value;
-                    this.RaisePropertyChanged("Numero");
                 }
             }
         }
@@ -496,6 +169,83 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
                 if ((object.ReferenceEquals(this.SkuField, value) != true)) {
                     this.SkuField = value;
                     this.RaisePropertyChanged("Sku");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LineaDto", Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio")]
+    [System.SerializableAttribute()]
+    public partial class LineaDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NumeroField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Numero {
+            get {
+                return this.NumeroField;
+            }
+            set {
+                if ((this.NumeroField.Equals(value) != true)) {
+                    this.NumeroField = value;
+                    this.RaisePropertyChanged("Numero");
                 }
             }
         }
@@ -757,6 +507,256 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OpDto", Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio")]
+    [System.SerializableAttribute()]
+    public partial class OpDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto ColorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaFinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaInicioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto HorarioActualField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto[] HorariosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto LineaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto ModeloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NumeroField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto Color {
+            get {
+                return this.ColorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorField, value) != true)) {
+                    this.ColorField = value;
+                    this.RaisePropertyChanged("Color");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaFin {
+            get {
+                return this.FechaFinField;
+            }
+            set {
+                if ((this.FechaFinField.Equals(value) != true)) {
+                    this.FechaFinField = value;
+                    this.RaisePropertyChanged("FechaFin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaInicio {
+            get {
+                return this.FechaInicioField;
+            }
+            set {
+                if ((this.FechaInicioField.Equals(value) != true)) {
+                    this.FechaInicioField = value;
+                    this.RaisePropertyChanged("FechaInicio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto HorarioActual {
+            get {
+                return this.HorarioActualField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HorarioActualField, value) != true)) {
+                    this.HorarioActualField = value;
+                    this.RaisePropertyChanged("HorarioActual");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto[] Horarios {
+            get {
+                return this.HorariosField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HorariosField, value) != true)) {
+                    this.HorariosField = value;
+                    this.RaisePropertyChanged("Horarios");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto Linea {
+            get {
+                return this.LineaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LineaField, value) != true)) {
+                    this.LineaField = value;
+                    this.RaisePropertyChanged("Linea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto Modelo {
+            get {
+                return this.ModeloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModeloField, value) != true)) {
+                    this.ModeloField = value;
+                    this.RaisePropertyChanged("Modelo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Numero {
+            get {
+                return this.NumeroField;
+            }
+            set {
+                if ((this.NumeroField.Equals(value) != true)) {
+                    this.NumeroField = value;
+                    this.RaisePropertyChanged("Numero");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HorarioDto", Namespace="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio")]
+    [System.SerializableAttribute()]
+    public partial class HorarioDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime InicioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Fin {
+            get {
+                return this.FinField;
+            }
+            set {
+                if ((this.FinField.Equals(value) != true)) {
+                    this.FinField = value;
+                    this.RaisePropertyChanged("Fin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Inicio {
+            get {
+                return this.InicioField;
+            }
+            set {
+                if ((this.InicioField.Equals(value) != true)) {
+                    this.InicioField = value;
+                    this.RaisePropertyChanged("Inicio");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ControlCalidadServiceReference.IControlCalidadServicio")]
     public interface IControlCalidadServicio {
@@ -766,12 +766,6 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarDefectoResponse")]
         System.Threading.Tasks.Task<bool> RegistrarDefectoAsync(int idEspDefecto, int numero, string pie);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/FinalizarOp", ReplyAction="http://tempuri.org/IControlCalidadServicio/FinalizarOpResponse")]
-        bool FinalizarOp(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto op);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/FinalizarOp", ReplyAction="http://tempuri.org/IControlCalidadServicio/FinalizarOpResponse")]
-        System.Threading.Tasks.Task<bool> FinalizarOpAsync(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto op);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/InicializarOp", ReplyAction="http://tempuri.org/IControlCalidadServicio/InicializarOpResponse")]
         System.ValueTuple<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto[]> InicializarOp();
@@ -822,6 +816,12 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ReanudarOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/ReanudarOPResponse")]
         System.Threading.Tasks.Task<System.ValueTuple<bool, string>> ReanudarOPAsync(int numero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/FinalizarOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/FinalizarOPResponse")]
+        bool FinalizarOP(int numero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/FinalizarOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/FinalizarOPResponse")]
+        System.Threading.Tasks.Task<bool> FinalizarOPAsync(int numero);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -857,14 +857,6 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         public System.Threading.Tasks.Task<bool> RegistrarDefectoAsync(int idEspDefecto, int numero, string pie) {
             return base.Channel.RegistrarDefectoAsync(idEspDefecto, numero, pie);
-        }
-        
-        public bool FinalizarOp(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto op) {
-            return base.Channel.FinalizarOp(op);
-        }
-        
-        public System.Threading.Tasks.Task<bool> FinalizarOpAsync(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto op) {
-            return base.Channel.FinalizarOpAsync(op);
         }
         
         public System.ValueTuple<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto[]> InicializarOp() {
@@ -929,6 +921,14 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         public System.Threading.Tasks.Task<System.ValueTuple<bool, string>> ReanudarOPAsync(int numero) {
             return base.Channel.ReanudarOPAsync(numero);
+        }
+        
+        public bool FinalizarOP(int numero) {
+            return base.Channel.FinalizarOP(numero);
+        }
+        
+        public System.Threading.Tasks.Task<bool> FinalizarOPAsync(int numero) {
+            return base.Channel.FinalizarOPAsync(numero);
         }
     }
 }

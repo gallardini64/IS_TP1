@@ -13,6 +13,7 @@ using System.Windows.Forms;
 
 namespace ControlCalidad.Cliente.Presentacion.Vistas
 {
+    //TODO agregar el cerrar sesion
     public partial class VistaSupervisorDeLinea : FormBase, IVistaSupervisorDeLinea
     {
         private PresentadorLinea _presentadorLinea;
@@ -66,8 +67,6 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
                     btReanudarOP.Visible = true;
                 }
             }
-
-
         }
 
         private void CargarOpActual(OpDto op)
@@ -185,6 +184,31 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
                 MessageBox.Show($"{resultado.Item2}", "Reanudar OP", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void btnFinalizarOP_Click(object sender, EventArgs e)
+        {
+            bool resultado = _presentadorLinea.FinalizarOP(opActual.Numero);
+            if (resultado)
+            {
+                VaciarCampos();
+                opActual = new OpDto();
+                MessageBox.Show($"La OP se finalizó correctamente", "Finalizar OP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"Error al finalizar la OP", "Finalizar OP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void VaciarCampos()
+        {
+            pNuevaOP.Visible = true;
+            tbFecOpAct.Text = "";
+            tbLineaOpAct.Text = "";
+            tbModeloOpAct.Text = "";
+            tbNroOpAct.Text = "";
+            tbObjetivoOpAct.Text = "";
         }
     }
 }
