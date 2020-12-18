@@ -22,7 +22,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
                 if (empleado.Rol == "SupervisorLinea")
                 {
 
-                    PresentadorLinea presentador = new PresentadorLinea(new VistaSupervisorDeLinea(), empleado);
+                    PresentadorLinea presentador = new PresentadorLinea(new VistaSupervisorDeLinea(),new VistaLineaProduccion(), empleado);
 
                     this.Visible = false;
                 }

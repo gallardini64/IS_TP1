@@ -35,8 +35,6 @@ namespace ControlCalidad.Cliente.AccesoExterno
             }
         }
 
-
-
         public static (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp()
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
@@ -63,18 +61,15 @@ namespace ControlCalidad.Cliente.AccesoExterno
         }
 
         public static (bool,string) ReanudarOP(int numero)
-    {
+        {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {
                 return servicio.ReanudarOP(numero);
             }
         }
 
-      
-        
-
         public static bool FinalizarOP(int numero)
-    {
+        {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {
                 return servicio.FinalizarOP(numero);

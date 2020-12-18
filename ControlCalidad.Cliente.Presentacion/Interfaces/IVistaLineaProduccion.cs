@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlCalidad.Cliente.Presentacion.Presentadores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
 {
     public interface IVistaLineaProduccion
     {
+        void Desplegar();
     }
 }

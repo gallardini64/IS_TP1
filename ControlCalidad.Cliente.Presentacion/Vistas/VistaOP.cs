@@ -19,7 +19,6 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
     {
         private PresentadorOP _presentadorOP;
         private List<DefectoAgregar> _panelDefectos = new List<DefectoAgregar>();
-        
         public OpDto opActual { get; set; }
         public TurnoDto turnoActual { get; set; }
 

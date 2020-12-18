@@ -12,15 +12,25 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
     public class PresentadorLinea
     {
         private IVistaSupervisorDeLinea _vista;
+        private IVistaLineaProduccion _vistaPantalla;
         public EmpleadoDto empleadoLinea { get; set; }
-        public PresentadorLinea(IVistaSupervisorDeLinea vista,EmpleadoDto empleado)
+        public PresentadorLinea(IVistaSupervisorDeLinea vista,IVistaLineaProduccion vistaPantalla,EmpleadoDto empleado)
         {
-
-            empleadoLinea = empleado;
+             empleadoLinea = empleado;
             _vista = vista;
+            _vistaPantalla = vistaPantalla;
             _vista.SetPresentador(this,empleado.Usuario);
+            _vistaPantalla.Desplegar();
             _vista.Desplegar();
         }
+
+
+        public void ActualizarPantalla(OpDto opActual)
+        {
+
+        }
+
+
         public (ColorDto[], ModeloDto[], LineaDto[]) IniciarOP()
         {
             return Adaptador.InicializarOp();

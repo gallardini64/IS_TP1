@@ -44,9 +44,11 @@
             this.tbContrasenia.ForeColor = System.Drawing.Color.White;
             this.tbContrasenia.Location = new System.Drawing.Point(177, 102);
             this.tbContrasenia.Name = "tbContrasenia";
+            this.tbContrasenia.PasswordChar = '*';
             this.tbContrasenia.Size = new System.Drawing.Size(110, 27);
             this.tbContrasenia.TabIndex = 1;
             this.tbContrasenia.Tag = "1";
+            this.tbContrasenia.UseSystemPasswordChar = true;
             // 
             // tbUsuario
             // 

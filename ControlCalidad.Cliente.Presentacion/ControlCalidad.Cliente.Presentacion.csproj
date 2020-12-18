@@ -84,6 +84,7 @@
     <Compile Include="Presentadores\PresentadorAcceso.cs" />
     <Compile Include="Presentadores\PresentadorLinea.cs" />
     <Compile Include="Presentadores\PresentadorOP.cs" />
+    <Compile Include="Presentadores\PresentadorPantalla.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\ControladoresDeUsuario\DefectoAgregar.cs">
@@ -97,6 +98,24 @@
     </Compile>
     <Compile Include="Vistas\ControladoresDeUsuario\Hermanado.Designer.cs">
       <DependentUpon>Hermanado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\Pantalla\DefectoCelda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\Pantalla\DefectoCelda.Designer.cs">
+      <DependentUpon>DefectoCelda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\Pantalla\DefectoIzqDerHora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\Pantalla\DefectoIzqDerHora.Designer.cs">
+      <DependentUpon>DefectoIzqDerHora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\Pantalla\IzquierdaDerechaPorHora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\ControladoresDeUsuario\Pantalla\IzquierdaDerechaPorHora.Designer.cs">
+      <DependentUpon>IzquierdaDerechaPorHora.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\FormBase.cs">
       <SubType>Form</SubType>
@@ -145,11 +164,23 @@
       <DependentUpon>Hermanado.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ControladoresDeUsuario\Pantalla\DefectoCelda.resx">
+      <DependentUpon>DefectoCelda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ControladoresDeUsuario\Pantalla\DefectoIzqDerHora.resx">
+      <DependentUpon>DefectoIzqDerHora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ControladoresDeUsuario\Pantalla\IzquierdaDerechaPorHora.resx">
+      <DependentUpon>IzquierdaDerechaPorHora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaAcceso.resx">
       <DependentUpon>VistaAcceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VistaLineaProduccion.resx">
+      <DependentUpon>VistaLineaProduccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaOP.resx">
       <DependentUpon>VistaOP.cs</DependentUpon>

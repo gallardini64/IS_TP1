@@ -20,11 +20,12 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         private ModeloDto[] _modelos;
         private ColorDto[] _colores;
         private LineaDto[] _lineas;
+
         public OpDto opActual { get; set; }
 
         public VistaSupervisorDeLinea()
         {
-            InitializeComponent();
+            InitializeComponent();         
         }
 
         public void SetPresentador(PresentadorLinea presentador, string usuario)
@@ -32,9 +33,9 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             _presentadorLinea = presentador;
             IniciarOP(_presentadorLinea.GetOp(usuario));
         }
-
         public void IniciarOP(OpDto op)
         {
+            
             if (op == null)
             {
                 var tupla = _presentadorLinea.IniciarOP();

@@ -11,8 +11,6 @@ namespace ControlCalidad.Servidor.Servicio
     [ServiceContract]
     public interface IControlCalidadServicio
     {
-        
-
         [OperationContract]
         bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP , TimeSpan? hora = null);
 
@@ -50,8 +48,8 @@ namespace ControlCalidad.Servidor.Servicio
         OpDto AsignarOPaSupervisorDeCalidad();
 
         [OperationContract]
-
         (HorarioDto,DefectoDto,ParDto) auxiliar();
+
     }
 
 
