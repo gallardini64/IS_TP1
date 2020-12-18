@@ -13,5 +13,6 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
         void Desplegar();
         void ActualizarTurno(TurnoDto turno);
         void ActualizarDatosDeOPActual(OpDto opActual);
+        void CargarEspecificaciones(EspecificacionDeDefectoDto[] especificaciones);
     }
 }

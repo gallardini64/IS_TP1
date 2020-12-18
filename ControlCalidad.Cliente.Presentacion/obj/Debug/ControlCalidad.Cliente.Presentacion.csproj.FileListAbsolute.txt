@@ -143,3 +143,7 @@ I:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 I:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.csproj.CopyComplete
 I:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.exe
 I:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.pdb
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoIzqDerHora.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.IzquierdaDerechaPorHora.resources
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.Presentacion\obj\Debug\ControlCalidad.Cliente.Presentacion.Vistas.VistaLineaProduccion.resources

@@ -26,8 +26,19 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             
         }
 
-        public EspecificacionDeDefectoDto[] GetEspecificaciones(string tipo)
+        public EspecificacionDeDefectoDto[] GetEspecificaciones(string tipo = null)
         {
+            if (tipo == null)
+            {
+                return _repositorio.GetAll().Select(especificacion => new EspecificacionDeDefectoDto
+                {
+
+                    Id = especificacion.Id,
+
+                    Descripcion = especificacion.Descripcion,
+                    TipoDefecto = especificacion.TipoDefecto.ToString(),
+                }).ToArray();
+            }
             return _repositorio.GetAll().Where(e => e.TipoDefecto.ToString() == tipo).Select(especificacion => new EspecificacionDeDefectoDto
             {
 

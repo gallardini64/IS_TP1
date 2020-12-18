@@ -16,5 +16,10 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
         {
             InitializeComponent();
         }
+
+        public void SetTexto(string texto)
+        {
+            lbText.Text = texto;
+        }
     }
 }

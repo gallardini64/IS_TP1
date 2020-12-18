@@ -27,7 +27,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
         {
             _vistaOP = vista;
             _id = id;
-            lbDefecto.Text = $"{descripcion} {_id}";
+            lbDefecto.Text = $"{descripcion}";
             defectoToolTip.ToolTipTitle = descripcion;
             lbContadorDer.Text = tupla.derecho.ToString();
             lbContadorIzq.Text = tupla.izquierdo.ToString();

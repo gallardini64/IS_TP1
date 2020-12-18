@@ -12,9 +12,27 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
 {
     public partial class DefectoIzqDerHora : UserControl
     {
+        public int acumuladoDer { get; set; }
+        public int acumuladoIzq { get; set; }
         public DefectoIzqDerHora()
         {
             InitializeComponent();
+        }
+
+        public void SetContadores(int derecha, int izquierda)
+        {
+            lbContDer.Text = derecha.ToString();
+            lbContIzq.Text = izquierda.ToString();
+        }
+        public void SetContadores()
+        {
+            lbContDer.Text = acumuladoDer.ToString();
+            lbContIzq.Text = acumuladoIzq.ToString();
+        }
+
+        public (int derecha, int izquierda) GetContadores()
+        {
+            return (int.Parse(lbContDer.Text), int.Parse(lbContIzq.Text));
         }
     }
 }

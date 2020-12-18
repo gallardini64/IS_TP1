@@ -29,25 +29,27 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
         /// </summary>
         private void InitializeComponent()
         {
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbText = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuCustomLabel2
+            // lbText
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(15, 6);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(111, 30);
-            this.bunifuCustomLabel2.TabIndex = 52;
-            this.bunifuCustomLabel2.Text = "Defecto";
+            this.lbText.AutoSize = true;
+            this.lbText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
+            this.lbText.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbText.ForeColor = System.Drawing.Color.White;
+            this.lbText.Location = new System.Drawing.Point(5, 6);
+            this.lbText.Name = "lbText";
+            this.lbText.Size = new System.Drawing.Size(96, 24);
+            this.lbText.TabIndex = 52;
+            this.lbText.Text = "Defecto";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
+            this.panel2.Controls.Add(this.lbText);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(169, 37);
@@ -58,17 +60,17 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.panel2);
             this.Name = "DefectoCelda";
             this.Size = new System.Drawing.Size(175, 44);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbText;
         private System.Windows.Forms.Panel panel2;
     }
 }

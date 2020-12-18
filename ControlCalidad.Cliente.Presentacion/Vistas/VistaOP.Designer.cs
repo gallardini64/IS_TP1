@@ -141,11 +141,11 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(385, 32);
+            this.label4.Location = new System.Drawing.Point(321, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 21);
+            this.label4.Size = new System.Drawing.Size(126, 21);
             this.label4.TabIndex = 26;
-            this.label4.Text = "FECHA:";
+            this.label4.Text = "FECHA INICIO:";
             // 
             // label3
             // 

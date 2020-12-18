@@ -30,6 +30,8 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
             var turno = Adaptador.ObtenerDatosDeTurnoActual(opActual.Numero);
             _vistaPantalla.ActualizarDatosDeOPActual(opActual);
             _vistaPantalla.ActualizarTurno(turno);
+            _vistaPantalla.CargarEspecificaciones(Adaptador.ObtenerEspecificacionesDefectosTipo());
+          
         }
 
 

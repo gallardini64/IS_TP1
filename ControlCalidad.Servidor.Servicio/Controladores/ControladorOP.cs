@@ -130,7 +130,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             {
                 return null;
             }
-            return new OpDto()
+            var opE = new OpDto()
             {
                 Numero = op.Numero,
                 Modelo = new ModeloDto
@@ -148,7 +148,63 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                 },
                 FechaInicio = op.FechaInicio,
                 Estado = op.Estado.ToString()
+
             };
+            var HorariosE = new List<HorarioDto>();
+            foreach (var horario in op.Horarios)
+            {
+                var h = new HorarioDto()
+                {
+                    Id = horario.Id,
+                    Inicio = horario.Inicio
+                };
+                var defectos = new List<DefectoDto>();
+                foreach (var defecto in horario.Defectos)
+                {
+                    var espD = new EspecificacionDeDefectoDto()
+                    {
+                        Descripcion = defecto.EspecificacionDeDefecto.Descripcion,
+                        Id = defecto.EspecificacionDeDefecto.Id,
+                        TipoDefecto = defecto.EspecificacionDeDefecto.TipoDefecto.ToString()
+                    };
+
+                    var d = new DefectoDto()
+                    {
+                        EspecificacionDeDefecto = espD,
+                        Pie = defecto.Pie.ToString(),
+                        Hora = defecto.Hora
+                    };
+                    defectos.Add(d);
+                }
+                h.Defectos = defectos;
+                var pares = new List<ParDto>();
+                foreach (var par in horario.Pares)
+                {
+                    var p = new ParDto()
+                    {
+                        calidad = par.Calidad.ToString(),
+                        Hora = par.Hora
+                    };
+                    pares.Add(p);
+                }
+                h.Pares = pares;
+                HorariosE.Add(h);
+
+                var Empleado = new EmpleadoDto()
+                {
+                    Nombre = op.Empleado.Nombre
+                    
+                };
+
+                opE.Empleado = Empleado;
+
+            }
+            
+
+            opE.Horarios = HorariosE;
+
+
+            return opE;
         }
         public (bool, string) ConfirmarOP(int numero, LineaDto linea, ModeloDto modelo, ColorDto color)
         {

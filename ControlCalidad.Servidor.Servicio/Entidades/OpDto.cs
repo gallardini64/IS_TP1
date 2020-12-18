@@ -32,6 +32,8 @@ namespace ControlCalidad.Servidor.Servicio
         [DataMember]
         public string Estado { get; set; }
 
+        [DataMember]
+        public EmpleadoDto Empleado { get; set; }
 
     }
 }

@@ -13,7 +13,7 @@ namespace ControlCalidad.Cliente.AccesoExterno
         // cambio en el adaptador
        
 
-        public static EspecificacionDeDefectoDto[] ObtenerEspecificacionesDefectosTipo(string tipo)
+        public static EspecificacionDeDefectoDto[] ObtenerEspecificacionesDefectosTipo(string tipo = null)
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {

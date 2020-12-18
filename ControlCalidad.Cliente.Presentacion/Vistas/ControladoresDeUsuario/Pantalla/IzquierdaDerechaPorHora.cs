@@ -20,5 +20,11 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
         {
             lbHora.Text = hora;
         }
+
+        public void  CambiarCabecera()
+        {
+            lbizq.Text = "PRI";
+            lbDer.Text = "OBJ";
+        }
     }
 }

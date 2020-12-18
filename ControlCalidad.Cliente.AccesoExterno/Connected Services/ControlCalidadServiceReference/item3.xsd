@@ -83,6 +83,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Color" nillable="true" type="tns:ColorDto" />
       <xs:element minOccurs="0" name="Defectos" nillable="true" type="tns:ArrayOfDefectoDto" />
+      <xs:element minOccurs="0" name="Empleado" nillable="true" type="tns:EmpleadoDto" />
       <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />

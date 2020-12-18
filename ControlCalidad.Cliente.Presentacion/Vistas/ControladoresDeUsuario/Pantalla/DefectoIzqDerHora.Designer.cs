@@ -29,35 +29,35 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
         /// </summary>
         private void InitializeComponent()
         {
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbContIzq = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbContDer = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // bunifuCustomLabel1
+            // lbContIzq
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(99, 6);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(26, 30);
-            this.bunifuCustomLabel1.TabIndex = 47;
-            this.bunifuCustomLabel1.Text = "0";
+            this.lbContIzq.AutoSize = true;
+            this.lbContIzq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
+            this.lbContIzq.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lbContIzq.ForeColor = System.Drawing.Color.White;
+            this.lbContIzq.Location = new System.Drawing.Point(99, 6);
+            this.lbContIzq.Name = "lbContIzq";
+            this.lbContIzq.Size = new System.Drawing.Size(26, 30);
+            this.lbContIzq.TabIndex = 47;
+            this.lbContIzq.Text = "0";
             // 
-            // bunifuCustomLabel2
+            // lbContDer
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(20, 6);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(26, 30);
-            this.bunifuCustomLabel2.TabIndex = 48;
-            this.bunifuCustomLabel2.Text = "0";
+            this.lbContDer.AutoSize = true;
+            this.lbContDer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
+            this.lbContDer.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lbContDer.ForeColor = System.Drawing.Color.White;
+            this.lbContDer.Location = new System.Drawing.Point(20, 6);
+            this.lbContDer.Name = "lbContDer";
+            this.lbContDer.Size = new System.Drawing.Size(26, 30);
+            this.lbContDer.TabIndex = 48;
+            this.lbContDer.Text = "0";
             // 
             // panel1
             // 
@@ -80,8 +80,8 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.lbContIzq);
+            this.Controls.Add(this.lbContDer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "DefectoIzqDerHora";
@@ -93,8 +93,8 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbContIzq;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbContDer;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
     }

@@ -31,9 +31,9 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
         {
             this.lbHora = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbizq = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbDer = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SuspendLayout();
             // 
             // lbHora
@@ -55,17 +55,17 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             this.panel2.Size = new System.Drawing.Size(76, 37);
             this.panel2.TabIndex = 46;
             // 
-            // bunifuCustomLabel2
+            // lbizq
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(20, 39);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(52, 30);
-            this.bunifuCustomLabel2.TabIndex = 45;
-            this.bunifuCustomLabel2.Text = "IZQ";
+            this.lbizq.AutoSize = true;
+            this.lbizq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
+            this.lbizq.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lbizq.ForeColor = System.Drawing.Color.White;
+            this.lbizq.Location = new System.Drawing.Point(20, 39);
+            this.lbizq.Name = "lbizq";
+            this.lbizq.Size = new System.Drawing.Size(52, 30);
+            this.lbizq.TabIndex = 45;
+            this.lbizq.Text = "IZQ";
             // 
             // panel1
             // 
@@ -75,25 +75,25 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             this.panel1.Size = new System.Drawing.Size(76, 37);
             this.panel1.TabIndex = 46;
             // 
-            // bunifuCustomLabel1
+            // lbDer
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(99, 39);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(59, 30);
-            this.bunifuCustomLabel1.TabIndex = 45;
-            this.bunifuCustomLabel1.Text = "DER";
+            this.lbDer.AutoSize = true;
+            this.lbDer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
+            this.lbDer.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lbDer.ForeColor = System.Drawing.Color.White;
+            this.lbDer.Location = new System.Drawing.Point(99, 39);
+            this.lbDer.Name = "lbDer";
+            this.lbDer.Size = new System.Drawing.Size(59, 30);
+            this.lbDer.TabIndex = 45;
+            this.lbDer.Text = "DER";
             // 
             // IzquierdaDerechaPorHora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.lbDer);
+            this.Controls.Add(this.lbizq);
             this.Controls.Add(this.lbHora);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -108,8 +108,8 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
 
         private Bunifu.Framework.UI.BunifuCustomLabel lbHora;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbizq;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbDer;
     }
 }
