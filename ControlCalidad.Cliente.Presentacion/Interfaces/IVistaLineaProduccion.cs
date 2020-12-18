@@ -1,4 +1,5 @@
-﻿using ControlCalidad.Cliente.Presentacion.Presentadores;
+﻿using ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference;
+using ControlCalidad.Cliente.Presentacion.Presentadores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,7 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
     public interface IVistaLineaProduccion
     {
         void Desplegar();
+        void ActualizarTurno(TurnoDto turno);
+        void ActualizarDatosDeOPActual(OpDto opActual);
     }
 }

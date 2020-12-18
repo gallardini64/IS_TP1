@@ -84,7 +84,6 @@
     <Compile Include="Presentadores\PresentadorAcceso.cs" />
     <Compile Include="Presentadores\PresentadorLinea.cs" />
     <Compile Include="Presentadores\PresentadorOP.cs" />
-    <Compile Include="Presentadores\PresentadorPantalla.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\ControladoresDeUsuario\DefectoAgregar.cs">

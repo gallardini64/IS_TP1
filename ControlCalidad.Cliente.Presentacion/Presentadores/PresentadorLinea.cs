@@ -27,7 +27,9 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
 
         public void ActualizarPantalla(OpDto opActual)
         {
-
+            var turno = Adaptador.ObtenerDatosDeTurnoActual(opActual.Numero);
+            _vistaPantalla.ActualizarDatosDeOPActual(opActual);
+            _vistaPantalla.ActualizarTurno(turno);
         }
 
 

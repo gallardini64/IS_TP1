@@ -59,6 +59,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
                 btnCrearOP.Enabled = false;
                 opActual = op;
                 CargarOpActual(opActual);
+                _presentadorLinea.ActualizarPantalla(opActual);
                 if (opActual.Estado == "Pausada")
                 {
                     btReanudarOP.Visible = true;
