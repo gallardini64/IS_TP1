@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 namespace ControlCalidad.Servidor.Servicio
 {
     [ServiceContract(
-    SessionMode = SessionMode.Required,
     CallbackContract = typeof(IOpServicioCallBack))]
     public interface IOpServicio
     {

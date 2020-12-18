@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Servidor.Servicio
 {
-
+    [ServiceContract]
     public interface IOpServicioCallBack
     {
         [OperationContract(IsOneWay = true)]
