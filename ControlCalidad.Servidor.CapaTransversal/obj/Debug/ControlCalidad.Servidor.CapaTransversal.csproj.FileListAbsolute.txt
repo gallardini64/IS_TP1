@@ -15,3 +15,4 @@ J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.CapaTransversal\obj\Debug\ControlCalidad.Servidor.CapaTransversal.csproj.CopyComplete
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.CapaTransversal\obj\Debug\ControlCalidad.Servidor.CapaTransversal.dll
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Servidor.CapaTransversal\obj\Debug\ControlCalidad.Servidor.CapaTransversal.pdb
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Servidor.CapaTransversal\obj\Debug\ControlCalidad.Servidor.CapaTransversal.csprojAssemblyReference.cache

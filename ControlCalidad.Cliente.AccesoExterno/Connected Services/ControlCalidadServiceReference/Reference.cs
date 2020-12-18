@@ -972,6 +972,9 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime HoraField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string calidadField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -981,6 +984,19 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Hora {
+            get {
+                return this.HoraField;
+            }
+            set {
+                if ((this.HoraField.Equals(value) != true)) {
+                    this.HoraField = value;
+                    this.RaisePropertyChanged("Hora");
+                }
             }
         }
         
@@ -1012,16 +1028,16 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
     public interface IControlCalidadServicio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarDefectoResponse")]
-        bool RegistrarDefecto(int idEspDefecto, int numero, string pie, int numeroOP);
+        bool RegistrarDefecto(int idEspDefecto, int numero, string pie, int numeroOP, System.Nullable<System.TimeSpan> hora);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarDefectoResponse")]
-        System.Threading.Tasks.Task<bool> RegistrarDefectoAsync(int idEspDefecto, int numero, string pie, int numeroOP);
+        System.Threading.Tasks.Task<bool> RegistrarDefectoAsync(int idEspDefecto, int numero, string pie, int numeroOP, System.Nullable<System.TimeSpan> hora);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarPar", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarParResponse")]
-        bool RegistrarPar(int numero, string calidad, int numeroOP);
+        bool RegistrarPar(int numero, string calidad, int numeroOP, System.Nullable<System.TimeSpan> hora);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarPar", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarParResponse")]
-        System.Threading.Tasks.Task<bool> RegistrarParAsync(int numero, string calidad, int numeroOP);
+        System.Threading.Tasks.Task<bool> RegistrarParAsync(int numero, string calidad, int numeroOP, System.Nullable<System.TimeSpan> hora);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/InicializarOp", ReplyAction="http://tempuri.org/IControlCalidadServicio/InicializarOpResponse")]
         System.ValueTuple<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto[]> InicializarOp();
@@ -1119,20 +1135,20 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie, int numeroOP) {
-            return base.Channel.RegistrarDefecto(idEspDefecto, numero, pie, numeroOP);
+        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie, int numeroOP, System.Nullable<System.TimeSpan> hora) {
+            return base.Channel.RegistrarDefecto(idEspDefecto, numero, pie, numeroOP, hora);
         }
         
-        public System.Threading.Tasks.Task<bool> RegistrarDefectoAsync(int idEspDefecto, int numero, string pie, int numeroOP) {
-            return base.Channel.RegistrarDefectoAsync(idEspDefecto, numero, pie, numeroOP);
+        public System.Threading.Tasks.Task<bool> RegistrarDefectoAsync(int idEspDefecto, int numero, string pie, int numeroOP, System.Nullable<System.TimeSpan> hora) {
+            return base.Channel.RegistrarDefectoAsync(idEspDefecto, numero, pie, numeroOP, hora);
         }
         
-        public bool RegistrarPar(int numero, string calidad, int numeroOP) {
-            return base.Channel.RegistrarPar(numero, calidad, numeroOP);
+        public bool RegistrarPar(int numero, string calidad, int numeroOP, System.Nullable<System.TimeSpan> hora) {
+            return base.Channel.RegistrarPar(numero, calidad, numeroOP, hora);
         }
         
-        public System.Threading.Tasks.Task<bool> RegistrarParAsync(int numero, string calidad, int numeroOP) {
-            return base.Channel.RegistrarParAsync(numero, calidad, numeroOP);
+        public System.Threading.Tasks.Task<bool> RegistrarParAsync(int numero, string calidad, int numeroOP, System.Nullable<System.TimeSpan> hora) {
+            return base.Channel.RegistrarParAsync(numero, calidad, numeroOP, hora);
         }
         
         public System.ValueTuple<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto[]> InicializarOp() {

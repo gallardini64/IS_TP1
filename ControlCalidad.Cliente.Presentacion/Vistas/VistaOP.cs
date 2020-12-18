@@ -18,13 +18,18 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
     public partial class VistaOP : FormBase, IVistaOP
     {
         private PresentadorOP _presentadorOP;
-        private List<DefectoAgregar> _panelesDefecto = new List<DefectoAgregar>();
+        private List<DefectoAgregar> _panelDefectos = new List<DefectoAgregar>();
+        
         public OpDto opActual { get; set; }
         public TurnoDto turnoActual { get; set; }
+
+        public bool EstaCargandoEnHoraActual { get; set; } = true;
+        private TimeSpan Hora { get; set; }
         public VistaOP()
         {
             InitializeComponent();
-
+            Hora = TimeSpan.Parse(DateTime.Now.ToString("HH:00"));
+            
         }
         public void SetPresentador(PresentadorOP presentadorOP, string empleado)
         {
@@ -33,10 +38,25 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         public void CargarOpActual()
         {
             opActual = _presentadorOP.AsignarOPaSupervisorDeCalidad();
-            VerificarEstadoOP();
             tbOpNum.Text = opActual.Numero.ToString();
             tbFec.Text = opActual.FechaInicio.ToString("dd/MM/yyyy");
+            CargarContadorPares();
+        }
 
+        private void CargarContadorPares()
+        {
+            
+                var horamas1 = Hora.Add(TimeSpan.Parse("01:00"));
+                if (Hora <= horamas1)
+                {
+                    lbContadorPrimera.Text = opActual.Horarios.LastOrDefault().Pares.Where(p => p.calidad == "Primera" &&
+                        (p.Hora.TimeOfDay >= Hora && p.Hora.TimeOfDay < Hora.Add(TimeSpan.Parse("01:00")))).Count().ToString();
+                }
+                else
+                {
+                    lbContadorPrimera.Text = opActual.Horarios.LastOrDefault().Pares.Where(p => p.calidad == "Primera" &&
+                        (p.Hora.TimeOfDay >= Hora || p.Hora.TimeOfDay < Hora.Add(TimeSpan.Parse("01:00")))).Count().ToString();
+                }
         }
 
         private void VerificarEstadoOP()
@@ -53,25 +73,55 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
 
         private void OpPausada()
         {
-            Phermanado.Habilitarse();
             btHermanado.Enabled = true;
+            foreach (var panel in _panelDefectos)
+            {
+                panel.Desactivar();
+            }
+            btnAgregarPar.Enabled = false;
+            btnQuitarPar.Enabled = false;
         }
 
         private void OpActiva()
         {
             Phermanado.Deshabilitarse();
             btHermanado.Enabled = false;
+            foreach (var panel in _panelDefectos)
+            {
+                panel.Activar();
+            }
+            btnAgregarPar.Enabled = true;
+            btnQuitarPar.Enabled = true;
         }
 
         private void CargarDatosDeTurnoActual()
         {
             turnoActual = _presentadorOP.ObtenerDatosDeTurnoActual(opActual);
             cbHora.DataSource = turnoActual.Horas;
+            var index = 0;
+            foreach (var hora in turnoActual.Horas)
+            {
+                if (DateTime.Now.TimeOfDay >= TimeSpan.Parse(hora) && DateTime.Now.TimeOfDay < TimeSpan.Parse(hora).Add(TimeSpan.Parse("01:00")))
+                {
+                    break;
+                }
+                index++;
+            }
+            cbHora.SelectedIndex = index;
+
             tbTurno.Text = turnoActual.Descripcion;
         }
         public void RegistrarDefecto(int idEspDefecto, int numero, string pie)
         {
-            _presentadorOP.RegistrarDefecto(idEspDefecto, numero, pie,opActual.Numero);
+            if (EstaCargandoEnHoraActual)
+            {
+                _presentadorOP.RegistrarDefecto(idEspDefecto, numero, pie, opActual.Numero);
+            }
+            else
+            {
+                _presentadorOP.RegistrarDefecto(idEspDefecto, numero, pie, opActual.Numero,Hora);
+            }
+            
         }
         public void DesactivarControles()
         {
@@ -84,22 +134,25 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         }
         public void Desplegar()
         {
-            CargarDatosDeTurnoActual();
             CargarDefectosDeReprocesado();
             CargarDefectosDeObservado();
+            CargarDatosDeTurnoActual();
+            VerificarEstadoOP();
             Show();
+            
         }
         private void CargarDefectosDeReprocesado()
         {
             EspecificacionDeDefectoDto[] especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Reprocesado");
             var i = 0;
+            
             foreach (var especificacion in especificacionDeDefectos)
             {
                 DefectoAgregar panelDefectos = new DefectoAgregar();
                 panelDefectos.setParametros(this, especificacion.Id, especificacion.Descripcion,CargarContadoresDefecto(especificacion.Id));
                 panelDefectos.Location = new Point(defectoAgregarRep.Location.X, defectoAgregarRep.Location.Y + 90 * i);
                 pReprocesado.Controls.Add(panelDefectos);
-                _panelesDefecto.Add(panelDefectos);
+                _panelDefectos.Add(panelDefectos);
                 i++;
             }
         }
@@ -107,13 +160,14 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         {
             EspecificacionDeDefectoDto[] especificacionDeDefectos = _presentadorOP.ObtenerEspecificacionesDefectosTipo("Observado");
             var i = 0;
+          
             foreach (var especificacion in especificacionDeDefectos)
             {
                 DefectoAgregar panelDefectos = new DefectoAgregar();
                 panelDefectos.setParametros(this, especificacion.Id, especificacion.Descripcion,CargarContadoresDefecto(especificacion.Id));
                 panelDefectos.Location = new Point(defectoAgregarObs.Location.X, defectoAgregarObs.Location.Y + 90 * i);
                 pObservado.Controls.Add(panelDefectos);
-                _panelesDefecto.Add(panelDefectos);
+                _panelDefectos.Add(panelDefectos);
                 i++;
             }
         }
@@ -121,19 +175,37 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         private (int,int) CargarContadoresDefecto(int id)
         {
             var horario = opActual.Horarios.LastOrDefault();
-            
+
+       
+
             if (horario != null)
             {
-                var contadorderecho = horario.Defectos.Where(e => e.EspecificacionDeDefecto.Id == id && e.Pie == "Derecho").Count();
-                var contadorizquierdo = horario.Defectos.Where(e => e.EspecificacionDeDefecto.Id == id && e.Pie == "Izquierdo").Count();
-                return (contadorderecho, contadorizquierdo);
+                var horamas1 = Hora.Add(TimeSpan.Parse("01:00"));
+                if (Hora <= horamas1)
+                {
+                    var contadorderecho = horario.Defectos.Where(e => e.EspecificacionDeDefecto.Id == id && e.Pie == "Derecho"
+                                && (e.Hora.TimeOfDay >= Hora && e.Hora.TimeOfDay < Hora.Add(TimeSpan.Parse("01:00")))).Count();
+                    var contadorizquierdo = horario.Defectos.Where(e => e.EspecificacionDeDefecto.Id == id && e.Pie == "Izquierdo"
+                                && (e.Hora.TimeOfDay >= Hora && e.Hora.TimeOfDay < Hora.Add(TimeSpan.Parse("01:00")))).Count();
+                    return (contadorderecho, contadorizquierdo);
+                }
+                else
+                {
+                    var contadorderecho = horario.Defectos.Where(e => e.EspecificacionDeDefecto.Id == id && e.Pie == "Derecho"
+                                && (e.Hora.TimeOfDay >= Hora || e.Hora.TimeOfDay < Hora.Add(TimeSpan.Parse("01:00")))).Count();
+                    var contadorizquierdo = horario.Defectos.Where(e => e.EspecificacionDeDefecto.Id == id && e.Pie == "Izquierdo"
+                                && (e.Hora.TimeOfDay >= Hora || e.Hora.TimeOfDay < Hora.Add(TimeSpan.Parse("01:00")))).Count();
+                    return (contadorderecho, contadorizquierdo);
+                }
+                
             }
             return (0, 0);
         }
 
         public void ActualizarNumeroDeDefectosTipo(int idEspDefecto, int numero, string pie)
-        {
-            _panelesDefecto.FirstOrDefault(e => e._id == idEspDefecto).RegistrarDefectoTipo(numero);
+        {   
+                _panelDefectos.FirstOrDefault(e => e._id == idEspDefecto).RegistrarDefectoTipo(numero, pie);
+         
         }
 
         private void VistaOP_MouseUp(object sender, MouseEventArgs e)
@@ -153,7 +225,15 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
 
         public void ActualizarParesCalidad(int numero, string calidad)
         {
-            lbContadorPrimera.Text = (Int32.Parse(lbContadorPrimera.Text) + numero).ToString();
+            if (opActual.Estado == "Pausada")
+            {
+                Phermanado.ActualizarContadores(numero, calidad);
+            }
+            else
+            {
+                lbContadorPrimera.Text = (Int32.Parse(lbContadorPrimera.Text) + numero).ToString();
+            }
+            
         }
 
         public void MostrarMensaje(string v)
@@ -163,15 +243,81 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
 
         private void btnAgregarPar_Click(object sender, EventArgs e)
         {
-            _presentadorOP.RegistrarPar(1, "Primera", opActual.Numero);
+            RegistrarPar(1,"Primera");
+
+        }
+
+        public void RegistrarPar(int numero, string calidad)
+        {
+
+            if (EstaCargandoEnHoraActual)
+            {
+                _presentadorOP.RegistrarPar(numero, calidad, opActual.Numero);
+            }
+            else
+            {
+                _presentadorOP.RegistrarPar(numero, calidad, opActual.Numero, Hora);
+            }
         }
 
         private void btnQuitarPar_Click(object sender, EventArgs e)
         {
-            if (Int32.Parse(lbContadorPrimera.Text) != 0)
+            RegistrarPar(-1, "Primera");
+        }
+
+        private void cbHora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btFiltrar_Click(object sender, EventArgs e)
+        {
+            Hora = TimeSpan.Parse(cbHora.SelectedValue.ToString());
+            opActual = _presentadorOP.AsignarOPaSupervisorDeCalidad();
+            foreach (var panel in _panelDefectos)
             {
-                _presentadorOP.RegistrarPar(-1, "Primera", opActual.Numero);
+                panel.ActualizarContadores(CargarContadoresDefecto(panel._id));
             }
+            CargarContadorPares();
+            EstaCargandoEnHoraActual = false;
+            btDeshacer.Enabled = true;
+        }
+
+        private void btDeshacer_Click(object sender, EventArgs e)
+        {
+            btFiltrar.Enabled = true;
+            btDeshacer.Enabled = false;
+            Hora = TimeSpan.Parse(DateTime.Now.ToString("HH:00"));
+            opActual = _presentadorOP.AsignarOPaSupervisorDeCalidad();
+            foreach (var panel in _panelDefectos)
+            {
+                panel.ActualizarContadores(CargarContadoresDefecto(panel._id));
+            }
+            CargarContadorPares();
+            RetornarAHoraActual();
+        }
+
+        public void RetornarAHoraActual()
+        {
+            var index = 0;
+            foreach (var hora in turnoActual.Horas)
+            {
+                if (DateTime.Now.TimeOfDay >= TimeSpan.Parse(hora) && DateTime.Now.TimeOfDay < TimeSpan.Parse(hora).Add(TimeSpan.Parse("01:00")))
+                {
+                    break;
+                }
+                index++;
+            }
+            cbHora.SelectedIndex = index;
+        }
+
+        private void btHermanado_Click(object sender, EventArgs e)
+        {
+            Phermanado.Habilitarse();
+            Phermanado.SetVista(this);
+            var primera = opActual.Horarios.LastOrDefault().Pares.Where(p => p.calidad == "Primera").Count();
+            var segunda = opActual.Horarios.LastOrDefault().Pares.Where(p => p.calidad == "Segunda").Count();
+            Phermanado.ActualizarContador(primera,segunda);
         }
     }
 }

@@ -26,11 +26,11 @@ namespace ControlCalidad.Servidor.Dominio
             Pares = new List<Par>();
             Turno = turno;
         }
-        public void RegistrarPar(int numero, Calidad calidad, Empleado empleado)
+        public void RegistrarPar(int numero, Calidad calidad, Empleado empleado, TimeSpan? hora = null)
         {
             if (numero > 0)
             {
-                Par par = new Par(DateTime.Now, calidad,empleado);
+                Par par = new Par(DateTime.Now, calidad,empleado,hora);
                 Pares.Add(par);
             }
             if (numero < 0)
@@ -44,18 +44,40 @@ namespace ControlCalidad.Servidor.Dominio
             }
         }
 
-        internal void RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now,Empleado empleado)
+        public void RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now,Empleado empleado,TimeSpan? hora = null)
         {
             if (numero > 0)
             {
-                Defecto defecto = new Defecto(especDe, pie, now,empleado);
+                Defecto defecto = new Defecto(especDe, pie, now,empleado,hora);
                 Defectos.Add(defecto);
             }
             if (numero < 0)
             {
-                var defecto = Defectos.ToList().LastOrDefault(d => d.EspecificacionDeDefecto.Equals(especDe) &&
-                                                                   d.Pie.ToString().Equals(pie));
-                Defectos.Remove(defecto);
+                
+
+                if (hora != null)
+                {
+                    if (hora > ((TimeSpan)hora).Add(TimeSpan.Parse("01:00")))
+                    {
+                        var defecto = Defectos.ToList().LastOrDefault(d => d.EspecificacionDeDefecto.Equals(especDe) &&
+                                                                   d.Pie.ToString().Equals(pie) && (d.Hora.TimeOfDay >= hora || d.Hora.TimeOfDay < ((TimeSpan)hora).Add(TimeSpan.Parse("01:00"))));
+                        Defectos.Remove(defecto);
+                    }
+                    else
+                    {
+                        var defecto = Defectos.ToList().LastOrDefault(d => d.EspecificacionDeDefecto.Equals(especDe) &&
+                                                                   d.Pie.ToString().Equals(pie) && d.Hora.TimeOfDay >= hora && d.Hora.TimeOfDay < ((TimeSpan)hora).Add(TimeSpan.Parse("01:00")));
+                        Defectos.Remove(defecto);
+                    }
+                    
+                }
+                else
+                {
+                    var defecto = Defectos.ToList().LastOrDefault(d => d.EspecificacionDeDefecto.Equals(especDe) &&
+                                                                                       d.Pie.ToString().Equals(pie));
+                    Defectos.Remove(defecto);
+                }
+                
             }
         }
     }

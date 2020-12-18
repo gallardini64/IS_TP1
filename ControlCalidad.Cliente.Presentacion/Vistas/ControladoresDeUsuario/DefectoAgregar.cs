@@ -22,10 +22,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
         }
 
 
-        private void btnAgregarDefectoDer_Click(object sender, EventArgs e)
-        {
-            _vistaOP.RegistrarDefecto(_id,1, "DERECHO");
-        }
+        
         public void setParametros(VistaOP vista, int id, string descripcion,(int derecho, int izquierdo) tupla)
         {
             _vistaOP = vista;
@@ -35,9 +32,25 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
             lbContadorDer.Text = tupla.derecho.ToString();
             lbContadorIzq.Text = tupla.izquierdo.ToString();
         }
-        public void RegistrarDefectoTipo(int numero)
+
+        public void ActualizarContadores((int derecha, int izquierda)tupla)
         {
-            lbContadorDer.Text = (Int32.Parse(lbContadorDer.Text) + numero).ToString();
+            lbContadorDer.Text = tupla.derecha.ToString();
+            lbContadorIzq.Text = tupla.izquierda.ToString();
+        }
+
+        public void RegistrarDefectoTipo(int numero,string pie)
+        {
+            if (pie == "Izquierdo")
+            {
+                lbContadorIzq.Text = (Int32.Parse(lbContadorIzq.Text) + numero).ToString();
+            }
+            else
+            {
+                lbContadorDer.Text = (Int32.Parse(lbContadorDer.Text) + numero).ToString();
+            }
+
+           
         }
 
 
@@ -58,19 +71,25 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario
             btnQuitarDefectoIzq.Enabled = true;
         }
 
+
+        private void btnAgregarDefectoDer_Click(object sender, EventArgs e)
+        {
+            _vistaOP.RegistrarDefecto(_id, 1, "Derecho");
+        }
+
         private void btnQuitarDefectoDer_Click(object sender, EventArgs e)
         {
-            _vistaOP.RegistrarDefecto(_id, -1, "DERECHO");
+            _vistaOP.RegistrarDefecto(_id, -1, "Derecho");
         }
 
         private void btnAgregarDefectoIzq_Click(object sender, EventArgs e)
         {
-            _vistaOP.RegistrarDefecto(_id, 1, "IZQUIERDO");
+            _vistaOP.RegistrarDefecto(_id, 1, "Izquierdo");
         }
 
         private void btnQuitarDefectoIzq_Click(object sender, EventArgs e)
         {
-            _vistaOP.RegistrarDefecto(_id, -1, "IZQUIERDO");
+            _vistaOP.RegistrarDefecto(_id, -1, "Izquierdo");
         }
     }
 }

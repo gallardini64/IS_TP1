@@ -17,14 +17,14 @@ namespace ControlCalidad.Servidor.Servicio
         private ControladorEspecificacionDeDefecto _controladorEspec = new ControladorEspecificacionDeDefecto();
         private ControladorEmpleados _controladorEmpleado = new ControladorEmpleados();
         
-        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP)
+        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP, TimeSpan? hora = null)
         {
-            return _controladorOP.RegistrarDefecto(idEspDefecto, numero, pie, numeroOP);
+            return _controladorOP.RegistrarDefecto(idEspDefecto, numero, pie, numeroOP,hora);
         }
 
-        public bool RegistrarPar(int numero, string calidad, int numeroOP)
+        public bool RegistrarPar(int numero, string calidad, int numeroOP, TimeSpan? hora = null)
         {
-            return _controladorOP.RegistrarPar(numero,calidad,numeroOP);
+            return _controladorOP.RegistrarPar(numero,calidad,numeroOP,hora);
         }
 
 

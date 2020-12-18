@@ -26,10 +26,27 @@ namespace ControlCalidad.Servidor.Dominio
         }
         
 
-        public Defecto(EspecificacionDeDefecto especDe, string pie, DateTime now,Empleado empleado)
+        public Defecto(EspecificacionDeDefecto especDe, string pie, DateTime now,Empleado empleado,TimeSpan? hora = null)
         {
+            if (hora == null)
+            {
+                Hora = now;
+            }
+            else
+            {
+                Hora = now;
+                if ((Hora.Date + hora) > now)
+                {
+                    Hora = ((DateTime)(Hora.Date + hora)).AddDays(-1);
+                }
+                else
+                {
+                    Hora = (DateTime)(Hora.Date + hora);
+                }
+                
+            }
             EspecificacionDeDefecto = especDe;
-            if (pie == "IZQUIERDO")
+            if (pie == "Izquierdo")
             {
                 Pie = Pie.Izquierdo;
             }
@@ -37,8 +54,9 @@ namespace ControlCalidad.Servidor.Dominio
             {
                 Pie = Pie.Derecho;
             }
-            Hora = now;
+            
             Empleado = empleado;
+
         }
 
         public Defecto()

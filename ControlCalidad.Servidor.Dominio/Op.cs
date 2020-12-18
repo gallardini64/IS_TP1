@@ -55,50 +55,45 @@ namespace ControlCalidad.Servidor.Dominio
             Horarios = new List<Horario>();
         }
 
-        public bool RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now, Empleado empleado)
+        public bool RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now, Empleado empleado, TimeSpan? hora = null)
         {
             Horario horarioActual = Horarios.LastOrDefault();
             if (horarioActual.Turno.SoyTurnoActual())
             {
-                horarioActual.RegistrarDefecto(numero, especDe, pie, now,empleado);
+                horarioActual.RegistrarDefecto(numero, especDe, pie, now,empleado,hora);
                 return true;
             }
             else
             {
                 if ((int)horarioActual.Turno.HeFilalizadoHace().TotalMinutes < 10)
                 {
-                    horarioActual.RegistrarDefecto(numero, especDe, pie, now,empleado);
+                    horarioActual.RegistrarDefecto(numero, especDe, pie, now,empleado, hora);
                     return true;
                 }
             }
             return false;
         }
 
-        public bool RegistrarPar(int numero, Calidad calidad,Empleado empleado, Horario horario = null)
+        public bool RegistrarPar(int numero, Calidad calidad,Empleado empleado, TimeSpan? hora = null)
         {
-            if (horario == null)
-            {
+           
                 Horario horarioActual = Horarios.LastOrDefault();
                 if (horarioActual.Turno.SoyTurnoActual())
                 {
-                    horarioActual.RegistrarPar(numero, calidad, empleado);
+                    horarioActual.RegistrarPar(numero, calidad, empleado,hora);
                     return true;
                 }
                 else
                 {
                     if ((int)horarioActual.Turno.HeFilalizadoHace().TotalMinutes < 10)
                     {
-                        horarioActual.RegistrarPar(numero, calidad, empleado);
+                        horarioActual.RegistrarPar(numero, calidad, empleado,hora);
                         return true;
                     }
-                }
                 return false;
-            }
-            else
-            {
-                horario.RegistrarPar(numero, calidad, empleado);
-                return true;
-            }
+                }
+                
+          
         }
 
         public void FinalizarOP()

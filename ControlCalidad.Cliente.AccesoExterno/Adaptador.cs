@@ -20,18 +20,18 @@ namespace ControlCalidad.Cliente.AccesoExterno
                 return servicio.GetEspecificacionDeDefectoTipo(tipo);
             }
         }
-        public static bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP)
+        public static bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP,TimeSpan? hora = null)
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {
-                return servicio.RegistrarDefecto(idEspDefecto,numero,pie,numeroOP);
+                return servicio.RegistrarDefecto(idEspDefecto,numero,pie,numeroOP,hora);
             }
         }
-        public static bool RegistrarPar(int numero, string calidad,int numeroOP)
+        public static bool RegistrarPar(int numero, string calidad,int numeroOP, TimeSpan? hora = null)
         {
             using (var servicio = new ControlCalidadServiceReference.ControlCalidadServicioClient())
             {
-                return servicio.RegistrarPar(numero,calidad,numeroOP);
+                return servicio.RegistrarPar(numero,calidad,numeroOP,hora);
             }
         }
 

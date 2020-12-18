@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
 namespace ControlCalidad.Servidor.Servicio
 {
@@ -8,6 +9,7 @@ namespace ControlCalidad.Servidor.Servicio
         [DataMember]
         public string calidad { get; set; }
 
-
+        [DataMember]
+        public DateTime Hora { get; set; }
     }
 }

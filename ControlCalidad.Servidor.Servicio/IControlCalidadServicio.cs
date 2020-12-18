@@ -14,10 +14,10 @@ namespace ControlCalidad.Servidor.Servicio
         
 
         [OperationContract]
-        bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP);
+        bool RegistrarDefecto(int idEspDefecto, int numero, string pie,int numeroOP , TimeSpan? hora = null);
 
         [OperationContract]
-        bool RegistrarPar(int numero, string calidad, int numeroOP);
+        bool RegistrarPar(int numero, string calidad, int numeroOP, TimeSpan? hora = null);
 
         [OperationContract]
         (ColorDto[], ModeloDto[], LineaDto[]) InicializarOp();

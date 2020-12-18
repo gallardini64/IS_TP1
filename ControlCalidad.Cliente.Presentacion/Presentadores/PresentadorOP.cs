@@ -21,9 +21,9 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
             _vista.CargarOpActual();
             _vista.Desplegar();
         }
-        public void RegistrarDefecto(int idEspDefecto,int numero,string pie,int numeroOP) 
+        public void RegistrarDefecto(int idEspDefecto,int numero,string pie,int numeroOP,TimeSpan? hora = null) 
         {
-            bool registrado = Adaptador.RegistrarDefecto(idEspDefecto,numero, pie, numeroOP);
+            bool registrado = Adaptador.RegistrarDefecto(idEspDefecto,numero, pie, numeroOP,hora);
             if (registrado)
             {
                 _vista.ActualizarNumeroDeDefectosTipo(idEspDefecto, numero, pie);
@@ -34,9 +34,9 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
             }
         }
 
-        public void RegistrarPar(int numero,string calidad,int numeroOP)
+        public void RegistrarPar(int numero,string calidad,int numeroOP, TimeSpan? hora = null)
         {
-            bool registrado = Adaptador.RegistrarPar(numero, calidad, numeroOP);
+            bool registrado = Adaptador.RegistrarPar(numero, calidad, numeroOP,hora);
             if (registrado)
             {
                 _vista.ActualizarParesCalidad(numero, calidad);

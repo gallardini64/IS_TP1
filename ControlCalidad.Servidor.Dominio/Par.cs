@@ -6,10 +6,27 @@ namespace ControlCalidad.Servidor.Dominio
     {
         public Calidad Calidad { get; set; }
         public DateTime Hora { get; set; }
-        public Par(DateTime now,Calidad calidad ,Empleado empleado)
+        public Par(DateTime now,Calidad calidad ,Empleado empleado, TimeSpan? hora = null)
         {
+            if (hora == null)
+            {
+                Hora = now;
+            }
+            else
+            {
+                Hora = now;
+                if ((Hora.Date + hora) > now)
+                {
+                    Hora = ((DateTime)(Hora.Date + hora)).AddDays(-1);
+                }
+                else
+                {
+                    Hora = (DateTime)(Hora.Date + hora);
+                }
+
+            }
             Empleado = empleado;
-            Hora = now;
+            
             Calidad = calidad;
         }
 

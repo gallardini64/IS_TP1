@@ -133,6 +133,7 @@
   <xs:element name="ArrayOfParDto" nillable="true" type="tns:ArrayOfParDto" />
   <xs:complexType name="ParDto">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Hora" type="xs:dateTime" />
       <xs:element minOccurs="0" name="calidad" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

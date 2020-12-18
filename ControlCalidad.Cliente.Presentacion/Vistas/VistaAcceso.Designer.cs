@@ -45,7 +45,7 @@
             this.tbContrasenia.Location = new System.Drawing.Point(177, 102);
             this.tbContrasenia.Name = "tbContrasenia";
             this.tbContrasenia.Size = new System.Drawing.Size(110, 27);
-            this.tbContrasenia.TabIndex = 33;
+            this.tbContrasenia.TabIndex = 1;
             this.tbContrasenia.Tag = "1";
             // 
             // tbUsuario
@@ -57,7 +57,7 @@
             this.tbUsuario.Location = new System.Drawing.Point(177, 44);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(110, 27);
-            this.tbUsuario.TabIndex = 34;
+            this.tbUsuario.TabIndex = 0;
             this.tbUsuario.Tag = "0";
             // 
             // lbContraseña
@@ -113,7 +113,7 @@
             this.btIniciarSesion.OnHoverTextColor = System.Drawing.Color.White;
             this.btIniciarSesion.selected = false;
             this.btIniciarSesion.Size = new System.Drawing.Size(160, 41);
-            this.btIniciarSesion.TabIndex = 35;
+            this.btIniciarSesion.TabIndex = 2;
             this.btIniciarSesion.Tag = "2";
             this.btIniciarSesion.Text = "Iniciar Sesión";
             this.btIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

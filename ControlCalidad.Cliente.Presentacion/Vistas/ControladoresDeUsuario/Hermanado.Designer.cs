@@ -52,6 +52,7 @@
             this.btQuitarSegunda.ButtonText = "";
             this.btQuitarSegunda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btQuitarSegunda.DisabledColor = System.Drawing.Color.Gray;
+            this.btQuitarSegunda.Enabled = false;
             this.btQuitarSegunda.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btQuitarSegunda.ForeColor = System.Drawing.Color.White;
             this.btQuitarSegunda.Iconcolor = System.Drawing.Color.Transparent;
@@ -78,6 +79,7 @@
             this.btQuitarSegunda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btQuitarSegunda.Textcolor = System.Drawing.Color.White;
             this.btQuitarSegunda.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btQuitarSegunda.Click += new System.EventHandler(this.btQuitarSegunda_Click);
             // 
             // btQuitarPrimera
             // 
@@ -89,6 +91,7 @@
             this.btQuitarPrimera.ButtonText = "";
             this.btQuitarPrimera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btQuitarPrimera.DisabledColor = System.Drawing.Color.Gray;
+            this.btQuitarPrimera.Enabled = false;
             this.btQuitarPrimera.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btQuitarPrimera.ForeColor = System.Drawing.Color.White;
             this.btQuitarPrimera.Iconcolor = System.Drawing.Color.Transparent;
@@ -115,6 +118,7 @@
             this.btQuitarPrimera.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btQuitarPrimera.Textcolor = System.Drawing.Color.White;
             this.btQuitarPrimera.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btQuitarPrimera.Click += new System.EventHandler(this.btQuitarPrimera_Click);
             // 
             // btAgregarSegunda
             // 
@@ -126,6 +130,7 @@
             this.btAgregarSegunda.ButtonText = "";
             this.btAgregarSegunda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAgregarSegunda.DisabledColor = System.Drawing.Color.Gray;
+            this.btAgregarSegunda.Enabled = false;
             this.btAgregarSegunda.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btAgregarSegunda.ForeColor = System.Drawing.Color.White;
             this.btAgregarSegunda.Iconcolor = System.Drawing.Color.Transparent;
@@ -152,6 +157,7 @@
             this.btAgregarSegunda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btAgregarSegunda.Textcolor = System.Drawing.Color.White;
             this.btAgregarSegunda.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAgregarSegunda.Click += new System.EventHandler(this.btAgregarSegunda_Click);
             // 
             // btAgregarPrimera
             // 
@@ -163,6 +169,7 @@
             this.btAgregarPrimera.ButtonText = "";
             this.btAgregarPrimera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAgregarPrimera.DisabledColor = System.Drawing.Color.Gray;
+            this.btAgregarPrimera.Enabled = false;
             this.btAgregarPrimera.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btAgregarPrimera.ForeColor = System.Drawing.Color.White;
             this.btAgregarPrimera.Iconcolor = System.Drawing.Color.Transparent;
@@ -189,6 +196,7 @@
             this.btAgregarPrimera.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btAgregarPrimera.Textcolor = System.Drawing.Color.White;
             this.btAgregarPrimera.TextFont = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAgregarPrimera.Click += new System.EventHandler(this.btAgregarPrimera_Click);
             // 
             // lbContadorSegunda
             // 

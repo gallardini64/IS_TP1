@@ -21,3 +21,4 @@ J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalid
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.csproj.CoreCompileInputs.cache
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.dll
 J:\4to Año\Ingeniería de Software\TPN° 1\ProyectoClienteServidor\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.pdb
+E:\Luciano\facultad\4to\IS\TP1\tp1_VF_1.1\ControlCalidad.Cliente.AccesoExterno\obj\Debug\ControlCalidad.Cliente.AccesoExterno.csprojAssemblyReference.cache

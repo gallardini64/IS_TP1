@@ -55,6 +55,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Phermanado = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Hermanado();
             this.btSalir = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btFiltrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btDeshacer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pObservado.SuspendLayout();
             this.pReprocesado.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -95,6 +97,7 @@
             this.btHermanado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btHermanado.Textcolor = System.Drawing.Color.White;
             this.btHermanado.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHermanado.Click += new System.EventHandler(this.btHermanado_Click);
             // 
             // tbFec
             // 
@@ -295,6 +298,7 @@
             this.cbHora.Size = new System.Drawing.Size(110, 29);
             this.cbHora.TabIndex = 35;
             this.cbHora.UseSelectable = true;
+            this.cbHora.SelectedIndexChanged += new System.EventHandler(this.cbHora_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -464,12 +468,91 @@
             this.btSalir.Textcolor = System.Drawing.Color.White;
             this.btSalir.TextFont = new System.Drawing.Font("Century Gothic", 12F);
             // 
+            // btFiltrar
+            // 
+            this.btFiltrar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btFiltrar.BorderRadius = 5;
+            this.btFiltrar.ButtonText = "Filtrar";
+            this.btFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btFiltrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btFiltrar.ForeColor = System.Drawing.Color.White;
+            this.btFiltrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btFiltrar.Iconimage = null;
+            this.btFiltrar.Iconimage_right = null;
+            this.btFiltrar.Iconimage_right_Selected = null;
+            this.btFiltrar.Iconimage_Selected = null;
+            this.btFiltrar.IconMarginLeft = 0;
+            this.btFiltrar.IconMarginRight = 0;
+            this.btFiltrar.IconRightVisible = true;
+            this.btFiltrar.IconRightZoom = 0D;
+            this.btFiltrar.IconVisible = true;
+            this.btFiltrar.IconZoom = 90D;
+            this.btFiltrar.IsTab = false;
+            this.btFiltrar.Location = new System.Drawing.Point(272, 72);
+            this.btFiltrar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btFiltrar.Name = "btFiltrar";
+            this.btFiltrar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btFiltrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btFiltrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btFiltrar.selected = false;
+            this.btFiltrar.Size = new System.Drawing.Size(82, 38);
+            this.btFiltrar.TabIndex = 33;
+            this.btFiltrar.Text = "Filtrar";
+            this.btFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btFiltrar.Textcolor = System.Drawing.Color.White;
+            this.btFiltrar.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btFiltrar.Click += new System.EventHandler(this.btFiltrar_Click);
+            // 
+            // btDeshacer
+            // 
+            this.btDeshacer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btDeshacer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btDeshacer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btDeshacer.BorderRadius = 5;
+            this.btDeshacer.ButtonText = "Deshacer";
+            this.btDeshacer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDeshacer.DisabledColor = System.Drawing.Color.Gray;
+            this.btDeshacer.Enabled = false;
+            this.btDeshacer.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btDeshacer.ForeColor = System.Drawing.Color.White;
+            this.btDeshacer.Iconcolor = System.Drawing.Color.Transparent;
+            this.btDeshacer.Iconimage = null;
+            this.btDeshacer.Iconimage_right = null;
+            this.btDeshacer.Iconimage_right_Selected = null;
+            this.btDeshacer.Iconimage_Selected = null;
+            this.btDeshacer.IconMarginLeft = 0;
+            this.btDeshacer.IconMarginRight = 0;
+            this.btDeshacer.IconRightVisible = true;
+            this.btDeshacer.IconRightZoom = 0D;
+            this.btDeshacer.IconVisible = true;
+            this.btDeshacer.IconZoom = 90D;
+            this.btDeshacer.IsTab = false;
+            this.btDeshacer.Location = new System.Drawing.Point(364, 72);
+            this.btDeshacer.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btDeshacer.Name = "btDeshacer";
+            this.btDeshacer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
+            this.btDeshacer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(199)))), ((int)(((byte)(255)))));
+            this.btDeshacer.OnHoverTextColor = System.Drawing.Color.White;
+            this.btDeshacer.selected = false;
+            this.btDeshacer.Size = new System.Drawing.Size(94, 38);
+            this.btDeshacer.TabIndex = 38;
+            this.btDeshacer.Text = "Deshacer";
+            this.btDeshacer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btDeshacer.Textcolor = System.Drawing.Color.White;
+            this.btDeshacer.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeshacer.Click += new System.EventHandler(this.btDeshacer_Click);
+            // 
             // VistaOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.btDeshacer);
+            this.Controls.Add(this.btFiltrar);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.Phermanado);
             this.Controls.Add(this.panel1);
@@ -529,5 +612,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btSalir;
         private ControladoresDeUsuario.DefectoAgregar defectoAgregarObs;
         private ControladoresDeUsuario.DefectoAgregar defectoAgregarRep;
+        private Bunifu.Framework.UI.BunifuFlatButton btFiltrar;
+        private Bunifu.Framework.UI.BunifuFlatButton btDeshacer;
     }
 }

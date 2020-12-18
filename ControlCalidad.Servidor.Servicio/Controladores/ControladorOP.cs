@@ -251,7 +251,8 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
                     {
                         var p = new ParDto()
                         {
-                            calidad = par.Calidad.ToString()
+                            calidad = par.Calidad.ToString(),
+                            Hora = par.Hora
                         };
                         pares.Add(p);
                     }
@@ -268,19 +269,19 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             
 
         }
-        public bool RegistrarPar(int numero, string calidad, int numeroOP)
+        public bool RegistrarPar(int numero, string calidad, int numeroOP, TimeSpan? hora = null)
         {
             Calidad c = (Calidad) Enum.Parse(typeof(Calidad), calidad);
             _op = _repositorioOP.GetFiltered(o => o.Numero == numeroOP).FirstOrDefault();
-            bool bandera = _op.RegistrarPar(numero, c, Sesion.GetEmpleado());
+            bool bandera = _op.RegistrarPar(numero, c, Sesion.GetEmpleado(),hora);
             _repositorioOP.Update(_op);
             return bandera;
         }
-        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie, int numeroOP)
+        public bool RegistrarDefecto(int idEspDefecto, int numero, string pie, int numeroOP, TimeSpan? hora = null)
         {
             var esp = _repositorioEsp.GetFiltered(e => e.Id == idEspDefecto).FirstOrDefault();
             _op = _repositorioOP.GetFiltered(o => o.Numero == numeroOP).FirstOrDefault();
-            bool registrada = _op.RegistrarDefecto(1, esp, pie, DateTime.Now,Sesion.GetEmpleado());
+            bool registrada = _op.RegistrarDefecto(numero, esp, pie, DateTime.Now,Sesion.GetEmpleado(),hora);
             _repositorioOP.Update(_op);
             return registrada;
         }
