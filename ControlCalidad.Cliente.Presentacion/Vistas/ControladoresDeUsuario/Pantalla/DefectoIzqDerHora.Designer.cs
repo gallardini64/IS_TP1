@@ -39,11 +39,11 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             // 
             this.lbContIzq.AutoSize = true;
             this.lbContIzq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.lbContIzq.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lbContIzq.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lbContIzq.ForeColor = System.Drawing.Color.White;
-            this.lbContIzq.Location = new System.Drawing.Point(99, 6);
+            this.lbContIzq.Location = new System.Drawing.Point(75, 9);
             this.lbContIzq.Name = "lbContIzq";
-            this.lbContIzq.Size = new System.Drawing.Size(26, 30);
+            this.lbContIzq.Size = new System.Drawing.Size(19, 21);
             this.lbContIzq.TabIndex = 47;
             this.lbContIzq.Text = "0";
             // 
@@ -51,28 +51,28 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             // 
             this.lbContDer.AutoSize = true;
             this.lbContDer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.lbContDer.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lbContDer.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lbContDer.ForeColor = System.Drawing.Color.White;
-            this.lbContDer.Location = new System.Drawing.Point(20, 6);
+            this.lbContDer.Location = new System.Drawing.Point(19, 9);
             this.lbContDer.Name = "lbContDer";
-            this.lbContDer.Size = new System.Drawing.Size(26, 30);
+            this.lbContDer.Size = new System.Drawing.Size(19, 21);
             this.lbContDer.TabIndex = 48;
             this.lbContDer.Text = "0";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.panel1.Location = new System.Drawing.Point(90, 3);
+            this.panel1.Location = new System.Drawing.Point(66, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(76, 37);
+            this.panel1.Size = new System.Drawing.Size(53, 30);
             this.panel1.TabIndex = 49;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.panel2.Location = new System.Drawing.Point(8, 3);
+            this.panel2.Location = new System.Drawing.Point(7, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(76, 37);
+            this.panel2.Size = new System.Drawing.Size(53, 30);
             this.panel2.TabIndex = 50;
             // 
             // DefectoIzqDerHora
@@ -85,7 +85,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "DefectoIzqDerHora";
-            this.Size = new System.Drawing.Size(175, 43);
+            this.Size = new System.Drawing.Size(125, 43);
             this.ResumeLayout(false);
             this.PerformLayout();
 

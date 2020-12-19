@@ -209,5 +209,10 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             tbNroOpAct.Text = "";
             tbObjetivoOpAct.Text = "";
         }
+
+        private void btSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

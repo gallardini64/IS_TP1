@@ -38,11 +38,11 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             // 
             this.lbText.AutoSize = true;
             this.lbText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.lbText.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbText.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lbText.ForeColor = System.Drawing.Color.White;
-            this.lbText.Location = new System.Drawing.Point(5, 6);
+            this.lbText.Location = new System.Drawing.Point(4, 8);
             this.lbText.Name = "lbText";
-            this.lbText.Size = new System.Drawing.Size(96, 24);
+            this.lbText.Size = new System.Drawing.Size(74, 21);
             this.lbText.TabIndex = 52;
             this.lbText.Text = "Defecto";
             // 
@@ -52,7 +52,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             this.panel2.Controls.Add(this.lbText);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(169, 37);
+            this.panel2.Size = new System.Drawing.Size(120, 37);
             this.panel2.TabIndex = 54;
             // 
             // DefectoCelda
@@ -62,7 +62,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pant
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.Controls.Add(this.panel2);
             this.Name = "DefectoCelda";
-            this.Size = new System.Drawing.Size(175, 44);
+            this.Size = new System.Drawing.Size(125, 43);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

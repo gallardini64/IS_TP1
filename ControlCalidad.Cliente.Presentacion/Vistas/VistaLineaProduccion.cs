@@ -28,7 +28,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
         public VistaLineaProduccion()
         {
             InitializeComponent();
-            
+            defectoTipoHead.SetTexto("Tipo");
         }
 
         public void ActualizarDatosDeOPActual(OpDto opActual)
@@ -89,13 +89,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
                 _pHorasParesHead.Add(izqDerPorHora);
                 i++;
             }
-
-            Promedio.SetTexto((sumatoria / cantidadHoras).ToString());
-
-
-
-
-
+            Promedio.SetTexto(string.Format("{0:0.00}",(sumatoria / cantidadHoras)));
         }
 
         public void CargarEspecificaciones(EspecificacionDeDefectoDto[] especificaciones)

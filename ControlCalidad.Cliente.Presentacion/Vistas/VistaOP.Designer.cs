@@ -455,7 +455,7 @@
             this.btSalir.IconVisible = true;
             this.btSalir.IconZoom = 60D;
             this.btSalir.IsTab = false;
-            this.btSalir.Location = new System.Drawing.Point(914, 660);
+            this.btSalir.Location = new System.Drawing.Point(924, 660);
             this.btSalir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btSalir.Name = "btSalir";
             this.btSalir.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
@@ -467,6 +467,7 @@
             this.btSalir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btSalir.Textcolor = System.Drawing.Color.White;
             this.btSalir.TextFont = new System.Drawing.Font("Century Gothic", 12F);
+            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
             // btFiltrar
             // 

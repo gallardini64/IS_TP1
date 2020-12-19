@@ -39,23 +39,23 @@
             this.tbLineaOpAct = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pDefectos = new System.Windows.Forms.Panel();
-            this.DefectoIzqDerHora = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoIzqDerHora();
-            this.izquierdaDerechaPorHora = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.IzquierdaDerechaPorHora();
-            this.defectoTipoHead = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
-            this.DefectoTipo = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
             this.DefectoIdHead = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
             this.DefectoId = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
+            this.defectoTipoHead = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
+            this.DefectoTipo = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
+            this.DefectoIzqDerHora = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoIzqDerHora();
+            this.izquierdaDerechaPorHora = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.IzquierdaDerechaPorHora();
             this.tbEmpleado = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pPares = new System.Windows.Forms.Panel();
-            this.Promedio = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.RelacionObjetivoPrimera = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoIzqDerHora();
             this.PrimeraObjetivoHora = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.IzquierdaDerechaPorHora();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Primera = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
             this.defectoCelda2 = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Promedio = new ControlCalidad.Cliente.Presentacion.Vistas.ControladoresDeUsuario.Pantalla.DefectoCelda();
             this.pDefectos.SuspendLayout();
             this.pPares.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +112,7 @@
             // 
             this.tbNroOpAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
             this.tbNroOpAct.BorderColor = System.Drawing.Color.SeaGreen;
+            this.tbNroOpAct.Enabled = false;
             this.tbNroOpAct.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.tbNroOpAct.ForeColor = System.Drawing.Color.White;
             this.tbNroOpAct.Location = new System.Drawing.Point(121, 12);
@@ -123,6 +124,7 @@
             // 
             this.tbFecOpAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
             this.tbFecOpAct.BorderColor = System.Drawing.Color.SeaGreen;
+            this.tbFecOpAct.Enabled = false;
             this.tbFecOpAct.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.tbFecOpAct.ForeColor = System.Drawing.Color.White;
             this.tbFecOpAct.Location = new System.Drawing.Point(1573, 76);
@@ -146,6 +148,7 @@
             // 
             this.tbModeloOpAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
             this.tbModeloOpAct.BorderColor = System.Drawing.Color.SeaGreen;
+            this.tbModeloOpAct.Enabled = false;
             this.tbModeloOpAct.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.tbModeloOpAct.ForeColor = System.Drawing.Color.White;
             this.tbModeloOpAct.Location = new System.Drawing.Point(887, 12);
@@ -157,6 +160,7 @@
             // 
             this.tbLineaOpAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(80)))), ((int)(((byte)(138)))));
             this.tbLineaOpAct.BorderColor = System.Drawing.Color.SeaGreen;
+            this.tbLineaOpAct.Enabled = false;
             this.tbLineaOpAct.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.tbLineaOpAct.ForeColor = System.Drawing.Color.White;
             this.tbLineaOpAct.Location = new System.Drawing.Point(123, 76);
@@ -180,75 +184,71 @@
             // 
             this.pDefectos.AutoScroll = true;
             this.pDefectos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.pDefectos.Controls.Add(this.DefectoIzqDerHora);
-            this.pDefectos.Controls.Add(this.izquierdaDerechaPorHora);
-            this.pDefectos.Controls.Add(this.defectoTipoHead);
-            this.pDefectos.Controls.Add(this.DefectoTipo);
             this.pDefectos.Controls.Add(this.DefectoIdHead);
             this.pDefectos.Controls.Add(this.DefectoId);
+            this.pDefectos.Controls.Add(this.defectoTipoHead);
+            this.pDefectos.Controls.Add(this.DefectoTipo);
+            this.pDefectos.Controls.Add(this.DefectoIzqDerHora);
+            this.pDefectos.Controls.Add(this.izquierdaDerechaPorHora);
             this.pDefectos.Location = new System.Drawing.Point(12, 167);
             this.pDefectos.Name = "pDefectos";
             this.pDefectos.Size = new System.Drawing.Size(1850, 419);
             this.pDefectos.TabIndex = 56;
+            // 
+            // DefectoIdHead
+            // 
+            this.DefectoIdHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.DefectoIdHead.Location = new System.Drawing.Point(15, 46);
+            this.DefectoIdHead.Name = "DefectoIdHead";
+            this.DefectoIdHead.Size = new System.Drawing.Size(127, 43);
+            this.DefectoIdHead.TabIndex = 6;
+            // 
+            // DefectoId
+            // 
+            this.DefectoId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.DefectoId.Location = new System.Drawing.Point(15, 97);
+            this.DefectoId.Name = "DefectoId";
+            this.DefectoId.Size = new System.Drawing.Size(127, 43);
+            this.DefectoId.TabIndex = 5;
+            this.DefectoId.Visible = false;
+            // 
+            // defectoTipoHead
+            // 
+            this.defectoTipoHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.defectoTipoHead.Location = new System.Drawing.Point(142, 46);
+            this.defectoTipoHead.Name = "defectoTipoHead";
+            this.defectoTipoHead.Size = new System.Drawing.Size(127, 43);
+            this.defectoTipoHead.TabIndex = 4;
+            // 
+            // DefectoTipo
+            // 
+            this.DefectoTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.DefectoTipo.Location = new System.Drawing.Point(142, 97);
+            this.DefectoTipo.Name = "DefectoTipo";
+            this.DefectoTipo.Size = new System.Drawing.Size(127, 43);
+            this.DefectoTipo.TabIndex = 4;
+            this.DefectoTipo.Visible = false;
             // 
             // DefectoIzqDerHora
             // 
             this.DefectoIzqDerHora.acumuladoDer = 0;
             this.DefectoIzqDerHora.acumuladoIzq = 0;
             this.DefectoIzqDerHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.DefectoIzqDerHora.Location = new System.Drawing.Point(378, 106);
+            this.DefectoIzqDerHora.Location = new System.Drawing.Point(272, 97);
             this.DefectoIzqDerHora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DefectoIzqDerHora.Name = "DefectoIzqDerHora";
-            this.DefectoIzqDerHora.Size = new System.Drawing.Size(175, 43);
+            this.DefectoIzqDerHora.Size = new System.Drawing.Size(125, 43);
             this.DefectoIzqDerHora.TabIndex = 1;
             // 
             // izquierdaDerechaPorHora
             // 
             this.izquierdaDerechaPorHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.izquierdaDerechaPorHora.Location = new System.Drawing.Point(378, 21);
+            this.izquierdaDerechaPorHora.Location = new System.Drawing.Point(272, 15);
             this.izquierdaDerechaPorHora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.izquierdaDerechaPorHora.Name = "izquierdaDerechaPorHora";
-            this.izquierdaDerechaPorHora.Size = new System.Drawing.Size(175, 80);
+            this.izquierdaDerechaPorHora.Size = new System.Drawing.Size(125, 75);
             this.izquierdaDerechaPorHora.TabIndex = 2;
             this.izquierdaDerechaPorHora.Visible = false;
-            // 
-            // defectoTipoHead
-            // 
-            this.defectoTipoHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.defectoTipoHead.Location = new System.Drawing.Point(190, 56);
-            this.defectoTipoHead.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.defectoTipoHead.Name = "defectoTipoHead";
-            this.defectoTipoHead.Size = new System.Drawing.Size(175, 44);
-            this.defectoTipoHead.TabIndex = 0;
-            // 
-            // DefectoTipo
-            // 
-            this.DefectoTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.DefectoTipo.Location = new System.Drawing.Point(190, 106);
-            this.DefectoTipo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DefectoTipo.Name = "DefectoTipo";
-            this.DefectoTipo.Size = new System.Drawing.Size(175, 44);
-            this.DefectoTipo.TabIndex = 0;
-            this.DefectoTipo.Visible = false;
-            // 
-            // DefectoIdHead
-            // 
-            this.DefectoIdHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.DefectoIdHead.Location = new System.Drawing.Point(11, 56);
-            this.DefectoIdHead.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DefectoIdHead.Name = "DefectoIdHead";
-            this.DefectoIdHead.Size = new System.Drawing.Size(175, 44);
-            this.DefectoIdHead.TabIndex = 0;
-            // 
-            // DefectoId
-            // 
-            this.DefectoId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.DefectoId.Location = new System.Drawing.Point(11, 105);
-            this.DefectoId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DefectoId.Name = "DefectoId";
-            this.DefectoId.Size = new System.Drawing.Size(175, 44);
-            this.DefectoId.TabIndex = 0;
-            this.DefectoId.Visible = false;
             // 
             // tbEmpleado
             // 
@@ -289,35 +289,38 @@
             // pPares
             // 
             this.pPares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.pPares.Controls.Add(this.bunifuCustomLabel4);
             this.pPares.Controls.Add(this.Promedio);
+            this.pPares.Controls.Add(this.defectoCelda2);
+            this.pPares.Controls.Add(this.Primera);
+            this.pPares.Controls.Add(this.bunifuCustomLabel4);
             this.pPares.Controls.Add(this.RelacionObjetivoPrimera);
             this.pPares.Controls.Add(this.PrimeraObjetivoHora);
-            this.pPares.Controls.Add(this.Primera);
-            this.pPares.Controls.Add(this.defectoCelda2);
-            this.pPares.Location = new System.Drawing.Point(12, 627);
+            this.pPares.Location = new System.Drawing.Point(12, 727);
             this.pPares.Name = "pPares";
-            this.pPares.Size = new System.Drawing.Size(1850, 421);
+            this.pPares.Size = new System.Drawing.Size(1850, 289);
             this.pPares.TabIndex = 56;
             // 
-            // Promedio
+            // bunifuCustomLabel4
             // 
-            this.Promedio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.Promedio.Location = new System.Drawing.Point(220, 193);
-            this.Promedio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Promedio.Name = "Promedio";
-            this.Promedio.Size = new System.Drawing.Size(172, 44);
-            this.Promedio.TabIndex = 3;
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(9, 205);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(194, 30);
+            this.bunifuCustomLabel4.TabIndex = 57;
+            this.bunifuCustomLabel4.Text = "El Promedio es:";
             // 
             // RelacionObjetivoPrimera
             // 
             this.RelacionObjetivoPrimera.acumuladoDer = 0;
             this.RelacionObjetivoPrimera.acumuladoIzq = 0;
             this.RelacionObjetivoPrimera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.RelacionObjetivoPrimera.Location = new System.Drawing.Point(199, 115);
+            this.RelacionObjetivoPrimera.Location = new System.Drawing.Point(199, 114);
             this.RelacionObjetivoPrimera.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RelacionObjetivoPrimera.Name = "RelacionObjetivoPrimera";
-            this.RelacionObjetivoPrimera.Size = new System.Drawing.Size(175, 43);
+            this.RelacionObjetivoPrimera.Size = new System.Drawing.Size(125, 43);
             this.RelacionObjetivoPrimera.TabIndex = 1;
             this.RelacionObjetivoPrimera.Visible = false;
             // 
@@ -327,27 +330,9 @@
             this.PrimeraObjetivoHora.Location = new System.Drawing.Point(199, 29);
             this.PrimeraObjetivoHora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PrimeraObjetivoHora.Name = "PrimeraObjetivoHora";
-            this.PrimeraObjetivoHora.Size = new System.Drawing.Size(175, 80);
+            this.PrimeraObjetivoHora.Size = new System.Drawing.Size(125, 75);
             this.PrimeraObjetivoHora.TabIndex = 2;
             this.PrimeraObjetivoHora.Visible = false;
-            // 
-            // Primera
-            // 
-            this.Primera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.Primera.Location = new System.Drawing.Point(11, 65);
-            this.Primera.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Primera.Name = "Primera";
-            this.Primera.Size = new System.Drawing.Size(175, 44);
-            this.Primera.TabIndex = 0;
-            // 
-            // defectoCelda2
-            // 
-            this.defectoCelda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.defectoCelda2.Location = new System.Drawing.Point(11, 119);
-            this.defectoCelda2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.defectoCelda2.Name = "defectoCelda2";
-            this.defectoCelda2.Size = new System.Drawing.Size(175, 44);
-            this.defectoCelda2.TabIndex = 0;
             // 
             // bunifuCustomLabel3
             // 
@@ -355,30 +340,42 @@
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(821, 594);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(821, 694);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(269, 30);
             this.bunifuCustomLabel3.TabIndex = 55;
             this.bunifuCustomLabel3.Text = "INFORME DE PRIMERA";
             // 
-            // bunifuCustomLabel4
+            // Primera
             // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(9, 193);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(194, 30);
-            this.bunifuCustomLabel4.TabIndex = 57;
-            this.bunifuCustomLabel4.Text = "El Promedio es:";
+            this.Primera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.Primera.Location = new System.Drawing.Point(66, 61);
+            this.Primera.Name = "Primera";
+            this.Primera.Size = new System.Drawing.Size(125, 43);
+            this.Primera.TabIndex = 58;
+            // 
+            // defectoCelda2
+            // 
+            this.defectoCelda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.defectoCelda2.Location = new System.Drawing.Point(66, 114);
+            this.defectoCelda2.Name = "defectoCelda2";
+            this.defectoCelda2.Size = new System.Drawing.Size(125, 43);
+            this.defectoCelda2.TabIndex = 59;
+            // 
+            // Promedio
+            // 
+            this.Promedio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.Promedio.Location = new System.Drawing.Point(199, 199);
+            this.Promedio.Name = "Promedio";
+            this.Promedio.Size = new System.Drawing.Size(125, 43);
+            this.Promedio.TabIndex = 60;
             // 
             // VistaLineaProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1880, 920);
+            this.ClientSize = new System.Drawing.Size(1880, 1080);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuCustomLabel2);
@@ -409,11 +406,8 @@
         }
 
         #endregion
-
-        private ControladoresDeUsuario.Pantalla.DefectoCelda DefectoIdHead;
         private ControladoresDeUsuario.Pantalla.DefectoIzqDerHora DefectoIzqDerHora;
         private ControladoresDeUsuario.Pantalla.IzquierdaDerechaPorHora izquierdaDerechaPorHora;
-        private ControladoresDeUsuario.Pantalla.DefectoCelda DefectoId;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbObjetivoOpAct;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
@@ -425,18 +419,20 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbLineaOpAct;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private System.Windows.Forms.Panel pDefectos;
-        private ControladoresDeUsuario.Pantalla.DefectoCelda defectoTipoHead;
-        private ControladoresDeUsuario.Pantalla.DefectoCelda DefectoTipo;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbEmpleado;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel pPares;
         private ControladoresDeUsuario.Pantalla.DefectoIzqDerHora RelacionObjetivoPrimera;
         private ControladoresDeUsuario.Pantalla.IzquierdaDerechaPorHora PrimeraObjetivoHora;
-        private ControladoresDeUsuario.Pantalla.DefectoCelda Primera;
-        private ControladoresDeUsuario.Pantalla.DefectoCelda defectoCelda2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private ControladoresDeUsuario.Pantalla.DefectoCelda Promedio;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private ControladoresDeUsuario.Pantalla.DefectoCelda DefectoIdHead;
+        private ControladoresDeUsuario.Pantalla.DefectoCelda DefectoId;
+        private ControladoresDeUsuario.Pantalla.DefectoCelda defectoTipoHead;
+        private ControladoresDeUsuario.Pantalla.DefectoCelda DefectoTipo;
+        private ControladoresDeUsuario.Pantalla.DefectoCelda Promedio;
+        private ControladoresDeUsuario.Pantalla.DefectoCelda defectoCelda2;
+        private ControladoresDeUsuario.Pantalla.DefectoCelda Primera;
     }
 }

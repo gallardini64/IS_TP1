@@ -318,5 +318,10 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             var segunda = opActual.Horarios.LastOrDefault().Pares.Where(p => p.calidad == "Segunda").Count();
             Phermanado.ActualizarContador(primera,segunda);
         }
+
+        private void btSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
