@@ -16,6 +16,8 @@ namespace ControlCalidad.Cliente.Presentacion.Interfaces
         void RegistrarPar(int numero, string calidad);
         void LimpiarCamposOP();
         void CargarOpActual();
+        void OpPausada();
+        void OpActiva();
         void RegistrarDefecto(int idEspDefecto,int numero, string pie);
         void ActualizarNumeroDeDefectosTipo(int id, int numero, string pie);
         void SetPresentador(PresentadorOP presentadorOP, string usuario);

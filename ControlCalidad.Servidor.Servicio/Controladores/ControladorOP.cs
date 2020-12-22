@@ -67,7 +67,7 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             return (colores, modelos, lineas);
         }
 
-        public bool FinalizarOP(int numero)
+        public bool FinalizarOP(EventHandler<(string, int)> opCambiaDeEstado, int numero)
         {
             _op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
             if (_op == null)
@@ -76,9 +76,10 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
             }
             _op.FinalizarOP();
             _repositorioOP.Update(_op);
+            opCambiaDeEstado?.Invoke(this, (_op.Estado.ToString(), _op.Numero));
             return true;
         }
-        public (bool,string) ReanudarOP(int numero)
+        public (bool,string) ReanudarOP(EventHandler<(string, int)> opCambiaDeEstado, int numero)
         {
             _op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
 
@@ -105,22 +106,17 @@ namespace ControlCalidad.Servidor.Servicio.Controladores
 
             _op.ReanudarOP(turnoActual);
             _repositorioOP.Update(_op);
+            opCambiaDeEstado?.Invoke(this, (_op.Estado.ToString(), _op.Numero));
             return (true, null);
             
         }
-        public bool PausarOP(int numero)
+        public bool PausarOP(EventHandler<(string,int)> opCambiaDeEstado,int numero)
         {
             _op = _repositorioOP.GetFiltered(o => o.Numero == numero).FirstOrDefault();
             _op.PausarOP();
-            try
-            {
-                _repositorioOP.Update(_op);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            _repositorioOP.Update(_op);
+             opCambiaDeEstado?.Invoke(this, (_op.Estado.ToString(),_op.Numero)); 
+            return true;
             
         }
         public OpDto GetOP(string usuario)

@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Cliente.Presentacion.Presentadores
 {
-    public class PresentadorLinea
+    public class PresentadorLinea: IControlCalidadServicioCallback
     {
         private IVistaSupervisorDeLinea _vista;
         private IVistaLineaProduccion _vistaPantalla;
         public EmpleadoDto empleadoLinea { get; set; }
         public PresentadorLinea(IVistaSupervisorDeLinea vista,IVistaLineaProduccion vistaPantalla,EmpleadoDto empleado)
         {
-             empleadoLinea = empleado;
+            Adaptador.SetContexto(this);
+            empleadoLinea = empleado;
             _vista = vista;
             _vistaPantalla = vistaPantalla;
             _vista.SetPresentador(this,empleado.Usuario);
@@ -63,6 +64,11 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
         public bool FinalizarOP(int numero)
         {
            return Adaptador.FinalizarOP(numero);
+        }
+
+        public void OnOPCambiaDeEstado(string estado, int numeroOP)
+        {
+            
         }
     }
 }

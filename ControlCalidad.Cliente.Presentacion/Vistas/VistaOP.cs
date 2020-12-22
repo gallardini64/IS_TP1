@@ -70,7 +70,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             }
         }
 
-        private void OpPausada()
+        public void OpPausada()
         {
             btHermanado.Enabled = true;
             foreach (var panel in _panelDefectos)
@@ -81,7 +81,7 @@ namespace ControlCalidad.Cliente.Presentacion.Vistas
             btnQuitarPar.Enabled = false;
         }
 
-        private void OpActiva()
+        public void OpActiva()
         {
             Phermanado.Deshabilitarse();
             btHermanado.Enabled = false;

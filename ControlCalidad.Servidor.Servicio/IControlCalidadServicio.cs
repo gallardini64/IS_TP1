@@ -7,8 +7,8 @@ using System.Text;
 
 namespace ControlCalidad.Servidor.Servicio
 {
-    
-    [ServiceContract]
+
+    [ServiceContract(CallbackContract = typeof(IControlCalidadServicioCallback))]
     public interface IControlCalidadServicio
     {
         [OperationContract]
@@ -37,6 +37,8 @@ namespace ControlCalidad.Servidor.Servicio
         
         [OperationContract]
         bool PausarOP(int numero);
+        [OperationContract]
+        void SeHaPausadoOP(object sender,(string estado,int numeroOP) tupla);
 
         [OperationContract]
         (bool,string) ReanudarOP(int numero);
@@ -49,7 +51,8 @@ namespace ControlCalidad.Servidor.Servicio
 
         [OperationContract]
         (HorarioDto,DefectoDto,ParDto) auxiliar();
-
+        [OperationContract]
+        void Suscribirse();
     }
 
 

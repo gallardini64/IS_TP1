@@ -1040,7 +1040,7 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ControlCalidadServiceReference.IControlCalidadServicio")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ControlCalidadServiceReference.IControlCalidadServicio", CallbackContract=typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.IControlCalidadServicioCallback))]
     public interface IControlCalidadServicio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/RegistrarDefecto", ReplyAction="http://tempuri.org/IControlCalidadServicio/RegistrarDefectoResponse")]
@@ -1099,6 +1099,35 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/PausarOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/PausarOPResponse")]
         System.Threading.Tasks.Task<bool> PausarOPAsync(int numero);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/SeHaPausadoOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/SeHaPausadoOPResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EspecificacionDeDefectoDto[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EspecificacionDeDefectoDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.TurnoDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.OpDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.DefectoDto[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.DefectoDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ParDto[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ParDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.ValueTuple<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ColorDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ModeloDto[], ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.LineaDto[]>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.ValueTuple<bool, string>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.ValueTuple<bool, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.EmpleadoDto>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.ValueTuple<string, int>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.ValueTuple<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.DefectoDto, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ParDto>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(string[]))]
+        void SeHaPausadoOP(object sender, System.ValueTuple<string, int> tupla);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/SeHaPausadoOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/SeHaPausadoOPResponse")]
+        System.Threading.Tasks.Task SeHaPausadoOPAsync(object sender, System.ValueTuple<string, int> tupla);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/ReanudarOP", ReplyAction="http://tempuri.org/IControlCalidadServicio/ReanudarOPResponse")]
         System.ValueTuple<bool, string> ReanudarOP(int numero);
         
@@ -1122,6 +1151,19 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/auxiliar", ReplyAction="http://tempuri.org/IControlCalidadServicio/auxiliarResponse")]
         System.Threading.Tasks.Task<System.ValueTuple<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.DefectoDto, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ParDto>> auxiliarAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/Suscribirse", ReplyAction="http://tempuri.org/IControlCalidadServicio/SuscribirseResponse")]
+        void Suscribirse();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/Suscribirse", ReplyAction="http://tempuri.org/IControlCalidadServicio/SuscribirseResponse")]
+        System.Threading.Tasks.Task SuscribirseAsync();
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IControlCalidadServicioCallback {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IControlCalidadServicio/OnOPCambiaDeEstado", ReplyAction="http://tempuri.org/IControlCalidadServicio/OnOPCambiaDeEstadoResponse")]
+        void OnOPCambiaDeEstado(string estado, int numeroOP);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1130,25 +1172,26 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ControlCalidadServicioClient : System.ServiceModel.ClientBase<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.IControlCalidadServicio>, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.IControlCalidadServicio {
+    public partial class ControlCalidadServicioClient : System.ServiceModel.DuplexClientBase<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.IControlCalidadServicio>, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.IControlCalidadServicio {
         
-        public ControlCalidadServicioClient() {
+        public ControlCalidadServicioClient(System.ServiceModel.InstanceContext callbackInstance) : 
+                base(callbackInstance) {
         }
         
-        public ControlCalidadServicioClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+        public ControlCalidadServicioClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+                base(callbackInstance, endpointConfigurationName) {
         }
         
-        public ControlCalidadServicioClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public ControlCalidadServicioClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public ControlCalidadServicioClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public ControlCalidadServicioClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public ControlCalidadServicioClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
+        public ControlCalidadServicioClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, binding, remoteAddress) {
         }
         
         public bool RegistrarDefecto(int idEspDefecto, int numero, string pie, int numeroOP, System.Nullable<System.TimeSpan> hora) {
@@ -1223,6 +1266,14 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
             return base.Channel.PausarOPAsync(numero);
         }
         
+        public void SeHaPausadoOP(object sender, System.ValueTuple<string, int> tupla) {
+            base.Channel.SeHaPausadoOP(sender, tupla);
+        }
+        
+        public System.Threading.Tasks.Task SeHaPausadoOPAsync(object sender, System.ValueTuple<string, int> tupla) {
+            return base.Channel.SeHaPausadoOPAsync(sender, tupla);
+        }
+        
         public System.ValueTuple<bool, string> ReanudarOP(int numero) {
             return base.Channel.ReanudarOP(numero);
         }
@@ -1253,6 +1304,14 @@ namespace ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference {
         
         public System.Threading.Tasks.Task<System.ValueTuple<ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.HorarioDto, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.DefectoDto, ControlCalidad.Cliente.AccesoExterno.ControlCalidadServiceReference.ParDto>> auxiliarAsync() {
             return base.Channel.auxiliarAsync();
+        }
+        
+        public void Suscribirse() {
+            base.Channel.Suscribirse();
+        }
+        
+        public System.Threading.Tasks.Task SuscribirseAsync() {
+            return base.Channel.SuscribirseAsync();
         }
     }
 }

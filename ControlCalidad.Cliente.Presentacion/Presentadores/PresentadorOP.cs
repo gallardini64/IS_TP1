@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 
 namespace ControlCalidad.Cliente.Presentacion.Presentadores
 {
-    public class PresentadorOP
+    public class PresentadorOP: IControlCalidadServicioCallback
     {
         private IVistaOP _vista;
         public EmpleadoDto empleadoCalidad { get; set; }
         public PresentadorOP(IVistaOP vista,EmpleadoDto empleado)
         {
+            Adaptador.SetContexto(this);
+            Adaptador.SuscribirseAEstadoDeOP();
             empleadoCalidad = empleado;
             _vista = vista;
             _vista.SetPresentador(this, empleadoCalidad.Usuario);
@@ -62,6 +64,17 @@ namespace ControlCalidad.Cliente.Presentacion.Presentadores
             return Adaptador.ObtenerEspecificacionesDefectosTipo(v);
         }
 
-        
+        public void OnOPCambiaDeEstado(string estado,int numeroOP)
+        {
+            if (estado.Equals("Pausada") || estado.Equals("Finalizada"))
+            {
+                _vista.OpPausada();
+            }
+            if (estado.Equals("Activa"))
+            {
+                _vista.OpActiva();
+            }
+
+        }
     }
 }

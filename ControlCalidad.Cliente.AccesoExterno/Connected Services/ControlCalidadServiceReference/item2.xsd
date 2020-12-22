@@ -138,6 +138,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SeHaPausadoOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sender" nillable="true" type="xs:anyType" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="tupla" type="q12:ValueTupleOfstringint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeHaPausadoOPResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ReanudarOP">
     <xs:complexType>
       <xs:sequence>
@@ -148,7 +161,7 @@
   <xs:element name="ReanudarOPResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="ReanudarOPResult" type="q12:ValueTupleOfbooleanstring" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="ReanudarOPResult" type="q13:ValueTupleOfbooleanstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -174,7 +187,7 @@
   <xs:element name="AsignarOPaSupervisorDeCalidadResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="AsignarOPaSupervisorDeCalidadResult" nillable="true" type="q13:OpDto" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ControlCalidad.Servidor.Servicio" minOccurs="0" name="AsignarOPaSupervisorDeCalidadResult" nillable="true" type="q14:OpDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -186,8 +199,31 @@
   <xs:element name="auxiliarResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="auxiliarResult" type="q14:ValueTupleOfHorarioDtoDefectoDtoParDtomqx32tkj" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="auxiliarResult" type="q15:ValueTupleOfHorarioDtoDefectoDtoParDtomqx32tkj" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Suscribirse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuscribirseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnOPCambiaDeEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numeroOP" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnOPCambiaDeEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

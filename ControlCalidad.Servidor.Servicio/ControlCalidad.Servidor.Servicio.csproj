@@ -69,6 +69,7 @@
     <Compile Include="Entidades\ParDto.cs" />
     <Compile Include="Entidades\TurnoDto.cs" />
     <Compile Include="IControlCalidadServicio.cs" />
+    <Compile Include="IControlCalidadServicioCallback.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ControlCalidadServicio.cs" />
   </ItemGroup>

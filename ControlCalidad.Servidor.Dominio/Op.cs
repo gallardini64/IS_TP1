@@ -57,20 +57,24 @@ namespace ControlCalidad.Servidor.Dominio
 
         public bool RegistrarDefecto(int numero, EspecificacionDeDefecto especDe, string pie, DateTime now, Empleado empleado, TimeSpan? hora = null)
         {
-            Horario horarioActual = Horarios.LastOrDefault();
-            if (horarioActual.Turno.SoyTurnoActual())
+            if (Estado == EstadoOP.Activa)
             {
-                horarioActual.RegistrarDefecto(numero, especDe, pie, now,empleado,hora);
-                return true;
-            }
-            else
-            {
-                if ((int)horarioActual.Turno.HeFilalizadoHace().TotalMinutes < 10)
+                Horario horarioActual = Horarios.LastOrDefault();
+                if (horarioActual.Turno.SoyTurnoActual())
                 {
-                    horarioActual.RegistrarDefecto(numero, especDe, pie, now,empleado, hora);
+                    horarioActual.RegistrarDefecto(numero, especDe, pie, now, empleado, hora);
                     return true;
                 }
+                else
+                {
+                    if ((int)horarioActual.Turno.HeFilalizadoHace().TotalMinutes < 10)
+                    {
+                        horarioActual.RegistrarDefecto(numero, especDe, pie, now, empleado, hora);
+                        return true;
+                    }
+                }
             }
+            
             return false;
         }
 
